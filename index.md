@@ -155,6 +155,8 @@ More importantly, you can also skip the building process and right off just **do
 
 </table>
 
+\* HarfBuzz will be required for Pango 1.32 only, unsupported currently 
+
 ## Building
 
 If you feel brave enough to build these on your own, bear in mind, GTK+ on Windows is **pain in the ass**. You're warned.
@@ -206,7 +208,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gettext-runtime) to this folder
  * convert _gettext-runtime\intl\intl.def_ to Unix EOL
  * open VS x86 or x64 command prompt
- * apply the patch with _patch -p1 -i gettext-runtime.patch_
+ * apply the patch with `patch -p1 -i gettext-runtime.patch`
  * run _build-x86.bat_ or _build-x64.bat_
 
 ### OpenSSL
@@ -236,7 +238,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [Fontconfig 2.8.0](http://dl.hexchat.org/gtk-win32/fontconfig-2.8.0.7z)
  * extract as _C:\mozilla-build\hexchat\fontconfig-2.8.0_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/fontconfig) to this folder
- * apply the patch with _patch -p1 -i fontconfig.patch_
+ * apply the patch with `patch -p1 -i fontconfig.patch`
  * open _fontconfig.sln_, set _build_ as startup project and compile for Win32 or x64 (you might have to press F7 a few times)
  * run _release-x86.bat_ or _release-x64.bat_
 
@@ -244,7 +246,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [Pixman 0.26.2](http://dl.hexchat.org/gtk-win32/pixman-0.26.2.7z)
  * extract as _C:\mozilla-build\hexchat\pixman-0.26.2_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/pixman) to this folder
- * apply the patch with _patch -p1 -i pixman.patch_
+ * apply the patch with `patch -p1 -i pixman.patch`
  * open _build\win32\vc10\pixman.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
@@ -282,7 +284,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [cairo 1.10.2](http://dl.hexchat.org/gtk-win32/cairo-1.10.2.7z)
  * extract as _C:\mozilla-build\hexchat\cairo-1.10.2_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/cairo) to this folder
- * apply the patch with _patch -p1 -i cairo.patch_
+ * apply the patch with `patch -p1 -i cairo.patch`
  * open _cairo.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
