@@ -14,7 +14,7 @@ More importantly, you can also skip the building process and right off just **do
 <table>
 
 <tr>
-<td>Microsoft Visual C++ Redistributable Package&nbsp;&nbsp;</td>
+<td>Microsoft Visual C++ Redistributable Package</td>
 <td>2010 SP1</td>
 <td><a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328">32 bit</a></td>
 <td><a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">64 bit</a></td>
