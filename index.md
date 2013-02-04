@@ -13,141 +13,141 @@ More importantly, you can also skip the building process and right off just **do
 <tr>
 <td>Microsoft Visual C++ Redistributable Package&nbsp;&nbsp;</td>
 <td>2010 SP1</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328">32 bit</a></td>
+<td><a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>zlib</td>
 <td>1.2.7</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/zlib-1.2.7-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/zlib-1.2.7-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>win-iconv</td>
 <td>0.0.4</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/win-iconv-0.0.4-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/win-iconv-0.0.4-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>FreeType</td>
 <td>2.4.10</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/freetype-2.4.10-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/freetype-2.4.10-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>libxml2</td>
 <td>2.9.0</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/libxml2-2.9.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/libxml2-2.9.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>gettext-runtime</td>
 <td>0.18</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gettext-runtime-0.18-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gettext-runtime-0.18-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>OpenSSL</td>
 <td>1.0.1c</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/openssl-1.0.1c-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/openssl-1.0.1c-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>libffi</td>
 <td>3.0.11</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/libffi-3.0.11-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/libffi-3.0.11-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>libpng</td>
 <td>1.5.13</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/libpng-1.5.13-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/libpng-1.5.13-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>Fontconfig</td>
 <td>2.8.0</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/fontconfig-2.8.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/fontconfig-2.8.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Pixman</td>
 <td>0.26.2</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/pixman-0.26.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/pixman-0.26.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>GLib</td>
 <td>2.34.1</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/glib-2.34.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/glib-2.34.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Enchant</td>
 <td>1.6.0</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/enchant-1.6.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/enchant-1.6.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>ATK</td>
 <td>2.5.91</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/atk-2.5.91-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/atk-2.5.91-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GDK-PixBuf</td>
 <td>2.26.4</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gdk-pixbuf-2.26.4-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gdk-pixbuf-2.26.4-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>cairo</td>
 <td>1.10.2</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/cairo-1.10.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/cairo-1.10.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>HarfBuzz *</td>
 <td>0.9.4</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td>32 bit</td>
+<td>64 bit</td>
 </tr>
 
 <tr class="even">
 <td>Pango</td>
 <td>1.30.1</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/pango-1.30.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/pango-1.30.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GTK+</td>
 <td>2.24.13</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gtk-2.24.13-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gtk-2.24.13-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
-<td>**GTK+ bundle**</td>
+<td><b>GTK+ bundle</b></td>
 <td>2.24.13</td>
-<td><a href="">32 bit</a></td>
-<td><a href="">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gtk-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/gtk-x64.7z">64 bit</a></td>
 </tr>
 
 </table>
