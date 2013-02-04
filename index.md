@@ -157,7 +157,7 @@ More importantly, you can also skip the building process and right off just **do
 
 \* HarfBuzz will be required for Pango 1.32 only, unsupported currently 
 
-## Building
+## Building from Source
 
 If you feel brave enough to build these on your own, bear in mind, GTK+ on Windows is **pain in the ass**. You're warned.
 
