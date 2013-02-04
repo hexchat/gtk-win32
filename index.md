@@ -2,11 +2,14 @@
 layout: default
 title: main page
 ---
+
+## About
+
 This page is intended to guide you through the process of building the whole GTK+ stack (and some additional libraries required by HexChat) on Windows using Visual C++ a.k.a. MSVC, version 10 that comes with Visual Studio 2010.
 
 More importantly, you can also skip the building process and right off just **download** and use the Visual C++ builds of GTK+ so that you don't have to <del>waste</del>spend weeks (months?) on getting it to work like I had. So without further ado:
 
-### GTK+ Visual C++ Builds:
+## GTK+ Visual C++ Builds:
 
 <table>
 
@@ -151,6 +154,8 @@ More importantly, you can also skip the building process and right off just **do
 </tr>
 
 </table>
+
+## Building
 
 If you feel brave enough to build these on your own, bear in mind, GTK+ on Windows is **pain in the ass**. You're warned.
 
