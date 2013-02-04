@@ -31,7 +31,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>FreeType</td>
 <td>2.4.10</td>
 <td><a href="">32 bit</a></td>
@@ -45,7 +45,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>gettext-runtime</td>
 <td>0.18</td>
 <td><a href="">32 bit</a></td>
@@ -59,7 +59,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>libffi</td>
 <td>3.0.11</td>
 <td><a href="">32 bit</a></td>
@@ -73,7 +73,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>Fontconfig</td>
 <td>2.8.0</td>
 <td><a href="">32 bit</a></td>
@@ -87,7 +87,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>GLib</td>
 <td>2.34.1</td>
 <td><a href="">32 bit</a></td>
@@ -101,7 +101,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>ATK</td>
 <td>2.5.91</td>
 <td><a href="">32 bit</a></td>
@@ -115,7 +115,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>cairo</td>
 <td>1.10.2</td>
 <td><a href="">32 bit</a></td>
@@ -129,7 +129,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>Pango</td>
 <td>1.30.1</td>
 <td><a href="">32 bit</a></td>
@@ -143,7 +143,7 @@ More importantly, you can also skip the building process and right off just **do
 <td><a href="">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>**GTK+ bundle**</td>
 <td>2.24.13</td>
 <td><a href="">32 bit</a></td>
