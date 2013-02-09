@@ -166,7 +166,7 @@ If you feel brave enough to build these on your own, bear in mind, GTK+ on Windo
 If this graph wasn't enough to frighten you off and you still think you want to do this, you'll need to install:
 
  * [Visual Studio 2010 Professional Trial](http://www.microsoft.com/en-us/download/details.aspx?id=16057)
- * [CMake](http://www.cmake.org/cmake/resources/software.html)
+ * [CMake 2.8](http://www.cmake.org/cmake/resources/software.html)
  * [MozillaBuild](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
  * Perl 5.16 [x86](http://dl.hexchat.org/misc/perl-5.16.2-x86.7z) or [x64](http://dl.hexchat.org/misc/perl-5.16.2-x64.7z) (extract to _C:\mozilla-build\perl-5.16\Win32_ or _C:\mozilla-build\perl-5.16\x64_)
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
