@@ -23,106 +23,106 @@ More importantly, you can also skip the building process and right off just **do
 <tr class="even">
 <td>zlib</td>
 <td>1.2.7</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/zlib-1.2.7-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/zlib-1.2.7-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/zlib-1.2.7-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/zlib-1.2.7-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>win-iconv</td>
-<td>0.0.4</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/win-iconv-0.0.4-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/win-iconv-0.0.4-x64.7z">64 bit</a></td>
+<td>0.0.6</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/win-iconv-0.0.6-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/win-iconv-0.0.6-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>FreeType</td>
-<td>2.4.10</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/freetype-2.4.10-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/freetype-2.4.10-x64.7z">64 bit</a></td>
+<td>2.4.11</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/freetype-2.4.11-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/freetype-2.4.11-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>libxml2</td>
 <td>2.9.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/libxml2-2.9.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/libxml2-2.9.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libxml2-2.9.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libxml2-2.9.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>gettext-runtime</td>
 <td>0.18</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gettext-runtime-0.18-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gettext-runtime-0.18-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gettext-runtime-0.18-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gettext-runtime-0.18-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>OpenSSL</td>
-<td>1.0.1c</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/openssl-1.0.1c-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/openssl-1.0.1c-x64.7z">64 bit</a></td>
+<td>1.0.1e</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/openssl-1.0.1e-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/openssl-1.0.1e-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>libffi</td>
 <td>3.0.11</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/libffi-3.0.11-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/libffi-3.0.11-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.11-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.11-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>libpng</td>
-<td>1.5.13</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/libpng-1.5.13-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/libpng-1.5.13-x64.7z">64 bit</a></td>
+<td>1.5.14</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libpng-1.5.14-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libpng-1.5.14-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>Fontconfig</td>
 <td>2.8.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/fontconfig-2.8.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/fontconfig-2.8.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/fontconfig-2.8.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/fontconfig-2.8.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Pixman</td>
 <td>0.26.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/pixman-0.26.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/pixman-0.26.2-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/pixman-0.26.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/pixman-0.26.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>GLib</td>
-<td>2.34.1</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/glib-2.34.1-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/glib-2.34.1-x64.7z">64 bit</a></td>
+<td>2.34.3</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/glib-2.34.3-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x46/glib-2.34.3-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Enchant</td>
 <td>1.6.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/enchant-1.6.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/enchant-1.6.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/enchant-1.6.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/enchant-1.6.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>ATK</td>
-<td>2.5.91</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/atk-2.5.91-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/atk-2.5.91-x64.7z">64 bit</a></td>
+<td>2.7.5</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/atk-2.7.5-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/atk-2.7.5-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GDK-PixBuf</td>
-<td>2.26.4</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gdk-pixbuf-2.26.4-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gdk-pixbuf-2.26.4-x64.7z">64 bit</a></td>
+<td>2.26.5</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gdk-pixbuf-2.26.5-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gdk-pixbuf-2.26.5-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>cairo</td>
 <td>1.10.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/cairo-1.10.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/cairo-1.10.2-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/cairo-1.10.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/cairo-1.10.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -135,22 +135,22 @@ More importantly, you can also skip the building process and right off just **do
 <tr class="even">
 <td>Pango</td>
 <td>1.30.1</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/pango-1.30.1-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/pango-1.30.1-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/pango-1.30.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/pango-1.30.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GTK+</td>
-<td>2.24.13</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gtk-2.24.13-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gtk-2.24.13-x64.7z">64 bit</a></td>
+<td>2.24.15</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gtk-2.24.15-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gtk-2.24.15-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td><b>GTK+ bundle</b></td>
-<td>2.24.13</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gtk-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/gtk-x64.7z">64 bit</a></td>
+<td>2.24.15</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gtk-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gtk-x64.7z">64 bit</a></td>
 </tr>
 
 </table>
@@ -212,7 +212,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _build-x86.bat_ or _build-x64.bat_
 
 ### OpenSSL
- * download [OpenSSL 1.0.1c](http://dl.hexchat.org/gtk-win32/src/openssl-1.0.1e.7z)
+ * download [OpenSSL 1.0.1e](http://dl.hexchat.org/gtk-win32/src/openssl-1.0.1e.7z)
  * extract as _C:\mozilla-build\hexchat\openssl-1.0.1e_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/openssl) to this folder
  * open VS x86 or x64 command prompt
@@ -227,7 +227,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * in a regular command prompt, run _release-x86.bat_ or _release-x64.bat_
 
 ### libpng
- * download [libpng 1.5.13](http://dl.hexchat.org/gtk-win32/src/libpng-1.5.14.7z)
+ * download [libpng 1.5.14](http://dl.hexchat.org/gtk-win32/src/libpng-1.5.14.7z)
  * extract as _C:\mozilla-build\hexchat\libpng-1.5.14_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libpng) to this folder
  * open _projects\vstudio\vstudio.sln_ and compile for Win32 or x64
@@ -250,7 +250,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GLib
- * download [GLib 2.34.1](http://dl.hexchat.org/gtk-win32/src/glib-2.34.3.7z)
+ * download [GLib 2.34.3](http://dl.hexchat.org/gtk-win32/src/glib-2.34.3.7z)
  * extract as _C:\mozilla-build\hexchat\glib-2.34.3_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/glib) to this folder
  * open _build\win32\vc10\glib.sln_, set _install_ as startup project and compile for Win32 or x64
@@ -264,14 +264,14 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _build-x86.bat_ or _build-x64.bat_
 
 ### ATK
- * download [ATK 2.5.91](http://dl.hexchat.org/gtk-win32/src/atk-2.7.5.7z)
+ * download [ATK 2.7.5](http://dl.hexchat.org/gtk-win32/src/atk-2.7.5.7z)
  * extract as _C:\mozilla-build\hexchat\atk-2.7.5_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/atk) to this folder
  * open _build\win32\vc10\atk.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GDK-PixBuf
- * download [GDK-PixBuf 2.26.4](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.26.5.7z)
+ * download [GDK-PixBuf 2.26.5](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.26.5.7z)
  * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.26.5_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gdk-pixbuf) to this folder
  * open _build\win32\vc10\gdk-pixbuf.sln_, set _install_ as startup project and compile for Win32 or x64
@@ -293,7 +293,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GTK+
- * download [GTK+ 2.24.13](http://dl.hexchat.org/gtk-win32/src/gtk-2.24.15.7z)
+ * download [GTK+ 2.24.15](http://dl.hexchat.org/gtk-win32/src/gtk-2.24.15.7z)
  * extract as _C:\mozilla-build\hexchat\gtk-2.24.15_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gtk) to this folder
  * apply the patch with `patch -p1 -i gtk-pixmap.patch`
