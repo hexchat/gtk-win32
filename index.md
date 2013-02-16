@@ -43,8 +43,8 @@ These are the separate packages for advanced users. These also require the redis
 </tr>
 
 <tr class="even">
-<td class="current">win-iconv</td>
-<td>0.0.6</td>
+<td>win-iconv</td>
+<td class="current">0.0.6</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/win-iconv-0.0.6-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/win-iconv-0.0.6-x64.7z">64 bit</a></td>
 </tr>
