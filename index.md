@@ -222,8 +222,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [libffi 3.0.11](http://dl.hexchat.org/gtk-win32/libffi-3.0.11.7z)
  * extract as _C:\mozilla-build\hexchat\libffi-3.0.11_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libffi) to this folder
- * open VS x86 or x64 command prompt
- * start a shell with _start-msvc10.bat_ or _start-msvc10-x64.bat_
+ * start a shell with _start-msvc10.bat_ or _start-msvc10-x64.bat_ from MozillaBuild
  * in this shell, run _build-x86.bat_ or _build-x64.bat_
  * in a regular command prompt, run _release-x86.bat_ or _release-x64.bat_
 
@@ -254,7 +253,6 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [GLib 2.34.1](http://dl.hexchat.org/gtk-win32/glib-2.34.1.7z)
  * extract as _C:\mozilla-build\hexchat\glib-2.34.0_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/glib) to this folder
- * open VS x86 or x64 command prompt
  * open _build\win32\vc10\glib.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
@@ -277,7 +275,6 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.26.4_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gdk-pixbuf) to this folder
  * open _build\win32\vc10\gdk-pixbuf.sln_, set _install_ as startup project and compile for Win32 or x64
- * run _build-x86.bat_ or _build-x64.bat_
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### cairo
