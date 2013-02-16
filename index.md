@@ -192,14 +192,14 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [FreeType 2.4.11](http://dl.hexchat.org/gtk-win32/src/freetype-2.4.11.7z)
  * extract as _C:\mozilla-build\hexchat\freetype-2.4.11_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/freetype) to this folder
- * open _builds\win32\vc10\freetype.sln_ and compile for Win32 or x64
+ * open _builds\win32\vc11\freetype.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### libxml2
  * download [libxml2 2.9.0](http://dl.hexchat.org/gtk-win32/src/libxml2-2.9.0.7z)
  * extract as _C:\mozilla-build\hexchat\libxml2-2.9.0_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libxml2) to this folder
- * open _win32\VC10\libxml2.sln_ and compile for Win32 or x64
+ * open _win32\vc11\libxml2.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### gettext-runtime
@@ -246,14 +246,14 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * extract as _C:\mozilla-build\hexchat\pixman-0.26.2_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/pixman) to this folder
  * apply the patch with `patch -p1 -i pixman.patch`
- * open _build\win32\vc10\pixman.sln_, set _install_ as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\pixman.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GLib
  * download [GLib 2.34.3](http://dl.hexchat.org/gtk-win32/src/glib-2.34.3.7z)
  * extract as _C:\mozilla-build\hexchat\glib-2.34.3_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/glib) to this folder
- * open _build\win32\vc10\glib.sln_, set _install_ as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\glib.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Enchant
@@ -267,14 +267,14 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [ATK 2.7.5](http://dl.hexchat.org/gtk-win32/src/atk-2.7.5.7z)
  * extract as _C:\mozilla-build\hexchat\atk-2.7.5_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/atk) to this folder
- * open _build\win32\vc10\atk.sln_, set _install_ as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\atk.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GDK-PixBuf
  * download [GDK-PixBuf 2.26.5](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.26.5.7z)
  * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.26.5_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gdk-pixbuf) to this folder
- * open _build\win32\vc10\gdk-pixbuf.sln_, set _install_ as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\gdk-pixbuf.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### cairo
@@ -289,7 +289,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [Pango 1.30.1](http://dl.hexchat.org/gtk-win32/src/pango-1.30.1.7z)
  * extract as _C:\mozilla-build\hexchat\pango-1.30.1_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/pango) to this folder
- * open _build\win32\vc10\pango.sln_, set install as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\pango.sln_, set install as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GTK+
@@ -297,5 +297,5 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * extract as _C:\mozilla-build\hexchat\gtk-2.24.15_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gtk) to this folder
  * apply the patch with `patch -p1 -i gtk-pixmap.patch`
- * open _build\win32\vc10\gtk+.sln_, set install as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\gtk+.sln_, set install as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
