@@ -296,5 +296,6 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [GTK+ 2.24.13](http://dl.hexchat.org/gtk-win32/gtk-2.24.13.7z)
  * extract as _C:\mozilla-build\hexchat\gtk-2.24.13_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gtk) to this folder
+ * apply the patch with `patch -p1 -i gtk-pixmap.patch`
  * open _build\win32\vc10\gtk+.sln_, set install as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
