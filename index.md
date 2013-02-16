@@ -3,9 +3,9 @@ layout: default
 title: main page
 ---
 
----
+- - -
 **This guide is largely based on Chun-wei Fan's [Compiling the GTK+ stack using Visual C++](https://live.gnome.org/GTK%2B/Win32/MSVCCompilationOfGTKStack). Thanks!**
----
+- - -
 
 ## About
 
