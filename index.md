@@ -94,7 +94,7 @@ More importantly, you can also skip the building process and right off just **do
 <td>GLib</td>
 <td>2.34.3</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/glib-2.34.3-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x46/glib-2.34.3-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/glib-2.34.3-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
