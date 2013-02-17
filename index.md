@@ -99,53 +99,53 @@ These are the separate packages for advanced users. These also require the redis
 </tr>
 
 <tr class="even">
+<td>HarfBuzz</td>
+<td class="current">0.9.12</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.12-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.12-x64.7z">64 bit</a></td>
+</tr>
+
+<tr>
 <td>Pixman</td>
 <td class="outdated">0.26.2</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/pixman-0.26.2-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/pixman-0.26.2-x64.7z">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>GLib</td>
 <td class="current">2.34.3</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/glib-2.34.3-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/glib-2.34.3-x64.7z">64 bit</a></td>
 </tr>
 
-<tr class="even">
+<tr>
 <td>Enchant</td>
 <td class="current">1.6.0</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/enchant-1.6.0-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/enchant-1.6.0-x64.7z">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>ATK</td>
 <td class="current">2.7.5</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/atk-2.7.5-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/atk-2.7.5-x64.7z">64 bit</a></td>
 </tr>
 
-<tr class="even">
+<tr>
 <td>GDK-PixBuf</td>
 <td class="current">2.26.5</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gdk-pixbuf-2.26.5-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gdk-pixbuf-2.26.5-x64.7z">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>cairo</td>
 <td class="outdated">1.10.2</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/cairo-1.10.2-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/cairo-1.10.2-x64.7z">64 bit</a></td>
 </tr>
-
-<!--tr class="even">
-<td>HarfBuzz *</td>
-<td>0.9.4</td>
-<td>32 bit</td>
-<td>64 bit</td>
-</tr-->
 
 <tr>
 <td>Pango</td>
@@ -245,6 +245,13 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/fontconfig) to this folder
  * apply the patch with `patch -p1 -i fontconfig.patch`
  * open _fontconfig.sln_, set _build_ as startup project and compile for Win32 or x64 (you might have to press F7 a few times)
+ * run _release-x86.bat_ or _release-x64.bat_
+
+### HarfBuzz
+ * download [HarfBuzz 0.9.12](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.12.7z)
+ * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.12_
+ * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/harfbuzz) to this folder
+ * open _win32\harfbuzz.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Pixman
