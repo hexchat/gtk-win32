@@ -291,11 +291,10 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### cairo
- * download [cairo 1.10.2](http://dl.hexchat.org/gtk-win32/src/cairo-1.10.2.7z)
- * extract as _C:\mozilla-build\hexchat\cairo-1.10.2_
+ * download [cairo 1.12.8](http://dl.hexchat.org/gtk-win32/src/cairo-1.12.8.7z)
+ * extract as _C:\mozilla-build\hexchat\cairo-1.12.8_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/cairo) to this folder
- * apply the patch with `patch -p1 -i cairo.patch`
- * open _cairo.sln_ and compile for Win32 or x64
+ * open _msvc\vc11\cairo.sln_, select the `Release_FC` configuration and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Pango
