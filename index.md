@@ -149,9 +149,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr>
 <td>Pango</td>
-<td class="outdated">1.30.1</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/pango-1.30.1-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/pango-1.30.1-x64.7z">64 bit</a></td>
+<td class="outdated">1.32.5</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/pango-1.32.5-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/pango-1.32.5-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
@@ -299,10 +299,10 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Pango
- * download [Pango 1.30.1](http://dl.hexchat.org/gtk-win32/src/pango-1.30.1.7z)
- * extract as _C:\mozilla-build\hexchat\pango-1.30.1_
+ * download [Pango 1.32.5](http://dl.hexchat.org/gtk-win32/src/pango-1.32.5.7z)
+ * extract as _C:\mozilla-build\hexchat\pango-1.32.5_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/pango) to this folder
- * open _build\win32\vc11\pango.sln_, set install as startup project and compile for Win32 or x64
+ * open _build\win32\vc11\pango_fc.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GTK+
