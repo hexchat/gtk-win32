@@ -11,7 +11,7 @@ You can also skip the building process and right off just **download** and use t
 
 ## GTK+ Visual C++ Builds:
 
-This is the redistributable and a bundle of all the GTK+ stuff. **This is what you'll most likely need**.
+This is the redistributable and a bundle of all the GTK+ stuff. **This is most likely what you need**.
 
 <table>
 
