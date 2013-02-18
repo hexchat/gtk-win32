@@ -142,9 +142,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>cairo</td>
-<td class="outdated">1.10.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/cairo-1.10.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/cairo-1.10.2-x64.7z">64 bit</a></td>
+<td class="outdated">1.12.8</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/cairo-1.12.8-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/cairo-1.12.8-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -294,7 +294,7 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [cairo 1.12.8](http://dl.hexchat.org/gtk-win32/src/cairo-1.12.8.7z)
  * extract as _C:\mozilla-build\hexchat\cairo-1.12.8_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/cairo) to this folder
- * open _msvc\vc11\cairo.sln_, select the `Release_FC` configuration and compile for Win32 or x64
+ * open _msvc\vc11\cairo.sln_, select the _Release\_FC_ configuration and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Pango
