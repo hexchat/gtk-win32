@@ -99,24 +99,24 @@ These are the separate packages for advanced users. These also require the redis
 </tr>
 
 <tr class="even">
-<td>HarfBuzz</td>
-<td class="current">0.9.12</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.12-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.12-x64.7z">64 bit</a></td>
-</tr>
-
-<tr>
 <td>Pixman</td>
 <td class="outdated">0.26.2</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/pixman-0.26.2-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/pixman-0.26.2-x64.7z">64 bit</a></td>
 </tr>
 
-<tr class="even">
+<tr>
 <td>GLib</td>
 <td class="current">2.34.3</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/glib-2.34.3-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/glib-2.34.3-x64.7z">64 bit</a></td>
+</tr>
+
+<tr class="even">
+<td>HarfBuzz</td>
+<td class="current">0.9.12</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.12-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.12-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -247,13 +247,6 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * open _fontconfig.sln_, set _build_ as startup project and compile for Win32 or x64 (you might have to press F7 a few times)
  * run _release-x86.bat_ or _release-x64.bat_
 
-### HarfBuzz
- * download [HarfBuzz 0.9.12](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.12.7z)
- * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.12_
- * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/harfbuzz) to this folder
- * open _win32\harfbuzz.sln_ and compile for Win32 or x64
- * run _release-x86.bat_ or _release-x64.bat_
-
 ### Pixman
  * download [Pixman 0.26.2](http://dl.hexchat.org/gtk-win32/src/pixman-0.26.2.7z)
  * extract as _C:\mozilla-build\hexchat\pixman-0.26.2_
@@ -267,6 +260,13 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * extract as _C:\mozilla-build\hexchat\glib-2.34.3_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/glib) to this folder
  * open _build\win32\vc11\glib.sln_, set _install_ as startup project and compile for Win32 or x64
+ * run _release-x86.bat_ or _release-x64.bat_
+
+### HarfBuzz
+ * download [HarfBuzz 0.9.12](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.12.7z)
+ * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.12_
+ * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/harfbuzz) to this folder
+ * open _win32\harfbuzz.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Enchant
