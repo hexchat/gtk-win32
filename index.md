@@ -135,9 +135,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr>
 <td>GDK-PixBuf</td>
-<td class="current">2.26.5</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gdk-pixbuf-2.26.5-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gdk-pixbuf-2.26.5-x64.7z">64 bit</a></td>
+<td class="current">2.27.2</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gdk-pixbuf-2.27.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gdk-pixbuf-2.27.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
@@ -285,8 +285,8 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GDK-PixBuf
- * download [GDK-PixBuf 2.26.5](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.26.5.7z)
- * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.26.5_
+ * download [GDK-PixBuf 2.27.2](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.27.2.7z)
+ * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.27.2_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gdk-pixbuf) to this folder
  * open _build\win32\vc11\gdk-pixbuf.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
