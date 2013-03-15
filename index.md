@@ -57,31 +57,31 @@ These are the separate packages for advanced users. These also require the redis
 </tr>
 
 <tr class="even">
+<td>libffi</td>
+<td class="current">3.0.11</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.11-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.11-x64.7z">64 bit</a></td>
+</tr>
+
+<tr>
 <td>libxml2</td>
 <td class="current">2.9.0</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libxml2-2.9.0-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libxml2-2.9.0-x64.7z">64 bit</a></td>
 </tr>
 
-<tr>
+<tr class="even">
 <td>gettext-runtime</td>
 <td class="current">0.18</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gettext-runtime-0.18-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gettext-runtime-0.18-x64.7z">64 bit</a></td>
 </tr>
 
-<tr class="even">
+<tr>
 <td>OpenSSL</td>
 <td class="current">1.0.1e</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/openssl-1.0.1e-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/openssl-1.0.1e-x64.7z">64 bit</a></td>
-</tr>
-
-<tr>
-<td>libffi</td>
-<td class="current">3.0.11</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.11-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.11-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
@@ -201,6 +201,14 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * open _builds\win32\vc11\freetype.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
+### libffi
+ * download [libffi 3.0.12](http://dl.hexchat.org/gtk-win32/src/libffi-3.0.12.7z)
+ * extract as _C:\mozilla-build\hexchat\libffi-3.0.12_
+ * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libffi) to this folder
+ * start a shell with _start-msvc10.bat_ or _start-msvc10-x64.bat_ from MozillaBuild
+ * in this shell, run _build-x86.bat_ or _build-x64.bat_
+ * in a regular command prompt, run _release-x86.bat_ or _release-x64.bat_
+
 ### libxml2
  * download [libxml2 2.9.0](http://dl.hexchat.org/gtk-win32/src/libxml2-2.9.0.7z)
  * extract as _C:\mozilla-build\hexchat\libxml2-2.9.0_
@@ -223,14 +231,6 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/openssl) to this folder
  * open VS x86 or x64 command prompt
  * run _build-x86.bat_ or _build-x64.bat_
-
-### libffi
- * download [libffi 3.0.11](http://dl.hexchat.org/gtk-win32/src/libffi-3.0.11.7z)
- * extract as _C:\mozilla-build\hexchat\libffi-3.0.11_
- * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libffi) to this folder
- * start a shell with _start-msvc10.bat_ or _start-msvc10-x64.bat_ from MozillaBuild
- * in this shell, run _build-x86.bat_ or _build-x64.bat_
- * in a regular command prompt, run _release-x86.bat_ or _release-x64.bat_
 
 ### libpng
  * download [libpng 1.5.14](http://dl.hexchat.org/gtk-win32/src/libpng-1.5.14.7z)
