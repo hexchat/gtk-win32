@@ -58,9 +58,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>libffi</td>
-<td class="current">3.0.11</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.11-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.11-x64.7z">64 bit</a></td>
+<td class="current">3.0.12</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.12-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.12-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
