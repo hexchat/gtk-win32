@@ -114,9 +114,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>HarfBuzz</td>
-<td class="current">0.9.12</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.12-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.12-x64.7z">64 bit</a></td>
+<td class="current">0.9.13</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.13-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.13-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
