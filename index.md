@@ -24,7 +24,7 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
 
 <tr class="even">
 <td>GTK+ bundle</td>
-<td>2.24.15</td>
+<td>2.24.17</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gtk-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gtk-x64.7z">64 bit</a></td>
 </tr>
