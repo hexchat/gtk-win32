@@ -176,7 +176,8 @@ If this graph wasn't enough to frighten you off and you still think you want to 
  * [MozillaBuild](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
  * Perl 5.16 [x86](http://dl.hexchat.org/misc/perl-5.16.2-x86.7z) or [x64](http://dl.hexchat.org/misc/perl-5.16.2-x64.7z) (extract to _C:\mozilla-build\perl-5.16\Win32_ or _C:\mozilla-build\perl-5.16\x64_)
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
- * [msgfmt](http://dl.hexchat.org/misc/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
+ * [msgfmt](http://dl.hexchat.org/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
+ * [Ragel](http://dl.hexchat.org/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
 
 As you can see, these libraries have a quite complex dependency order, so it's really recommended to build them in the order they're explained here, otherwise you'll probably encounter quite a few problems (you'll most likely encounter too many problems already, at least initially). After you built something, always extract the resulting package to _C:\mozilla-build\hexchat\build\Win32_ or _C:\mozilla-build\hexchat\build\x64_. When in Visual Studio, always select the _Release_ configurations, others most likely won't work.
 
