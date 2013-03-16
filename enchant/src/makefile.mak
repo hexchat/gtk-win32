@@ -111,7 +111,7 @@ WARN_CFLAGS = -W1
 OPTIMFLAGS = -Od
 !else
 # Some people prefer -O2 -G6 instead of -O1, but -O2 is not reliable in MSVC5.
-OPTIMFLAGS = -DNDEBUG -D_NDEBUG -Ox -MP2
+OPTIMFLAGS = -DNDEBUG -D_NDEBUG -Od -MP
 !endif
 
 OUTPUTFLAGS = \
