@@ -1,0 +1,11 @@
+diff -ruN --strip-trailing-cr win-iconv-0.0.6.orig/CMakeLists.txt win-iconv-0.0.6/CMakeLists.txt
+--- win-iconv-0.0.6.orig/CMakeLists.txt	2013-03-16 05:14:00 +0100
++++ win-iconv-0.0.6/CMakeLists.txt	2013-03-16 05:30:57 +0100
+@@ -23,6 +23,7 @@
+ 
+ if(MSVC)
+     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
++    set(CMAKE_C_FLAGS_RELEASE  "-Od")
+ endif(MSVC)
+ 
+ if(NOT WINCE)
