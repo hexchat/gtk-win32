@@ -1,6 +1,17 @@
+diff -ruN --strip-trailing-cr gettext-runtime-0.18.orig/CMakeLists.txt gettext-runtime-0.18/CMakeLists.txt
+--- gettext-runtime-0.18.orig/CMakeLists.txt	2013-03-16 05:31:57 +0100
++++ gettext-runtime-0.18/CMakeLists.txt	2013-03-16 05:35:41 +0100
+@@ -33,6 +33,7 @@
+ 
+ if(MSVC)
+     add_definitions(-wd4996 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS)
++    set(CMAKE_C_FLAGS_RELEASE  "-Od")
+ endif(MSVC)
+ 
+ add_subdirectory(gettext-runtime)
 diff -ruN --strip-trailing-cr gettext-runtime-0.18.orig/gettext-runtime/intl/intl.def gettext-runtime-0.18/gettext-runtime/intl/intl.def
---- gettext-runtime-0.18.orig/gettext-runtime/intl/intl.def	2012-09-28 21:56:54 +0200
-+++ gettext-runtime-0.18/gettext-runtime/intl/intl.def	2012-09-28 21:56:44 +0200
+--- gettext-runtime-0.18.orig/gettext-runtime/intl/intl.def	2013-03-16 04:57:04 +0100
++++ gettext-runtime-0.18/gettext-runtime/intl/intl.def	2013-03-16 05:36:15 +0100
 @@ -1,4 +1,3 @@
 -LIBRARY libintl.DLL
  EXPORTS
