@@ -264,8 +264,8 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### HarfBuzz
- * download [HarfBuzz 0.9.12](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.12.7z)
- * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.12_
+ * download [HarfBuzz 0.9.13](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.13.7z)
+ * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.13_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/harfbuzz) to this folder
  * open _win32\harfbuzz.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
