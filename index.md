@@ -178,6 +178,7 @@ If this graph wasn't enough to frighten you off and you still think you want to 
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
  * [msgfmt](http://dl.hexchat.org/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
  * [Ragel](http://dl.hexchat.org/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
+ * [Visual C++ Redistributable for Visual Studio 2012 Update 1 x86](http://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU1/vcredist_x86.exe)
 
 As you can see, these libraries have a quite complex dependency order, so it's really recommended to build them in the order they're explained here, otherwise you'll probably encounter quite a few problems (you'll most likely encounter too many problems already, at least initially). After you built something, always extract the resulting package to _C:\mozilla-build\hexchat\build\Win32_ or _C:\mozilla-build\hexchat\build\x64_. When in Visual Studio, always select the _Release_ configurations, others most likely won't work.
 
