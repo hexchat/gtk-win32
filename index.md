@@ -58,9 +58,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>libffi</td>
-<td class="current">3.0.12</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.12-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.12-x64.7z">64 bit</a></td>
+<td class="current">3.0.13</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libffi-3.0.13-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libffi-3.0.13-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -107,16 +107,16 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr>
 <td>GLib</td>
-<td class="current">2.34.3</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/glib-2.34.3-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/glib-2.34.3-x64.7z">64 bit</a></td>
+<td class="current">2.36.0</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/glib-2.36.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/glib-2.36.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>HarfBuzz</td>
-<td class="current">0.9.13</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.13-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.13-x64.7z">64 bit</a></td>
+<td class="current">0.9.14</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/harfbuzz-0.9.14-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/harfbuzz-0.9.14-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -128,16 +128,16 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>ATK</td>
-<td class="current">2.7.91</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/atk-2.7.91-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/atk-2.7.91-x64.7z">64 bit</a></td>
+<td class="current">2.8.0</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/atk-2.8.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/atk-2.8.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GDK-PixBuf</td>
-<td class="current">2.27.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gdk-pixbuf-2.27.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gdk-pixbuf-2.27.2-x64.7z">64 bit</a></td>
+<td class="current">2.28.0</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/gdk-pixbuf-2.28.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/gdk-pixbuf-2.28.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
@@ -203,8 +203,8 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### libffi
- * download [libffi 3.0.12](http://dl.hexchat.org/gtk-win32/src/libffi-3.0.12.7z)
- * extract as _C:\mozilla-build\hexchat\libffi-3.0.12_
+ * download [libffi 3.0.13](http://dl.hexchat.org/gtk-win32/src/libffi-3.0.13.7z)
+ * extract as _C:\mozilla-build\hexchat\libffi-3.0.13_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libffi) to this folder
  * start a shell with _start-msvc10.bat_ or _start-msvc10-x64.bat_ from MozillaBuild
  * in this shell, run _build-x86.bat_ or _build-x64.bat_
@@ -256,15 +256,15 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GLib
- * download [GLib 2.34.3](http://dl.hexchat.org/gtk-win32/src/glib-2.34.3.7z)
- * extract as _C:\mozilla-build\hexchat\glib-2.34.3_
+ * download [GLib 2.36.0](http://dl.hexchat.org/gtk-win32/src/glib-2.36.0.7z)
+ * extract as _C:\mozilla-build\hexchat\glib-2.36.0_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/glib) to this folder
  * open _build\win32\vc11\glib.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### HarfBuzz
- * download [HarfBuzz 0.9.13](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.13.7z)
- * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.13_
+ * download [HarfBuzz 0.9.14](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.14.7z)
+ * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.14_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/harfbuzz) to this folder
  * open _win32\harfbuzz.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
@@ -277,15 +277,15 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _build-x86.bat_ or _build-x64.bat_
 
 ### ATK
- * download [ATK 2.7.91](http://dl.hexchat.org/gtk-win32/src/atk-2.7.91.7z)
- * extract as _C:\mozilla-build\hexchat\atk-2.7.91_
+ * download [ATK 2.8.0](http://dl.hexchat.org/gtk-win32/src/atk-2.8.0.7z)
+ * extract as _C:\mozilla-build\hexchat\atk-2.8.0_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/atk) to this folder
  * open _build\win32\vc11\atk.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### GDK-PixBuf
- * download [GDK-PixBuf 2.27.2](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.27.2.7z)
- * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.27.2_
+ * download [GDK-PixBuf 2.28.0](http://dl.hexchat.org/gtk-win32/src/gdk-pixbuf-2.28.0.7z)
+ * extract as _C:\mozilla-build\hexchat\gdk-pixbuf-2.28.0_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gdk-pixbuf) to this folder
  * open _build\win32\vc11\gdk-pixbuf.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
@@ -309,6 +309,6 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * download [GTK+ 2.24.17](http://dl.hexchat.org/gtk-win32/src/gtk-2.24.17.7z)
  * extract as _C:\mozilla-build\hexchat\gtk-2.24.17_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/gtk) to this folder
- * apply the patch with `patch -p1 -i gtk.patch`
+ * apply the patch with `patch -p1 -i gtk-bgimg.patch` and `patch -p1 -i gtk-pixmap.patch`
  * open _build\win32\vc11\gtk+.sln_, set install as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
