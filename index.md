@@ -100,9 +100,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>Pixman</td>
-<td class="outdated">0.26.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/pixman-0.26.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/pixman-0.26.2-x64.7z">64 bit</a></td>
+<td class="current">0.28.2</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/pixman-0.28.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/pixman-0.28.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -249,10 +249,9 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Pixman
- * download [Pixman 0.26.2](http://dl.hexchat.org/gtk-win32/src/pixman-0.26.2.7z)
- * extract as _C:\mozilla-build\hexchat\pixman-0.26.2_
+ * download [Pixman 0.28.2](http://dl.hexchat.org/gtk-win32/src/pixman-0.28.2.7z)
+ * extract as _C:\mozilla-build\hexchat\pixman-0.28.2_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/pixman) to this folder
- * apply the patch with `patch -p1 -i pixman.patch`
  * open _build\win32\vc11\pixman.sln_, set _install_ as startup project and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
