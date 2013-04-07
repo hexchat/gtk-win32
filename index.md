@@ -114,9 +114,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>HarfBuzz</td>
-<td class="outdated">0.9.14</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/harfbuzz-0.9.14-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/harfbuzz-0.9.14-x64.7z">64 bit</a></td>
+<td class="current">0.9.15</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/harfbuzz-0.9.15-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/harfbuzz-0.9.15-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -263,8 +263,8 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### HarfBuzz
- * download [HarfBuzz 0.9.14](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.14.7z)
- * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.14_
+ * download [HarfBuzz 0.9.15](http://dl.hexchat.org/gtk-win32/src/harfbuzz-0.9.15.7z)
+ * extract as _C:\mozilla-build\hexchat\harfbuzz-0.9.15_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/harfbuzz) to this folder
  * open _win32\harfbuzz.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
