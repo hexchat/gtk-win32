@@ -86,9 +86,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>libpng</td>
-<td class="outdated">1.5.14</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libpng-1.5.14-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libpng-1.5.14-x64.7z">64 bit</a></td>
+<td class="current">1.6.1</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x86/libpng-1.6.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc10/x64/libpng-1.6.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
@@ -234,10 +234,10 @@ As you can see, these libraries have a quite complex dependency order, so it's r
  * run _build-x86.bat_ or _build-x64.bat_
 
 ### libpng
- * download [libpng 1.5.14](http://dl.hexchat.org/gtk-win32/src/libpng-1.5.14.7z)
- * extract as _C:\mozilla-build\hexchat\libpng-1.5.14_
+ * download [libpng 1.6.1](http://dl.hexchat.org/gtk-win32/src/libpng-1.6.1.7z)
+ * extract as _C:\mozilla-build\hexchat\libpng-1.6.1_
  * copy the [HexChat fixes](https://github.com/hexchat/gtk-win32/tree/master/libpng) to this folder
- * open _projects\vstudio\vstudio.sln_ and compile for Win32 or x64
+ * open _projects\vc11\vstudio.sln_ and compile for Win32 or x64
  * run _release-x86.bat_ or _release-x64.bat_
 
 ### Fontconfig
