@@ -7,7 +7,7 @@ title: main page
 
 This page is intended to guide you through the process of building the whole GTK+ stack (and some additional libraries required by HexChat) on Windows using Visual C++ a.k.a. MSVC, version 11 that comes with Visual Studio 2012. It is largely based on Chun-wei Fan's [Compiling the GTK+ stack using Visual C++](https://live.gnome.org/GTK%2B/Win32/MSVCCompilationOfGTKStack). Thanks!
 
-You can also skip the building process and right off just **download** and use the Visual C++ builds of GTK+ so that you don't have to <del>waste</del>spend weeks (months?) on getting it to work like I had. So without further ado:
+You can also skip the building process and right off just **download** and use the Visual C++ builds of GTK+ so that you don't have to <del>waste</del>spend weeks (months?) on getting it to work like we had. So without further ado:
 
 ## GTK+ Visual C++ Builds:
 
@@ -171,7 +171,7 @@ If you feel brave enough to build these on your own, bear in mind, GTK+ on Windo
 
 If this graph wasn't enough to frighten you off and you still think you want to do this, you'll need to install:
 
- * [Visual Studio 2012 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/downloads#d-express-windows-desktop)
+ * [Visual Studio 2012 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/downloads#d-express-windows-desktop) + [Visual Studio 2012 Update 2](http://www.microsoft.com/en-us/download/details.aspx?id=38188)
  * [CMake 2.8](http://www.cmake.org/cmake/resources/software.html)
  * [MozillaBuild](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
  * Perl 5.18 [x86](http://dl.hexchat.org/misc/perl/perl-5.17.10-x86.7z) or [x64](http://dl.hexchat.org/misc/perl/perl-5.17.10-x64.7z) (extract to _C:\mozilla-build\perl-5.18\Win32_ or _C:\mozilla-build\perl-5.18\x64_)
