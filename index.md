@@ -190,7 +190,7 @@ Now you gotta allow PowerShell scripts to be ran on your system. Open a PowerShe
 
 <pre>Set-ExecutionPolicy RemoteSigned</pre>
 
-Once done, close this elevated shell, and run PowerShell as a regular user. Go to the `gtk-win32` repo root and start building with the script:
+Once done, close this elevated shell, and run PowerShell as a regular user. Go to the _gtk-win32_ repo root and start building with the script:
 
 <pre>cd c:\mozilla-build\hexchat\github\gtk-win32
 .\hexchat-build.ps1</pre>
