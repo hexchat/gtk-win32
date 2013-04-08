@@ -165,7 +165,7 @@ These are the separate packages for advanced users. These also require the redis
 
 ## Building from Source
 
-Building GTK+ and its dependencies on Windows has never been easier. We have a PowerShell which does most of the work for you, so you just have to wait until it finishes. But first of all, here's the dependency graph of the GTK+ stack.
+Building GTK+ and its dependencies on Windows has never been easier. We have a PowerShell script which does most of the work for you, so you just have to wait until it finishes. But first of all, here's the dependency graph of the GTK+ stack.
 
 <img src="images/dependency-graph.png" alt="gtk dependency graph" />
 
@@ -181,10 +181,10 @@ To compile all this yourself, you need to install:
 
 When you're done installing these, you also have to clone 2 repos from GitHub.
 
- * [GTK-Win32](https://github.com/hexchat/gtk-win32) to `c:\mozilla-build\hexchat\github\gtk-win32`
- * [HexChat](https://github.com/hexchat/hexchat) to `c:\mozilla-build\hexchat\github\hexchat`
+ * [GTK-Win32](https://github.com/hexchat/gtk-win32) to _c:\mozilla-build\hexchat\github\gtk-win32_
+ * [HexChat](https://github.com/hexchat/hexchat) to _c:\mozilla-build\hexchat\github\hexchat_
 
-If you want to use other paths, that's fine but then make sure you update the related properties in `gtk-win32\hexchat-build.ps1` and `hexchat\win32\hexchat.props`.
+If you want to use other paths, that's fine but then make sure you update the related properties in _gtk-win32\hexchat-build.ps1_ and _hexchat\win32\hexchat.props_.
 
 Now you gotta allow PowerShell scripts to be ran on your system. Open a PowerShell prompt *as Administrator* and run the following command:
 
@@ -195,4 +195,4 @@ Once done, close this elevated shell, and run PowerShell as a regular user. Go t
 <pre>cd c:\mozilla-build\hexchat\github\gtk-win32
 .\hexchat-build.ps1</pre>
 
-Once ready, your GTK+ stack will be found under `c:\mozilla-build\hexchat\gtk` and your HexChat installer under `c:\mozilla-build\hexchat\github\hexchat-build`. Enjoy!
+Once ready, your GTK+ stack will be found under _c:\mozilla-build\hexchat\gtk_ and your HexChat installer under _c:\mozilla-build\hexchat\github\hexchat-build_. Enjoy!
