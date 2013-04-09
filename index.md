@@ -178,6 +178,7 @@ To compile all this yourself, you need to install:
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
  * [msgfmt](http://dl.hexchat.org/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
  * [Ragel](http://dl.hexchat.org/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
+ * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the 7z.exe bundled with mozilla-build)
 
 When you're done installing these, you also have to clone 2 repos from GitHub.
 
