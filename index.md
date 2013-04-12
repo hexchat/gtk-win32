@@ -5,7 +5,7 @@ title: main page
 
 ## About
 
-This page is intended to guide you through the process of building the whole GTK+ stack (and some additional libraries required by HexChat) on Windows using Visual C++ a.k.a. MSVC, version 11 that comes with Visual Studio 2012. It is largely based on Chun-wei Fan's [Compiling the GTK+ stack using Visual C++](https://live.gnome.org/GTK%2B/Win32/MSVCCompilationOfGTKStack). Thanks!
+This page is intended to guide you through the process of building the whole GTK+ stack (and a few additional libraries required by HexChat) on Windows using Visual C++ a.k.a. MSVC, version 11 that comes with Visual Studio 2012. It is largely based on Chun-wei Fan's [Compiling the GTK+ stack using Visual C++](https://live.gnome.org/GTK%2B/Win32/MSVCCompilationOfGTKStack). Thanks!
 
 You can also skip the building process and right off just **download** and use the Visual C++ builds of GTK+ so that you don't have to spend **a lot** of time on getting it to work like we had. So without further ado:
 
@@ -180,13 +180,9 @@ To compile all this yourself, you need to install:
  * [Ragel](http://dl.hexchat.org/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
  * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
 
-When you're done installing these, you also have to clone 2 repos from GitHub.
+When you're done installing these, you also have to clone the [GTK-Win32](https://github.com/hexchat/gtk-win32) repo to _c:\mozilla-build\hexchat\github\gtk-win32_.
 
- * [GTK-Win32](https://github.com/hexchat/gtk-win32) to _c:\mozilla-build\hexchat\github\gtk-win32_
- * [HexChat](https://github.com/hexchat/hexchat) to _c:\mozilla-build\hexchat\github\hexchat_
-
-You can use other paths, but then make sure you update the related properties in _hexchat\win32\hexchat.props_ and feed _gtk-win32\build.ps1_
-with the correct parameters (open the script with an editor for examples).
+You can use other paths, but then make sure to feed _gtk-win32\build.ps1_ with the correct parameters (open the script with an editor for examples).
 
 Now you have to allow PowerShell scripts to be ran on your system. Open a PowerShell prompt *as Administrator* and run the following command:
 
@@ -198,5 +194,4 @@ The example below will perform a default build for x86:
 <pre>cd c:\mozilla-build\hexchat\github\gtk-win32
 .\build.ps1 -Configuration x86</pre>
 
-Once ready, your GTK+ stack will be found under _c:\mozilla-build\hexchat\gtk_ and your HexChat installer under
-_c:\mozilla-build\hexchat\github\hexchat-build_. Enjoy!
+Once ready, your GTK+ stack will be found under _c:\mozilla-build\hexchat\gtk_. Enjoy!
