@@ -142,9 +142,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>cairo</td>
-<td class="outdated">1.12.8</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/cairo-1.12.8-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/cairo-1.12.8-x64.7z">64 bit</a></td>
+<td class="current">1.12.14</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/cairo-1.12.14-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/cairo-1.12.14-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
