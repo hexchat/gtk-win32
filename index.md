@@ -185,7 +185,7 @@ When you're done installing these, you also have to clone 2 repos from GitHub.
  * [GTK-Win32](https://github.com/hexchat/gtk-win32) to _c:\mozilla-build\hexchat\github\gtk-win32_
  * [HexChat](https://github.com/hexchat/hexchat) to _c:\mozilla-build\hexchat\github\hexchat_
 
-You can use other paths, but then make sure you update the related properties in _gtk-win32\hexchat-build.ps1_ and _hexchat\win32\hexchat.props_.
+You can use other paths, but then make sure you update the related properties in _gtk-win32\build.ps1_ and _hexchat\win32\hexchat.props_.
 
 Now you have to allow PowerShell scripts to be ran on your system. Open a PowerShell prompt *as Administrator* and run the following command:
 
@@ -194,7 +194,7 @@ Now you have to allow PowerShell scripts to be ran on your system. Open a PowerS
 Once done, close this elevated shell, and run PowerShell as a regular user. Go to the _gtk-win32_ repo root and start building with the script:
 
 <pre>cd c:\mozilla-build\hexchat\github\gtk-win32
-.\hexchat-build.ps1 -Architecture x86</pre>
+.\build.ps1 -Configuration x86</pre>
 
-There are many more options, open _hexchat-build.ps1_ with an editor for more info. Once ready, your GTK+ stack will be found under
+There are many more options, open _build.ps1_ with an editor for more info. Once ready, your GTK+ stack will be found under
 _c:\mozilla-build\hexchat\gtk_ and your HexChat installer under _c:\mozilla-build\hexchat\github\hexchat-build_. Enjoy!
