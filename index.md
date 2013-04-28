@@ -86,7 +86,7 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>libpng</td>
-<td class="current">1.6.1</td>
+<td class="outdated">1.6.1</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libpng-1.6.1-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libpng-1.6.1-x64.7z">64 bit</a></td>
 </tr>
@@ -107,14 +107,14 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr>
 <td>GLib</td>
-<td class="current">2.36.0</td>
+<td class="outdated">2.36.0</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/glib-2.36.0-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/glib-2.36.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>HarfBuzz</td>
-<td class="current">0.9.15</td>
+<td class="outdated">0.9.15</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/harfbuzz-0.9.15-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/harfbuzz-0.9.15-x64.7z">64 bit</a></td>
 </tr>
@@ -135,7 +135,7 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr>
 <td>GDK-PixBuf</td>
-<td class="current">2.28.0</td>
+<td class="outdated">2.28.0</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/gdk-pixbuf-2.28.0-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/gdk-pixbuf-2.28.0-x64.7z">64 bit</a></td>
 </tr>
