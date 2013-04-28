@@ -107,9 +107,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr>
 <td>GLib</td>
-<td class="outdated">2.36.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/glib-2.36.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/glib-2.36.0-x64.7z">64 bit</a></td>
+<td class="outdated">2.36.1</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/glib-2.36.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/glib-2.36.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
