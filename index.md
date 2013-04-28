@@ -86,9 +86,9 @@ These are the separate packages for advanced users. These also require the redis
 
 <tr class="even">
 <td>libpng</td>
-<td class="outdated">1.6.1</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libpng-1.6.1-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libpng-1.6.1-x64.7z">64 bit</a></td>
+<td class="current">1.6.2</td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libpng-1.6.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libpng-1.6.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
