@@ -270,7 +270,7 @@ td.current, span.current {
 	color: #0b0;
 }
 
-td.outdated, span.current {
+td.outdated, span.outdated {
 	color: #b00;
 }
 
