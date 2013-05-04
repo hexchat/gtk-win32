@@ -34,7 +34,7 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
 These are the separate packages for advanced users. These also require the redistributable to be installed.
 
 Current packages are marked in <span class="current">green</span>, outdated packages are marked in <span class="outdated">red</span>.
-In case you find a newer release of a package marked as current, [let us know](https://github.com/hexchat/gtk-win32/issues/new)!
+In case you find a newer release of a package marked as current, [let us know](https://github.com/hexchat/gtk-win32/issues/new?labels=bump)!
 
 <table>
 
