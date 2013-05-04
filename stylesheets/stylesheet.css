@@ -266,11 +266,11 @@ tr.even {
 	background: #dedede;
 }
 
-td.current {
+td.current, span.current {
 	color: #0b0;
 }
 
-td.outdated {
+td.outdated, span.current {
 	color: #b00;
 }
 
