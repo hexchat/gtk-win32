@@ -54,7 +54,7 @@ In case you find a newer release of a package marked as current, [let us know](h
 
 <tr>
 <td>FreeType</td>
-<td class="current">2.4.11</td>
+<td class="outdated">2.4.11</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/freetype-2.4.11-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/freetype-2.4.11-x64.7z">64 bit</a></td>
 </tr>
@@ -68,7 +68,7 @@ In case you find a newer release of a package marked as current, [let us know](h
 
 <tr>
 <td>libxml2</td>
-<td class="current">2.9.0</td>
+<td class="outdated">2.9.0</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libxml2-2.9.0-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libxml2-2.9.0-x64.7z">64 bit</a></td>
 </tr>
@@ -103,14 +103,14 @@ In case you find a newer release of a package marked as current, [let us know](h
 
 <tr class="even">
 <td>Pixman</td>
-<td class="current">0.28.2</td>
+<td class="outdated">0.28.2</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/pixman-0.28.2-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/pixman-0.28.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GLib</td>
-<td class="current">2.36.1</td>
+<td class="outdated">2.36.1</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/glib-2.36.1-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/glib-2.36.1-x64.7z">64 bit</a></td>
 </tr>
@@ -159,7 +159,7 @@ In case you find a newer release of a package marked as current, [let us know](h
 
 <tr class="even">
 <td>GTK+</td>
-<td class="current">2.24.17</td>
+<td class="outdated">2.24.17</td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/gtk-2.24.17-x86.7z">32 bit</a></td>
 <td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/gtk-2.24.17-x64.7z">64 bit</a></td>
 </tr>
