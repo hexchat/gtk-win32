@@ -25,8 +25,8 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
 <tr class="even">
 <td>GTK+ bundle</td>
 <td>2.24.17</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/gtk-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/gtk-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/gtk-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/gtk-x64.7z">64 bit</a></td>
 </tr>
 
 </table>
@@ -41,127 +41,127 @@ In case you find a newer release of a package marked as current, [let us know](h
 <tr>
 <td>zlib</td>
 <td class="current">1.2.8</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/zlib-1.2.8-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/zlib-1.2.8-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/zlib-1.2.8-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/zlib-1.2.8-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>win-iconv</td>
 <td class="current">0.0.6</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/win-iconv-0.0.6-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/win-iconv-0.0.6-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/win-iconv-0.0.6-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/win-iconv-0.0.6-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>FreeType</td>
 <td class="current">2.4.12</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/freetype-2.4.12-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/freetype-2.4.12-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/freetype-2.4.12-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/freetype-2.4.12-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>libffi</td>
 <td class="current">3.0.13</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libffi-3.0.13-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libffi-3.0.13-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/libffi-3.0.13-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/libffi-3.0.13-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>libxml2</td>
 <td class="current">2.9.1</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libxml2-2.9.1-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libxml2-2.9.1-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/libxml2-2.9.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/libxml2-2.9.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>gettext-runtime</td>
 <td class="current">0.18</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/gettext-runtime-0.18-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/gettext-runtime-0.18-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/gettext-runtime-0.18-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/gettext-runtime-0.18-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>OpenSSL</td>
 <td class="current">1.0.1e</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/openssl-1.0.1e-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/openssl-1.0.1e-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/openssl-1.0.1e-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/openssl-1.0.1e-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>libpng</td>
 <td class="current">1.6.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/libpng-1.6.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/libpng-1.6.2-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/libpng-1.6.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/libpng-1.6.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Fontconfig</td>
 <td class="outdated">2.8.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/fontconfig-2.8.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/fontconfig-2.8.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/fontconfig-2.8.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/fontconfig-2.8.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>Pixman</td>
 <td class="current">0.30.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/pixman-0.30.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/pixman-0.30.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/pixman-0.30.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/pixman-0.30.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GLib</td>
 <td class="current">2.36.2</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/glib-2.36.2-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/glib-2.36.2-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/glib-2.36.2-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/glib-2.36.2-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>HarfBuzz</td>
 <td class="current">0.9.16</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/harfbuzz-0.9.16-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/harfbuzz-0.9.16-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/harfbuzz-0.9.16-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/harfbuzz-0.9.16-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Enchant</td>
 <td class="current">1.6.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/enchant-1.6.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/enchant-1.6.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/enchant-1.6.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/enchant-1.6.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>ATK</td>
 <td class="current">2.8.0</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/atk-2.8.0-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/atk-2.8.0-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/atk-2.8.0-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/atk-2.8.0-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>GDK-PixBuf</td>
 <td class="current">2.28.1</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/gdk-pixbuf-2.28.1-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/gdk-pixbuf-2.28.1-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/gdk-pixbuf-2.28.1-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/gdk-pixbuf-2.28.1-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>cairo</td>
 <td class="current">1.12.14</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/cairo-1.12.14-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/cairo-1.12.14-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/cairo-1.12.14-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/cairo-1.12.14-x64.7z">64 bit</a></td>
 </tr>
 
 <tr>
 <td>Pango</td>
 <td class="outdated">1.32.5</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/pango-1.32.5-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/pango-1.32.5-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/pango-1.32.5-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/pango-1.32.5-x64.7z">64 bit</a></td>
 </tr>
 
 <tr class="even">
 <td>GTK+</td>
 <td class="current">2.24.18</td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x86/gtk-2.24.18-x86.7z">32 bit</a></td>
-<td><a href="http://dl.hexchat.org/gtk-win32/vc11/x64/gtk-2.24.18-x64.7z">64 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x86/gtk-2.24.18-x86.7z">32 bit</a></td>
+<td><a href="http://dl.hexchat.net/gtk-win32/vc11/x64/gtk-2.24.18-x64.7z">64 bit</a></td>
 </tr>
 
 </table>
@@ -177,10 +177,10 @@ To compile all this yourself, you need to install:
  * [Visual Studio 2012 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/downloads#d-express-windows-desktop) + [Visual Studio 2012 Update 2](http://www.microsoft.com/en-us/download/details.aspx?id=38188)
  * [CMake 2.8](http://www.cmake.org/cmake/resources/software.html)
  * [MozillaBuild](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
- * Perl 5.18 [x86](http://dl.hexchat.org/misc/perl/perl-5.17.10-x86.7z) or [x64](http://dl.hexchat.org/misc/perl/perl-5.17.10-x64.7z) (extract to _C:\mozilla-build\perl-5.18\Win32_ or _C:\mozilla-build\perl-5.18\x64_)
+ * Perl 5.18 [x86](http://dl.hexchat.net/misc/perl/perl-5.17.10-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.17.10-x64.7z) (extract to _C:\mozilla-build\perl-5.18\Win32_ or _C:\mozilla-build\perl-5.18\x64_)
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
- * [msgfmt](http://dl.hexchat.org/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
- * [Ragel](http://dl.hexchat.org/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
+ * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
+ * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
  * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
 
 When you're done installing these, you also have to clone the [GTK-Win32](https://github.com/hexchat/gtk-win32) repo to _c:\mozilla-build\hexchat\github\gtk-win32_.
