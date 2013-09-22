@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkaccessibility.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkaccessibilitymisc.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkaccessibilityutil.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkarrowaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkbooleancellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkbuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcellaccessibleparent.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcheckmenuitemaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcolorswatchaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcomboboxaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcontaineraccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkcontainercellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkentryaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkexpanderaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkframeaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkiconviewaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkimageaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkimagecellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtklabelaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtklevelbaraccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtklinkbuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtklockbuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkmenuaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkmenushellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkmenuitemaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtknotebookaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtknotebookpageaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkpanedaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkprogressbaraccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkradiobuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkradiomenuitemaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkrangeaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkrenderercellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkscaleaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkscalebuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkscrolledwindowaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkspinbuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkspinneraccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkstatusbaraccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkswitchaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtktextcellaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtktextviewaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtktogglebuttonaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtktoplevelaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtktreeviewaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkwidgetaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtk\a11y\gtkwindowaccessible.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+--- gtk+-3.8.4/gdk/fallback-c89.c.orig	2013-07-04 08:41:01 -0400
++++ gtk+-3.8.4/gdk/fallback-c89.c	2013-09-22 18:18:07 -0400
+@@ -17,6 +17,8 @@
+  * License along with this library. If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#if (_MSC_VER < 1800) /* VS 2013 is C99 compliant */
++
+ #include <float.h>
+ 
+ #ifndef HAVE_DECL_ISNAN
+@@ -54,3 +56,5 @@
+     return ceil (x - 0.5);
+ }
+ #endif
++
++#endif
