@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="UserMacros">
-    <VSVer>12</VSVer>
-    <GlibEtcInstallRoot>..\..\..\..\vs$(VSVer)\$(Platform)</GlibEtcInstallRoot>
-    <GlibEtcInstallRootFromBuildWin32>..\..\..\vs$(VSVer)\$(Platform)</GlibEtcInstallRootFromBuildWin32>
-    <CopyDir>$(GlibEtcInstallRoot)</CopyDir>
+    <GlibEtcInstallRoot>..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>
+    <CopyDir>..\..\..\..\gtk-3.8.4-rel</CopyDir>
     <DefDir>$(SolutionDir)$(Configuration)\$(Platform)\obj\$(ProjectName)</DefDir>
     <ApiVersion>3.0</ApiVersion>
     <GtkBinaryVersion>3.0.0</GtkBinaryVersion>
     <GtkDummyPrefix>\"/dummy\"</GtkDummyPrefix>
-    <GlibEtcInstallRoot>..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>
     <GtkPrefixDefine>GTK_PREFIX="\"$(GtkDummyPrefix)\""</GtkPrefixDefine>
     <GdkDefines>GDK_COMPILATION;G_LOG_DOMAIN="Gdk"</GdkDefines>
     <GtkIncludedImmodulesDefines>INCLUDE_IM_am_et;INCLUDE_IM_cedilla;INCLUDE_IM_cyrillic_translit;INCLUDE_IM_ime;INCLUDE_IM_inuktitut;INCLUDE_IM_ipa;INCLUDE_IM_multipress;INCLUDE_IM_thai;INCLUDE_IM_ti_er;INCLUDE_IM_ti_et;INCLUDE_IM_viqr</GtkIncludedImmodulesDefines>
@@ -23,6 +20,7 @@ copy $(Configuration)\$(Platform)\bin\*.dll $(CopyDir)\bin
 
 copy $(Configuration)\$(Platform)\bin\*.exe $(CopyDir)\bin
 
+copy $(Configuration)\$(Platform)\bin\*.pdb $(CopyDir)\bin
 
 mkdir $(CopyDir)\lib
 
@@ -685,36 +683,13 @@ copy ..\..\..\gdk\gdkconfig.h $(CopyDir)\include\gtk-3.0\gdk
 copy $(Configuration)\$(Platform)\bin\*-$(ApiVersion).lib $(CopyDir)\lib
 
 
-mkdir $(CopyDir)\share\glib-2.0\schemas
-
-copy ..\..\..\gtk\org.gtk.Settings.FileChooser.gschema.xml $(CopyDir)\share\glib-2.0\schemas
-
-copy ..\..\..\gtk\org.gtk.Settings.ColorChooser.gschema.xml $(CopyDir)\share\glib-2.0\schemas
-
-copy ..\..\..\demos\gtk-demo\org.gtk.Demo.gschema.xml $(CopyDir)\share\glib-2.0\schemas
-
-echo "Compiling gsettings XML Files..."
-
-$(CopyDir)\bin\glib-compile-schemas.exe $(CopyDir)\share\glib-2.0\schemas
-
-
 </GtkDoInstall>
-<DoGenGir>
-set VSVER=$(VSVer)
-set CONF=$(Configuration)
-set PLAT=$(Platform)
-set BASEDIR=$(GlibEtcInstallRootFromBuildWin32)
-cd ..
-call gengir_gtk.bat
-
-cd vs$(VSVer)
-</DoGenGir>
     <GtkGenerateGdkDef>echo EXPORTS &gt;"$(DefDir)\gdk.def" &amp;&amp; cl /EP -DGDK_WINDOWING_WIN32 -DALL_FILES -DG_GNUC_CONST= ..\..\..\gdk\gdk.symbols &gt;&gt;"$(DefDir)\gdk.def"</GtkGenerateGdkDef>
     <GtkGenerateGtkDef>echo EXPORTS &gt;"$(DefDir)\gtk.def" &amp;&amp; cl /EP -DGDK_WINDOWING_WIN32 -DINCLUDE_VARIABLES -DG_OS_WIN32 -DALL_FILES -DG_GNUC_MALLOC= -DG_GNUC_CONST= -DG_GNUC_NULL_TERMINATED= -DG_GNUC_PRINTF=;G_GNUC_PRINTF ..\..\..\gtk\gtk.symbols &gt;&gt;"$(DefDir)\gtk.def"</GtkGenerateGtkDef>
     <GtkLibtoolCompatibleDllPrefix>lib</GtkLibtoolCompatibleDllPrefix>
     <GtkLibtoolCompatibleDllSuffix>-$(ApiVersion)-0</GtkLibtoolCompatibleDllSuffix>
     <GtkSeparateVSDllPrefix />
-    <GtkSeparateVSDllSuffix>-3-vs$(VSVer)</GtkSeparateVSDllSuffix>
+    <GtkSeparateVSDllSuffix>-3</GtkSeparateVSDllSuffix>
     <GtkDllPrefix>$(GtkSeparateVSDllPrefix)</GtkDllPrefix>
     <GtkDllSuffix>$(GtkSeparateVSDllSuffix)</GtkDllSuffix>
   </PropertyGroup>
@@ -748,14 +723,8 @@ copy ..\..\..\gdk\gdkconfig.h.win32 ..\..\..\gdk\gdkconfig.h
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <BuildMacro Include="VSVer">
-      <Value>$(VSVer)</Value>
-    </BuildMacro>
     <BuildMacro Include="GlibEtcInstallRoot">
       <Value>$(GlibEtcInstallRoot)</Value>
-    </BuildMacro>
-    <BuildMacro Include="GlibEtcInstallRootFromBuildWin32">
-      <Value>$(GlibEtcInstallRootFromBuildWin32)</Value>
     </BuildMacro>
     <BuildMacro Include="CopyDir">
       <Value>$(CopyDir)</Value>

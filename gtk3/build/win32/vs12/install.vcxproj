@@ -104,6 +104,10 @@
     <ProjectReference Include="gtk-demo.vcxproj">
       <Project>{fc5aadb5-95cd-4bf0-ba8b-0c16fe7073fc}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <ProjectReference Include="gtk.vcxproj">
       <Project>{fc5aadb5-95cd-4bf0-ba8b-0c16fe7073f5}</Project>
@@ -116,6 +120,10 @@
     <ProjectReference Include="gtk-demo-application.vcxproj">
       <Project>{3281202a-cd26-4c67-b892-eb34bdbc612f}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
