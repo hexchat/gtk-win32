@@ -170,7 +170,7 @@ In case you find a newer release of a package marked as current, [let us know](h
 
 Building GTK+ and its dependencies on Windows has never been easier. We have a PowerShell script which does most of the work for you, so you just have to wait until it finishes. But first of all, here's the dependency graph of the GTK+ stack.
 
-<img src="images/dependency-graph.png" alt="gtk dependency graph" />
+<img src="img/dependency-graph.png" alt="gtk dependency graph" />
 
 To compile all this yourself, you need to install:
 
