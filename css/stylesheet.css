@@ -11,27 +11,28 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 Theme Styles
 *******************************************************************************/
 
+html {
+  font: 16px/1.5 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}
+
 body {
+  background: #212121;
   box-sizing: border-box;
   color:#373737;
-  background: #212121;
-  font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  font-weight: 700;
   color:#222222;
   font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   letter-spacing: -1px;
+  margin: 10px 0;
 }
 
 h1 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 h2 {
@@ -90,10 +91,6 @@ footer a:hover {
   text-shadow: #0090ff 0 0 2px;
 }
 
-em {
-  font-style: italic;
-}
-
 img {
   position: relative;
   margin: 0 auto;
@@ -112,11 +109,8 @@ img {
 pre, code {
   width: 100%;
   color: #222;
-  background-color: #fff;
-
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 14px;
-
+  background-color: white;
+  font: 14px/1 Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -126,14 +120,14 @@ pre, code {
 pre {
   width: 100%;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: auto;
 }
 
 code {
   padding: 3px;
   margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 pre code {
@@ -149,7 +143,8 @@ blockquote {
 }
 
 ul, ol, dl {
-  margin-bottom: 15px
+  margin-bottom: 15px;
+  padding: 0;
 }
 
 ul li {
@@ -192,7 +187,7 @@ th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
   background: #373737;
-  color: #fff;
+  color: white;
  }
 
 td {
@@ -244,10 +239,10 @@ Full-Width Styles
   right: 10px;
   z-index: 10;
   padding: 10px 50px 10px 10px;
-  color: #fff;
+  color: white;
   background: url('../img/blacktocat.png') #0090ff no-repeat 95% 50%;
-  font-weight: 700;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
@@ -267,14 +262,14 @@ Full-Width Styles
 
 #project_title {
   margin: 0;
-  color: #fff;
+  color: white;
   font-size: 42px;
-  font-weight: 700;
+  font-weight: bold;
   text-shadow: #111 0 0 10px;
 }
 
 #project_tagline {
-  color: #fff;
+  color: white;
   font-size: 24px;
   font-weight: 300;
   background: none;
