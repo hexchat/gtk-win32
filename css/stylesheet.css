@@ -35,9 +35,8 @@ h1 {
 }
 
 h2 {
-  padding-bottom: 10px;
+  border-bottom: 1px dotted #999999;
   font-size: 32px;
-  background: url('../img/bg_hr.png') repeat-x bottom;
 }
 
 h3 {
@@ -180,8 +179,7 @@ dl p {
 hr {
   height: 1px;
   margin-bottom: 5px;
-  border: none;
-  background: url('../img/bg_hr.png') repeat-x center;
+  border-bottom: 1px dotted #999999;
 }
 
 table {
@@ -281,6 +279,7 @@ Full-Width Styles
   font-weight: 300;
   background: none;
   text-shadow: #111 0 0 10px;
+  border: none;
 }
 
 #downloads {
