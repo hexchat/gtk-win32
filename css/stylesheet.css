@@ -200,22 +200,18 @@ form {
   padding: 20px;
 }
 
-/* img {
-  width: 100%;
-  max-width: 100%;
-} */
-
-tr.even {
-	background: #dedede;
+tr:nth-child(even) {
+  background-color: #dedede
 }
 
-td.current, span.current {
-	color: #0b0;
+.current {
+  color: #0b0;
 }
 
-td.outdated, span.outdated {
-	color: #b00;
+.outdated {
+  color: red;
 }
+
 
 /*******************************************************************************
 Full-Width Styles
