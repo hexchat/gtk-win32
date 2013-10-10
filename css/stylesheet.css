@@ -12,19 +12,19 @@ Theme Styles
 *******************************************************************************/
 
 html {
-  font: 16px/1.5 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  font: 16px/1.5 "Myriad Pro", Calibri, Helvetica, Arial, sans-serif;
 }
 
 body {
   background: #212121;
   box-sizing: border-box;
-  color:#373737;
+  color: #373737;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  color: #222222;
+  font-family: "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: -1px;
   margin: 10px 0;
@@ -69,8 +69,6 @@ a {
   color: #007edf;
   text-shadow: none;
 
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
   -webkit-transition: color 0.5s ease;
   -webkit-transition: text-shadow 0.5s ease;
   -moz-transition: color 0.5s ease;
@@ -79,6 +77,8 @@ a {
   -o-transition: text-shadow 0.5s ease;
   -ms-transition: color 0.5s ease;
   -ms-transition: text-shadow 0.5s ease;
+  transition: color 0.5s ease;
+  transition: text-shadow 0.5s ease;
 }
 
 #main_content a:hover {
@@ -91,43 +91,43 @@ footer a:hover {
   text-shadow: #0090ff 0 0 2px;
 }
 
-img {
+.depGraph {
   position: relative;
-  margin: 0 auto;
-  /* max-width: 739px; */
+   /* max-width: 739px; */
   padding: 5px;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
+  box-shadow: 0 0 5px #ebebeb;
 }
 
-pre, code {
+code,
+pre {
   width: 100%;
   color: #222;
   background-color: white;
   font: 14px/1 Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-
-}
-
-pre {
-  width: 100%;
-  padding: 10px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: auto;
 }
 
 code {
   padding: 3px;
   margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+  padding: 10px;
+  overflow: auto;
 }
 
 pre code {
@@ -135,14 +135,16 @@ pre code {
   box-shadow: none;
 }
 
-blockquote {
+/*blockquote {
   color: #666;
   margin-bottom: 20px;
   padding: 0 0 0 20px;
   border-left: 3px solid #bbb;
-}
+}*/
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-bottom: 15px;
   padding: 0;
 }
@@ -157,7 +159,7 @@ ol li {
   padding-left: 20px;
 }
 
-dl dt {
+/*dl dt {
   font-weight: bold;
 }
 
@@ -175,7 +177,7 @@ hr {
   height: 1px;
   margin-bottom: 5px;
   border-bottom: 1px dotted #999999;
-}
+}*/
 
 table {
   border: 1px solid #373737;
@@ -184,7 +186,7 @@ table {
  }
 
 th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 10px;
   background: #373737;
   color: white;
@@ -228,7 +230,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-#forkme_banner {
+/*#forkme_banner {
   display: block;
   position: absolute;
   top:0;
@@ -236,20 +238,26 @@ Full-Width Styles
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: white;
-  background: url('../img/blacktocat.png') #0090ff no-repeat 95% 50%;
+  background: url("../img/blacktocat.png") #0090ff no-repeat 95% 50%;
   font-weight: bold;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-}
+}*/
 
-#header_wrap {
-  background: #212121;
-  background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #373737, #212121);
-  background: -ms-linear-gradient(top, #373737, #212121);
-  background: -o-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);
+#header_wrap,
+#footer_wrap {
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #373737), color-stop(0.6, #373737), color-stop(0.8, #212121));
+  background-image: -webkit-linear-gradient(top, #373737 20%, #373737 60%, #212121 80%);
+  background-image: -moz-linear-gradient(top, #373737 20%, #373737 60%, #212121 80%);
+  background-image: -ms-linear-gradient(top, #373737 20%, #373737 60%, #212121 80%);
+  background-image: -o-linear-gradient(top, #373737 20%, #373737 60%, #212121 80%);
+  background-image: linear-gradient(top, #373737 20%, #373737 60%, #212121 80%);
 }
 
 #header_wrap .inner {
@@ -273,14 +281,14 @@ Full-Width Styles
   border: none;
 }
 
-#downloads {
+/*#downloads {
   position: absolute;
   width: 210px;
   z-index: 10;
   bottom: -40px;
   right: 0;
   height: 70px;
-  background: url('../img/icon_download.png') no-repeat 0% 90%;
+  background: url("../img/icon_download.png") no-repeat 0 90%;
 }
 
 .zip_download_link {
@@ -310,7 +318,7 @@ Full-Width Styles
 
 .tar_download_link:hover {
   background: url(../img/sprite_download.png) no-repeat top right;
-}
+}*/
 
 #main_content_wrap {
   background: #f2f2f2;
@@ -322,10 +330,6 @@ Full-Width Styles
   padding-top: 40px;
 }
 
-#footer_wrap {
-  background: #212121;
-}
-
 
 
 /*******************************************************************************
@@ -333,13 +337,17 @@ Small Device Styles
 *******************************************************************************/
 
 @media screen and (max-width: 480px) {
-  body {
-    font-size:14px;
+  html {
+    font-size: 14px;
   }
 
-  #downloads {
+  /*#downloads {
     display: none;
   }
+
+  .depGraph {
+    display: none;
+  }*/
 
   .inner {
     min-width: 320px;
@@ -347,7 +355,7 @@ Small Device Styles
   }
 
   #project_title {
-  font-size: 32px;
+    font-size: 32px;
   }
 
   h1 {
@@ -374,10 +382,27 @@ Small Device Styles
     font-size: 12px;
   }
 
-  code, pre {
+  code,
+  pre {
     min-width: 320px;
     max-width: 480px;
     font-size: 11px;
   }
 
+}
+
+@media screen and (max-width: 768px) {
+  .depGraph {
+    padding: 0;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
 }
