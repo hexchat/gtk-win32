@@ -165,7 +165,7 @@ When you're done installing these, you also have to clone the [GTK-Win32](https:
 
 You can use other paths, but then make sure to feed _gtk-win32\build.ps1_ with the correct parameters (open the script with an editor for examples).
 
-Now you have to allow PowerShell scripts to be ran on your system. Open a PowerShell prompt *as Administrator* and run the following command:
+Now you have to allow PowerShell scripts to be run on your system. Open a PowerShell prompt *as Administrator* and run the following command:
 
 <pre>Set-ExecutionPolicy RemoteSigned</pre>
 
