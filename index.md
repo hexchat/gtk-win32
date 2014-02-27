@@ -1,6 +1,5 @@
 ---
 layout: default
-title: main page
 ---
 
 ## About
