@@ -126,7 +126,7 @@ These are the separate packages for advanced users. These also require the redis
 
 Building GTK+ and its dependencies on Windows has never been easier. We have a PowerShell script which does most of the work for you, so you just have to wait until it finishes. But first of all, here's the dependency graph of the GTK+ stack.
 
-<img class="depGraph" src="img/dependency-graph.png" alt="GTK dependency graph" width="725" height="1160"/>
+<img class="depGraph" src="img/dependency-graph.png" alt="GTK dependency graph" width="725" height="1160">
 
 To compile all this yourself, you need to install:
 
