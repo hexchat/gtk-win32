@@ -11,13 +11,24 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 Theme Styles
 *******************************************************************************/
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
   font: 16px/1.5 "Myriad Pro", Calibri, Helvetica, Arial, sans-serif;
 }
 
 body {
-  background: #212121;
-  box-sizing: border-box;
+  background-color: #212121;
   color: #373737;
   -webkit-font-smoothing: antialiased;
 }
@@ -99,14 +110,13 @@ footer a:hover {
   border: 1px solid #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
+  -o-box-shadow: 0 0 5px #ebebeb;
   box-shadow: 0 0 5px #ebebeb;
 }
 
 code,
 pre {
-  width: 100%;
   color: #222;
   background-color: white;
   font: 14px/1 Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -115,8 +125,8 @@ pre {
   border-radius: 2px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -188,7 +198,7 @@ table {
 th {
   font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 10px;
-  background: #373737;
+  background-color: #373737;
   color: white;
  }
 
@@ -198,7 +208,7 @@ td {
  }
 
 form {
-  background: #f2f2f2;
+  background-color: #f2f2f2;
   padding: 20px;
 }
 
@@ -313,7 +323,7 @@ Full-Width Styles
 }*/
 
 #main_content_wrap {
-  background: #f2f2f2;
+  background-color: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
@@ -334,10 +344,6 @@ Small Device Styles
   }
 
   /*#downloads {
-    display: none;
-  }
-
-  .depGraph {
     display: none;
   }*/
 
@@ -390,8 +396,8 @@ Small Device Styles
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    -o-box-shadow: none;
     -ms-box-shadow: none;
+    -o-box-shadow: none;
     box-shadow: none;
     max-width: 100%;
     height: auto;
