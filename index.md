@@ -33,8 +33,8 @@ These are the separate packages for advanced users. These also require the redis
 <table>
     <tr>
         <td>ATK</td>
-        <td>2.9.4</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.9.4.7z">Source</a></td>
+        <td>2.12.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.12.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>cairo</td>
@@ -78,8 +78,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>HarfBuzz</td>
-        <td>0.9.27</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.27.7z">Source</a></td>
+        <td>0.9.28</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.28.7z">Source</a></td>
     </tr>
     <tr>
         <td>libffi</td>
