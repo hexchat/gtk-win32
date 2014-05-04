@@ -206,14 +206,6 @@ tr:nth-child(even) {
   background-color: #dedede
 }
 
-.current {
-  color: #0b0;
-}
-
-.outdated {
-  color: red;
-}
-
 
 /*******************************************************************************
 Full-Width Styles

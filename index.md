@@ -22,7 +22,7 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
     </tr>
     <tr>
         <td>GTK+ bundle</td>
-        <td>2.24.19</td>
+        <td>2.24.23</td>
         <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/gtk-x86.7z">32 bit</a></td>
         <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/gtk-x64.7z">64 bit</a></td>
     </tr>
@@ -30,117 +30,96 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
 
 These are the separate packages for advanced users. These also require the redistributable to be installed.
 
-Current packages are marked in <span class="current">green</span>, outdated packages are marked in <span class="outdated">red</span>.
-In case you find a newer release of a package marked as current, [let us know](https://github.com/hexchat/gtk-win32/issues/new?labels=bump)!
-
 <table>
     <tr>
         <td>ATK</td>
-        <td class="current">2.9.3</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/atk-2.9.3-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/atk-2.9.3-x64.7z">64 bit</a></td>
+        <td>2.9.4</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.9.4.7z">Source</a></td>
     </tr>
     <tr>
         <td>cairo</td>
-        <td class="current">1.12.14</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/cairo-1.12.14-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/cairo-1.12.14-x64.7z">64 bit</a></td>
+        <td>1.12.16</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/cairo-1.12.16.7z">Source</a></td>
     </tr>
     <tr>
         <td>Enchant</td>
-        <td class="current">1.6.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/enchant-1.6.0-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/enchant-1.6.0-x64.7z">64 bit</a></td>
+        <td>1.6.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>Fontconfig</td>
-        <td class="outdated">2.8.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/fontconfig-2.8.0-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/fontconfig-2.8.0-x64.7z">64 bit</a></td>
+        <td>2.8.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>FreeType</td>
-        <td class="current">2.5.0.1</td>
-        <td><a href="http://dl.hexchat.org/gtk-win32/vc12/x86/freetype-2.5.0.1-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/freetype-2.5.0.1-x64.7z">64 bit</a></td>
+        <td>2.5.3</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.3.7z">Source</a></td>
     </tr>
     <tr>
         <td>GDK-PixBuf</td>
-        <td class="current">2.28.1</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/gdk-pixbuf-2.28.1-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/gdk-pixbuf-2.28.1-x64.7z">64 bit</a></td>
+        <td>2.30.7</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.7.7z">Source</a></td>
     </tr>
     <tr>
         <td>gettext-runtime</td>
-        <td class="current">0.18</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/gettext-runtime-0.18-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/gettext-runtime-0.18-x64.7z">64 bit</a></td>
+        <td>0.18</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gettext-runtime-0.18.7z">Source</a></td>
     </tr>
     <tr>
         <td>GLib</td>
-        <td class="current">2.36.2</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/glib-2.36.2-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/glib-2.36.2-x64.7z">64 bit</a></td>
+        <td>2.40.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.40.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>GTK+</td>
-        <td class="current">2.24.19</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/gtk-2.24.19-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/gtk-2.24.19-x64.7z">64 bit</a></td>
+        <td>2.24.23</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk-2.24.23.7z">Source</a></td>
     </tr>
     <tr>
         <td>HarfBuzz</td>
-        <td class="current">0.9.18</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/harfbuzz-0.9.18-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/harfbuzz-0.9.18-x64.7z">64 bit</a></td>
+        <td>0.9.27</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.27.7z">Source</a></td>
     </tr>
     <tr>
         <td>libffi</td>
-        <td class="current">3.0.13</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/libffi-3.0.13-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/libffi-3.0.13-x64.7z">64 bit</a></td>
+        <td>3.0.13</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libffi-3.0.13.7z">Source</a></td>
     </tr>
     <tr>
         <td>libpng</td>
-        <td class="current">1.6.2</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/libpng-1.6.2-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/libpng-1.6.2-x64.7z">64 bit</a></td>
+        <td>1.6.8</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.8.7z">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
-        <td class="current">2.9.1</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/libxml2-2.9.1-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/libxml2-2.9.1-x64.7z">64 bit</a></td>
+        <td>2.9.1</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libxml2-2.9.1.7z">Source</a></td>
     </tr>
     <tr>
         <td>OpenSSL</td>
-        <td class="current">1.0.1e</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/openssl-1.0.1e-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/openssl-1.0.1e-x64.7z">64 bit</a></td>
+        <td>1.0.1g</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1g.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
-        <td class="outdated">1.32.5</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/pango-1.32.5-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/pango-1.32.5-x64.7z">64 bit</a></td>
+        <td>1.36.3</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.3.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pixman</td>
-        <td class="current">0.30.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/pixman-0.30.0-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/pixman-0.30.0-x64.7z">64 bit</a></td>
+        <td>0.32.4</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pixman-0.32.4.7z">Source</a></td>
     </tr>
     <tr>
         <td>win-iconv</td>
-        <td class="current">0.0.6</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/win-iconv-0.0.6-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/win-iconv-0.0.6-x64.7z">64 bit</a></td>
+        <td>0.0.6</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.6.7z">Source</a></td>
     </tr>
     <tr>
         <td>zlib</td>
-        <td class="current">1.2.8</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/zlib-1.2.8-x86.7z">32 bit</a></td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/zlib-1.2.8-x64.7z">64 bit</a></td>
+        <td>1.2.8</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.7z">Source</a></td>
     </tr>
 </table>
 
