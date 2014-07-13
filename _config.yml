@@ -1,0 +1,6 @@
+title:          GTK+ for Windows
+markdown:       kramdown
+highlighter:    false
+encoding:       UTF-8
+
+exclude:        ["params.json"]
