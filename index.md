@@ -73,13 +73,13 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>GTK+</td>
-        <td>2.24.23</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk-2.24.23.7z">Source</a></td>
+        <td>2.24.24</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk-2.24.24.7z">Source</a></td>
     </tr>
     <tr>
         <td>HarfBuzz</td>
-        <td>0.9.28</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.28.7z">Source</a></td>
+        <td>0.9.30</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.30.7z">Source</a></td>
     </tr>
     <tr>
         <td>libffi</td>
@@ -88,8 +88,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>libpng</td>
-        <td>1.6.8</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.8.7z">Source</a></td>
+        <td>1.6.12</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.12.7z">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
@@ -98,18 +98,18 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>OpenSSL</td>
-        <td>1.0.1g</td>
+        <td>1.0.1h</td>
         <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1h.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
-        <td>1.36.3</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.3.7z">Source</a></td>
+        <td>1.36.5</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.5.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pixman</td>
-        <td>0.32.4</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/pixman-0.32.4.7z">Source</a></td>
+        <td>0.32.6</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pixman-0.32.6.7z">Source</a></td>
     </tr>
     <tr>
         <td>win-iconv</td>
