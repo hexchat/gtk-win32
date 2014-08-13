@@ -133,7 +133,7 @@ To compile all this yourself, you need to install:
 
  * [Visual Studio 2013 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/2013-downloads#d-2013-express)
  * [CMake 3.0.1](http://www.cmake.org/cmake/resources/software.html)
- * [MozillaBuild 1.9](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
+ * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
  * Perl 5.20 [x86](http://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\mozilla-build\perl-5.20\Win32_ or _C:\mozilla-build\perl-5.20\x64_)
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
  * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
