@@ -114,7 +114,7 @@ param (
 	[string]
 	$CMakePath = 'C:\Program Files (x86)\CMake\bin',
 
-	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'win-iconv', 'zlib')]
+	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'win-iconv', 'zlib')]
 	$OnlyBuild = @()
 )
 
@@ -133,8 +133,8 @@ $items = @{
 	'fontconfig'       = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.7z';     'Dependencies' = @('freetype', 'libxml2')               };
 	'freetype'         = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.5.3.7z';       'Dependencies' = @()                                    };
 	'gdk-pixbuf'       = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.8.7z';    'Dependencies' = @('glib', 'libpng')                    };
-	'gettext-runtime'  = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gettext-runtime-0.18.7z'; 'Dependencies' = @('win-iconv')                         };
-	'glib'             = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.40.0.7z';          'Dependencies' = @('gettext-runtime', 'libffi', 'zlib') };
+	'gettext'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gettext-0.18.7z';         'Dependencies' = @('win-iconv')                         };
+	'glib'             = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.40.0.7z';          'Dependencies' = @('gettext', 'libffi', 'zlib')         };
 	'gtk'              = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk-2.24.24.7z';          'Dependencies' = @('atk', 'gdk-pixbuf', 'pango')        };
 	'harfbuzz'         = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.30.7z';      'Dependencies' = @('freetype', 'glib')                  };
 	'libffi'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libffi-3.0.13.7z';        'Dependencies' = @()                                    };
@@ -352,22 +352,32 @@ $items['gdk-pixbuf'].BuildScript = {
 	Package $packageDestination
 }
 
-$items['gettext-runtime'].BuildScript = {
+$items['gettext'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
-
-	Exec $Patch -p1 -i gettext-runtime.patch
 
 	Remove-Item -Recurse CMakeCache.txt, CMakeFiles -ErrorAction Ignore
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+	$env:PATH="${env:PATH};$packageDestination\..\..\..\gtk\$platform\bin"
+	$env:INCLUDE = "${env:INCLUDE};$packageDestination\..\..\..\gtk\$platform\include"
+	$env:LIB = "${env:LIB};$packageDestination\..\..\..\gtk\$platform\lib"
 
-	$env:PATH = "${env:PATH};$CMakePath"
-	Exec cmake -G 'NMake Makefiles' "-DCMAKE_INSTALL_PREFIX=`"$packageDestination`"" -DCMAKE_BUILD_TYPE=Release "-DICONV_INCLUDE_DIR=`"$packageDestination\..\..\..\gtk\$platform\include`"" "-DICONV_LIBRARIES=`"$packageDestination\..\..\..\gtk\$platform\lib\iconv.lib`""
-	Exec nmake clean
-	Exec nmake
-	Exec nmake install
-	Exec nmake clean
+	$configureCommand = "./configure --prefix='$($packageDestination -replace '\\', '\\')' --disable-c++ --disable-java --disable-csharp --without-emacs LD=link"
+
+	$currentPwd = $PWD
+
+	Push-Location ..\..
+
+	echo "cd $($currentPwd -replace '\\', '\\') && $configureCommand && make clean && make && make install" | &$mozillaBuildStartVC
+
+	$libgnuintl_h_Contents = Get-Content $PWD\gettext-runtime\intl\libgnuintl.h
+	$libgnuintl_h_Contents = libgnuintl_h_Contents | %{ $_ -replace '^#define LIBINTL_DLL_EXPORTED$', '#define LIBINTL_DLL_EXPORTED __declspec(dllexport)' }
+	Set-Content $PWD\gettext-runtime\intl\libgnuintl.h $libgnuintl_h_Contents
+
+	echo "cd $($currentPwd -replace '\\', '\\') && make clean && make && make install" | &$mozillaBuildStartVC
+
+	Pop-Location
 
 	[void] (Swap-Environment $originalEnvironment)
 
