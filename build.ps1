@@ -483,10 +483,14 @@ $items['libffi'].BuildScript = {
 		}
 	}
 
+	$ErrorActionPreference = 'Continue'
+
 	$currentPwd = $PWD
 	Push-Location ..\..
-	echo "cd $($currentPwd -replace '\\', '\\') && $configureCommand && make clean && make" | &$mozillaBuildStartVC
+	echo "cd $($currentPwd -replace '\\', '\\') && $configureCommand && make clean && make" | &$mozillaBuildStartVC 2>&1
 	Pop-Location
+
+	$ErrorActionPreference = 'Stop'
 
 	New-Item -Type Directory $packageDestination\bin
 	Copy-Item `
@@ -810,6 +814,9 @@ $items['zlib'].BuildScript = {
 #========================================================================================================================================================
 
 
+$ErrorActionPreference = 'Stop'
+
+
 # Verify VS exists at the indicated location, and that it supports the required target
 switch ($Configuration) {
 	'x86' {
@@ -934,11 +941,24 @@ $items.GetEnumerator() | %{
 		function Exec {
 			$name, $arguments = @($args)
 			$arguments = @($arguments | ?{ $_ -ne $null })
-			&$name @arguments
-			[void] ($LASTEXITCODE -and $(throw "$name $arguments exited with code $LASTEXITCODE"))
+
+			$ErrorActionPreference = 'Continue'
+
+			"`$ $name $arguments"
+
+			&$name @arguments 2>&1
+
+			$ErrorActionPreference = 'Stop'
+
+			"$name $arguments exited with code $LASTEXITCODE"
+			if ($LASTEXITCODE -ne 0) {
+				throw "$name $arguments exited with code $LASTEXITCODE"
+			}
 		}
 	} -ArgumentList $item {
 		param ($item)
+
+		$ErrorActionPreference = 'Stop'
 
 		$ArchivesDownloadDirectory = $using:ArchivesDownloadDirectory
 		$workingDirectory = $using:workingDirectory
@@ -974,14 +994,26 @@ do {
 	Get-Job | %{
 		$job = $_
 
-		@(Receive-Job $job 2>&1) | %{
-			if ($_ -isnot [System.Management.Automation.ErrorRecord]) {
-				Write-Host "$($job.Name) : $_"
+		$ErrorActionPreference = 'Continue'
+
+		Receive-Job $job 2>&1 | %{
+			if ($_ -is [System.Management.Automation.ErrorRecord]) {
+				$message = $_.Exception.Message
+				$Host.UI.WriteErrorLine("$($job.Name) : $message")
+			}
+			elseif ($_ -is [System.Exception]) {
+				$message = $_.Message
+				$Host.UI.WriteErrorLine("$($job.Name) : $message")
 			}
 			else {
-				$Host.UI.WriteErrorLine("$($job.Name) : $($_.Exception.Message)")
+				$message = $_
+				Write-Host "$($job.Name) : $message"
 			}
+
+			Out-File -Append -Encoding OEM -FilePath "$logDirectory\$($job.Name).log" -InputObject $message
 		}
+
+		$ErrorActionPreference = 'Stop'
 
 		if (($job.State -eq 'Completed') -and (-not $job.HasMoreData)) {
 			$items[$job.Name].State = 'Pending'
@@ -1050,8 +1082,19 @@ while (@($items.GetEnumerator() | ?{ ($_.Value.State -eq 'Pending') -or ($_.Valu
 				function Exec {
 					$name, $arguments = @($args)
 					$arguments = @($arguments | ?{ $_ -ne $null })
-					&$name @arguments
-					[void] ($LASTEXITCODE -and $(throw "$name $arguments exited with code $LASTEXITCODE"))
+
+					$ErrorActionPreference = 'Continue'
+
+					"`$ $name $arguments"
+
+					&$name @arguments 2>&1
+
+					$ErrorActionPreference = 'Stop'
+
+					"$name $arguments exited with code $LASTEXITCODE"
+					if ($LASTEXITCODE -ne 0) {
+						throw "$name $arguments exited with code $LASTEXITCODE"
+					}
 				}
 
 				# Add utf-8 BOM to the given file because cl.exe throws C4819 otherwise
@@ -1074,6 +1117,8 @@ while (@($items.GetEnumerator() | ?{ ($_.Value.State -eq 'Pending') -or ($_.Valu
 				}
 			} -ArgumentList $nextPendingItem {
 				param ($item)
+
+				$ErrorActionPreference = 'Stop'
 
 				$MozillaBuildDirectory = $using:MozillaBuildDirectory
 				$mozillaBuildStartVC = $using:mozillaBuildStartVC
@@ -1098,17 +1143,27 @@ while (@($items.GetEnumerator() | ?{ ($_.Value.State -eq 'Pending') -or ($_.Valu
 	Get-Job | %{
 		$job = $_
 
+		$ErrorActionPreference = 'Continue'
+
 		# Log all its output
-		@(Receive-Job $job 2>&1) | %{
-			if ($_ -isnot [System.Management.Automation.ErrorRecord]) {
-				Write-Host "$($job.Name) : $_"
+		Receive-Job $job 2>&1 | %{
+			if ($_ -is [System.Management.Automation.ErrorRecord]) {
+				$Host.UI.WriteErrorLine("$($job.Name) : $message")
+				$message = $_.Exception.Message
+			}
+			elseif ($_ -is [System.Exception]) {
+				$message = $_.Message
+				$Host.UI.WriteErrorLine("$($job.Name) : $message")
 			}
 			else {
-				$Host.UI.WriteErrorLine("$($job.Name) : $($_.Exception.Message)")
+				$message = $_
+				Write-Host "$($job.Name) : $message"
 			}
 
-			Out-File -Append -Encoding OEM -FilePath "$logDirectory\$($job.Name).log" -InputObject $_
+			Out-File -Append -Encoding OEM -FilePath "$logDirectory\$($job.Name).log" -InputObject $message
 		}
+
+		$ErrorActionPreference = 'Stop'
 
 		# If the job has been completed...
 		if (($job.State -eq 'Completed') -and (-not $job.HasMoreData)) {
