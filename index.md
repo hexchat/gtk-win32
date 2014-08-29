@@ -23,7 +23,7 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
     <tr>
         <td>GTK+ bundle</td>
         <td>2.24.24</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/gtk-x86.7z">32 bit</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x86/gtk-Win32.7z">32 bit</a></td>
         <td><a href="http://dl.hexchat.net/gtk-win32/vc12/x64/gtk-x64.7z">64 bit</a></td>
     </tr>
 </table>
