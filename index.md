@@ -136,11 +136,11 @@ To compile all this yourself, you need to install:
  * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
  * Perl 5.20 [x86](http://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\mozilla-build\perl-5.20\Win32_ or _C:\mozilla-build\perl-5.20\x64_)
  * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
- * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _c:\mozilla-build_)
- * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _c:\mozilla-build_)
+ * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _C:\mozilla-build_)
+ * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _C:\mozilla-build_)
  * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
 
-When you're done installing these, you also have to clone the [GTK-Win32](https://github.com/hexchat/gtk-win32) repo to _c:\mozilla-build\hexchat\github\gtk-win32_.
+When you're done installing these, you also have to clone the [GTK-Win32](https://github.com/hexchat/gtk-win32) repo to _C:\mozilla-build\hexchat\github\gtk-win32_.
 
 You can use other paths, but then make sure to feed _gtk-win32\build.ps1_ with the correct parameters (open the script with an editor for examples).
 
@@ -151,7 +151,7 @@ Now you have to allow PowerShell scripts to be run on your system. Open a PowerS
 Once done, close this elevated shell, and run PowerShell as a regular user. Go to the _gtk-win32_ repo root and start building with the script.
 The example below will perform a default build for x86:
 
-<pre>cd c:\mozilla-build\hexchat\github\gtk-win32
+<pre>cd C:\mozilla-build\hexchat\github\gtk-win32
 .\build.ps1 -Configuration x86</pre>
 
-Once ready, your GTK+ stack will be found under _c:\mozilla-build\hexchat\gtk_. Enjoy!
+Once ready, your GTK+ stack will be found under _C:\mozilla-build\hexchat\gtk_. Enjoy!
