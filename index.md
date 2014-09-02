@@ -78,8 +78,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>HarfBuzz</td>
-        <td>0.9.30</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.30.7z">Source</a></td>
+        <td>0.9.35</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.35.7z">Source</a></td>
     </tr>
     <tr>
         <td>libffi</td>
@@ -103,8 +103,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>Pango</td>
-        <td>1.36.5</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.5.7z">Source</a></td>
+        <td>1.36.6</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.6.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pixman</td>
