@@ -33,8 +33,8 @@ These are the separate packages for advanced users. These also require the redis
 <table>
     <tr>
         <td>ATK</td>
-        <td>2.12.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.12.0.7z">Source</a></td>
+        <td>2.14.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.14.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>cairo</td>
@@ -68,8 +68,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>GLib</td>
-        <td>2.40.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.40.0.7z">Source</a></td>
+        <td>2.42.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.42.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>GTK+</td>
@@ -103,8 +103,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>Pango</td>
-        <td>1.36.6</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.6.7z">Source</a></td>
+        <td>1.36.8</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.8.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pixman</td>
