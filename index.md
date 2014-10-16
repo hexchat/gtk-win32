@@ -38,8 +38,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>cairo</td>
-        <td>1.12.16</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/cairo-1.12.16.7z">Source</a></td>
+        <td>1.14.0</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/cairo-1.14.0.7z">Source</a></td>
     </tr>
     <tr>
         <td>Enchant</td>
@@ -88,8 +88,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>libpng</td>
-        <td>1.6.12</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.12.7z">Source</a></td>
+        <td>1.6.13</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.13.7z">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
