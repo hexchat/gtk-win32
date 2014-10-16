@@ -98,8 +98,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>OpenSSL</td>
-        <td>1.0.1h</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1h.7z">Source</a></td>
+        <td>1.0.1j</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1j.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
