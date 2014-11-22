@@ -68,18 +68,18 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>GLib</td>
-        <td>2.42.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.42.0.7z">Source</a></td>
+        <td>2.42.1</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.42.1.7z">Source</a></td>
     </tr>
     <tr>
         <td>GTK+</td>
-        <td>2.24.24</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk-2.24.24.7z">Source</a></td>
+        <td>2.24.25</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk-2.24.25.7z">Source</a></td>
     </tr>
     <tr>
         <td>HarfBuzz</td>
-        <td>0.9.35</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.35.7z">Source</a></td>
+        <td>0.9.36</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.36.7z">Source</a></td>
     </tr>
     <tr>
         <td>libffi</td>
@@ -88,8 +88,8 @@ These are the separate packages for advanced users. These also require the redis
     </tr>
     <tr>
         <td>libpng</td>
-        <td>1.6.13</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.13.7z">Source</a></td>
+        <td>1.6.14</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.14.7z">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
