@@ -9,6 +9,7 @@ This page is intended to guide you through the process of building the whole GTK
 
 You can also skip the building process and right off just **download** and use the Visual C++ builds of GTK+ so that you don't have to spend **a lot** of time on getting it to work like we had. So without further ado:
 
+
 ## GTK+ Visual C++ Builds:
 
 This is the redistributable and a bundle of all the GTK+ stuff. **This is most likely what you need**.
@@ -28,7 +29,42 @@ This is the redistributable and a bundle of all the GTK+ stuff. **This is most l
     </tr>
 </table>
 
-These are the separate packages for advanced users. These also require the redistributable to be installed.
+
+## Building from Source
+
+Building GTK+ and its dependencies on Windows has never been easier. We have a PowerShell script which does most of the work for you, so you just have to wait until it finishes. But first of all, here's the dependency graph of the GTK+ stack.
+
+<img class="depGraph" src="img/dependency-graph.png" alt="GTK dependency graph" width="725" height="1160"/>
+
+To compile all this yourself, you need to install:
+
+ * [Visual Studio 2013 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/2013-downloads#d-2013-express)
+ * [CMake 3.0.2](http://www.cmake.org/cmake/resources/software.html)
+ * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
+ * Perl 5.20 [x86](http://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\mozilla-build\perl-5.20\Win32_ or _C:\mozilla-build\perl-5.20\x64_)
+ * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
+ * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _C:\mozilla-build_)
+ * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _C:\mozilla-build_)
+ * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
+
+When you're done installing these, you also have to clone the [GTK-Win32](https://github.com/hexchat/gtk-win32) repo to _C:\mozilla-build\hexchat\github\gtk-win32_.
+
+You can use other paths, but then make sure to feed _gtk-win32\build.ps1_ with the correct parameters (open the script with an editor for examples).
+
+Now you have to allow PowerShell scripts to be run on your system. Open a PowerShell prompt *as Administrator* and run the following command:
+
+<pre>Set-ExecutionPolicy RemoteSigned</pre>
+
+Once done, close this elevated shell, and run PowerShell as a regular user. Go to the _gtk-win32_ repo root and start building with the script.
+The example below will perform a default build for x86:
+
+<pre>cd C:\mozilla-build\hexchat\github\gtk-win32
+.\build.ps1 -Configuration x86</pre>
+
+Once ready, your GTK+ stack will be found under _C:\mozilla-build\hexchat\gtk_. Enjoy!
+
+
+## Versions
 
 <table>
     <tr>
@@ -122,36 +158,3 @@ These are the separate packages for advanced users. These also require the redis
         <td><a href="http://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.7z">Source</a></td>
     </tr>
 </table>
-
-## Building from Source
-
-Building GTK+ and its dependencies on Windows has never been easier. We have a PowerShell script which does most of the work for you, so you just have to wait until it finishes. But first of all, here's the dependency graph of the GTK+ stack.
-
-<img class="depGraph" src="img/dependency-graph.png" alt="GTK dependency graph" width="725" height="1160"/>
-
-To compile all this yourself, you need to install:
-
- * [Visual Studio 2013 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/2013-downloads#d-2013-express)
- * [CMake 3.0.2](http://www.cmake.org/cmake/resources/software.html)
- * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
- * Perl 5.20 [x86](http://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\mozilla-build\perl-5.20\Win32_ or _C:\mozilla-build\perl-5.20\x64_)
- * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
- * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _C:\mozilla-build_)
- * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _C:\mozilla-build_)
- * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
-
-When you're done installing these, you also have to clone the [GTK-Win32](https://github.com/hexchat/gtk-win32) repo to _C:\mozilla-build\hexchat\github\gtk-win32_.
-
-You can use other paths, but then make sure to feed _gtk-win32\build.ps1_ with the correct parameters (open the script with an editor for examples).
-
-Now you have to allow PowerShell scripts to be run on your system. Open a PowerShell prompt *as Administrator* and run the following command:
-
-<pre>Set-ExecutionPolicy RemoteSigned</pre>
-
-Once done, close this elevated shell, and run PowerShell as a regular user. Go to the _gtk-win32_ repo root and start building with the script.
-The example below will perform a default build for x86:
-
-<pre>cd C:\mozilla-build\hexchat\github\gtk-win32
-.\build.ps1 -Configuration x86</pre>
-
-Once ready, your GTK+ stack will be found under _C:\mozilla-build\hexchat\gtk_. Enjoy!
