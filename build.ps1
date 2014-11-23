@@ -114,7 +114,7 @@ param (
 	[string]
 	$CMakePath = 'C:\Program Files (x86)\CMake\bin',
 
-	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'win-iconv', 'zlib')]
+	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'openssl', 'pango', 'pixman', 'win-iconv', 'zlib')]
 	$OnlyBuild = @()
 )
 
@@ -128,9 +128,8 @@ param (
 
 $items = @{
 	'atk'              = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/atk-2.14.0.7z';           'Dependencies' = @('glib')                              };
-	'cairo'            = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/cairo-1.14.0.7z';         'Dependencies' = @('fontconfig', 'glib', 'pixman')      };
+	'cairo'            = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/cairo-1.14.0.7z';         'Dependencies' = @('glib', 'pixman')                    };
 	'enchant'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.7z';        'Dependencies' = @('glib')                              };
-	'fontconfig'       = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.7z';     'Dependencies' = @('freetype', 'libxml2')               };
 	'freetype'         = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.5.3.7z';       'Dependencies' = @()                                    };
 	'gdk-pixbuf'       = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.8.7z';    'Dependencies' = @('glib', 'libpng')                    };
 	'gettext-runtime'  = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gettext-runtime-0.18.7z'; 'Dependencies' = @('win-iconv')                         };
@@ -139,7 +138,6 @@ $items = @{
 	'harfbuzz'         = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.36.7z';      'Dependencies' = @('freetype', 'glib')                  };
 	'libffi'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libffi-3.0.13.7z';        'Dependencies' = @()                                    };
 	'libpng'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libpng-1.6.14.7z';        'Dependencies' = @('zlib')                              };
-	'libxml2'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libxml2-2.9.1.7z';        'Dependencies' = @('win-iconv')                         };
 	'openssl'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1j.7z';       'Dependencies' = @('zlib')                              };
 	'pango'            = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.36.8.7z';         'Dependencies' = @('cairo', 'harfbuzz')                 };
 	'pixman'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.32.6.7z';        'Dependencies' = @('libpng')                            };
@@ -179,7 +177,7 @@ $items['cairo'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild msvc\vc12\cairo.sln /p:Platform=$platform /p:Configuration=Release_FC /maxcpucount /nodeReuse:True
+	Exec msbuild msvc\vc12\cairo.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -244,70 +242,6 @@ $items['enchant'].BuildScript = {
 
 	New-Item -Type Directory $packageDestination\share\doc\enchant
 	Copy-Item .\COPYING.LIB $packageDestination\share\doc\enchant\COPYING
-
-	Package $packageDestination
-}
-
-$items['fontconfig'].BuildScript = {
-	$packageDestination = "$PWD-$filenameArch"
-	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
-
-	Exec $Patch -p1 -i fontconfig.patch
-
-	$originalEnvironment = Swap-Environment $vcvarsEnvironment
-
-	Exec msbuild fontconfig.sln /p:Platform=$platform /p:Configuration=Release /t:build /nodeReuse:True
-
-	[void] (Swap-Environment $originalEnvironment)
-
-	switch ($filenameArch) {
-		'x86' {
-			$releaseDirectory = '.\Release'
-		}
-
-		'x64' {
-			$releaseDirectory = '.\x64\Release'
-		}
-	}
-
-	New-Item -Type Directory $packageDestination\bin
-	Copy-Item `
-		$releaseDirectory\fontconfig.dll, `
-		$releaseDirectory\fontconfig.pdb, `
-		$releaseDirectory\fc-cache.exe, `
-		$releaseDirectory\fc-cache.pdb, `
-		$releaseDirectory\fc-cat.exe, `
-		$releaseDirectory\fc-cat.pdb, `
-		$releaseDirectory\fc-list.exe, `
-		$releaseDirectory\fc-list.pdb, `
-		$releaseDirectory\fc-match.exe, `
-		$releaseDirectory\fc-match.pdb, `
-		$releaseDirectory\fc-query.exe, `
-		$releaseDirectory\fc-query.pdb, `
-		$releaseDirectory\fc-scan.exe, `
-		$releaseDirectory\fc-scan.pdb `
-		$packageDestination\bin
-
-	New-Item -Type Directory $packageDestination\etc\fonts
-	Copy-Item `
-		.\fonts.conf, `
-		.\fonts.dtd `
-		$packageDestination\etc\fonts
-
-	New-Item -Type Directory $packageDestination\include\fontconfig
-	Copy-Item `
-		.\fontconfig\fcfreetype.h, `
-		.\fontconfig\fcprivate.h, `
-		.\fontconfig\fontconfig.h `
-		$packageDestination\include\fontconfig
-
-	New-Item -Type Directory $packageDestination\lib
-	Copy-Item `
-		$releaseDirectory\fontconfig.lib `
-		$packageDestination\lib
-
-	New-Item -Type Directory $packageDestination\share\doc\fontconfig
-	Copy-Item .\COPYING $packageDestination\share\doc\fontconfig
 
 	Package $packageDestination
 }
@@ -560,52 +494,6 @@ $items['libpng'].BuildScript = {
 	Package $packageDestination
 }
 
-$items['libxml2'].BuildScript = {
-	$packageDestination = "$PWD-$filenameArch"
-	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
-
-	$originalEnvironment = Swap-Environment $vcvarsEnvironment
-
-	Exec msbuild win32\vc12\libxml2.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
-
-	[void] (Swap-Environment $originalEnvironment)
-
-	switch ($filenameArch) {
-		'x86' {
-			$releaseDirectory = '.\win32\vc12\Release'
-		}
-
-		'x64' {
-			$releaseDirectory = '.\win32\vc12\x64\Release'
-		}
-	}
-
-	New-Item -Type Directory $packageDestination\bin
-	Copy-Item `
-		$releaseDirectory\libxml2.dll, `
-		$releaseDirectory\libxml2.pdb, `
-		$releaseDirectory\runsuite.exe, `
-		$releaseDirectory\runsuite.pdb `
-		$packageDestination\bin
-
-	New-Item -Type Directory $packageDestination\include\libxml
-	Copy-Item `
-		.\include\win32config.h, `
-		.\include\wsockcompat.h, `
-		.\include\libxml\*.h `
-		$packageDestination\include\libxml
-
-	New-Item -Type Directory $packageDestination\lib
-	Copy-Item `
-		$releaseDirectory\libxml2.lib `
-		$packageDestination\lib
-
-	New-Item -Type Directory $packageDestination\share\doc\libxml2
-	Copy-Item .\COPYING $packageDestination\share\doc\libxml2
-
-	Package $packageDestination
-}
-
 $items['openssl'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
@@ -695,7 +583,7 @@ $items['pango'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs12\pango.sln /p:Platform=$platform /p:Configuration=Release_FC /nodeReuse:True
+	Exec msbuild build\win32\vs12\pango.sln /p:Platform=$platform /p:Configuration=Release /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
