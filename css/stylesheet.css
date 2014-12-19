@@ -149,12 +149,12 @@ dl {
   padding: 0;
 }
 
-ul li {
+ul > li {
   list-style: inside;
   padding-left: 20px;
 }
 
-ol li {
+ol > li {
   list-style: decimal inside;
   padding-left: 20px;
 }
