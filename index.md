@@ -89,8 +89,8 @@ Once ready, your GTK+ stack will be found under _C:\mozilla-build\hexchat\gtk_. 
     </tr>
     <tr>
         <td>FreeType</td>
-        <td>2.5.3</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.3.7z">Source</a></td>
+        <td>2.5.4</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.4.7z">Source</a></td>
     </tr>
     <tr>
         <td>GDK-PixBuf</td>
@@ -114,8 +114,8 @@ Once ready, your GTK+ stack will be found under _C:\mozilla-build\hexchat\gtk_. 
     </tr>
     <tr>
         <td>HarfBuzz</td>
-        <td>0.9.36</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.36.7z">Source</a></td>
+        <td>0.9.37</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.37.7z">Source</a></td>
     </tr>
     <tr>
         <td>libffi</td>
@@ -124,8 +124,8 @@ Once ready, your GTK+ stack will be found under _C:\mozilla-build\hexchat\gtk_. 
     </tr>
     <tr>
         <td>libpng</td>
-        <td>1.6.14</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.14.7z">Source</a></td>
+        <td>1.6.15</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.15.7z">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
