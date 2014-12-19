@@ -121,18 +121,18 @@ These are the libraries in the bundle:
 
 ## Building from Source
 
-If you want to build the bundle from source yourself, we have a PowerShell script that will download the sources, apply some patches and run the build. It is largely based on Fan Chun-wei's [Compiling the GTK+ stack using Visual C++](https://wiki.gnome.org/action/show/Projects/GTK+/Win32/MSVCCompilationOfGTKStack).
+If you want to build the bundle from source yourself, we have a PowerShell script that will download the sources, apply some patches and run the build. It is largely based on Fan Chun-wei's [Compiling the GTK+ (and Clutter) stack using Visual C++ 2008 and later](https://wiki.gnome.org/action/show/Projects/GTK+/Win32/MSVCCompilationOfGTKStack).
 
 1. Install the following build tools and dependencies:
 
- * [Visual Studio 2013 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/2013-downloads#d-2013-express)
- * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
- * [CMake 3.0.2](http://www.cmake.org/cmake/resources/software.html)
- * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
- * Perl 5.20 [x86](http://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\mozilla-build\perl-5.20\Win32_ or _C:\mozilla-build\perl-5.20\x64_)
- * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
- * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _C:\mozilla-build_)
- * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _C:\mozilla-build_)
+    * [Visual Studio 2013 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/2013-downloads#d-2013-express)
+    * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
+    * [CMake 3.0.2](http://www.cmake.org/cmake/resources/software.html)
+    * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
+    * Perl 5.20 [x86](http://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](http://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\mozilla-build\perl-5.20\Win32_ or _C:\mozilla-build\perl-5.20\x64_)
+    * [NASM](http://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D) (extract to _C:\mozilla-build\nasm_)
+    * [msgfmt](http://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.7z) (extract to _C:\mozilla-build_)
+    * [Ragel](http://dl.hexchat.net/gtk-win32/ragel-6.8.7z) (extract to _C:\mozilla-build_)
 
 1. Clone the [gtk-win32](https://github.com/hexchat/gtk-win32) repository to _C:\mozilla-build\hexchat\github\gtk-win32_ This repository contains the build script, project files and patches.
 
