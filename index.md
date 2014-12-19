@@ -145,7 +145,7 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
     <pre><code>cd C:\mozilla-build\hexchat\github\gtk-win32
 .\build.ps1</code></pre>
 
-    To build 64-bit GTK, run:
+    To build the 64-bit bundle instead, run:
 
     <pre><code>cd C:\mozilla-build\hexchat\github\gtk-win32
 .\build.ps1 -Configuration x64</code></pre>
