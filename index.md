@@ -138,29 +138,21 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 
 1. Now you have to allow PowerShell scripts to be run on your system. Open a PowerShell prompt **as Administrator** and run the following command:
 
-    ```
-    Set-ExecutionPolicy RemoteSigned
-    ```
+    <pre><code>Set-ExecutionPolicy RemoteSigned</code></pre>
 
 1. Now start a new PowerShell window as a regular user. Go to the _gtk-win32_ directory and start building with the script. For example, to build the 32-bit bundle, run:
 
-    ```
-    cd C:\mozilla-build\hexchat\github\gtk-win32
-    .\build.ps1
-    ```
+    <pre><code>cd C:\mozilla-build\hexchat\github\gtk-win32
+.\build.ps1</code></pre>
 
     To build 64-bit GTK, run:
 
-    ```
-    cd C:\mozilla-build\hexchat\github\gtk-win32
-    .\build.ps1 -Configuration x64
-    ```
+    <pre><code>cd C:\mozilla-build\hexchat\github\gtk-win32
+.\build.ps1 -Configuration x64</code></pre>
 
     The script has some parameters you can pass in. Run
 
-    ```
-    Get-Help -Full .\build.ps1
-    ```
+    <pre><code>Get-Help -Full .\build.ps1</code></pre>
 
     to see the help for the parameters and examples.
 
