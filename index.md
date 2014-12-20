@@ -126,6 +126,7 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 1. Install the following build tools and dependencies:
 
     * [Visual Studio 2013 Express for Windows Desktop](http://www.microsoft.com/visualstudio/eng/2013-downloads#d-2013-express)
+    * [Windows Management Framework 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) - Not needed for Windows 8.1 and above
     * [7-Zip](http://www.7-zip.org/download.html) (install to _C:\Program Files\7-Zip_; do not use the _7z.exe_ bundled with MozillaBuild)
     * [CMake 3.0.2](http://www.cmake.org/cmake/resources/software.html)
     * [MozillaBuild 1.10.0](http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/)
