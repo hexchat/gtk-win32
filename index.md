@@ -48,8 +48,8 @@ These are the libraries in the bundle:
     </tr>
     <tr>
         <td>FreeType</td>
-        <td>2.5.4</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.4.7z">Source</a></td>
+        <td>2.5.5</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.5.7z">Source</a></td>
     </tr>
     <tr>
         <td>GDK-PixBuf</td>
@@ -83,8 +83,8 @@ These are the libraries in the bundle:
     </tr>
     <tr>
         <td>libpng</td>
-        <td>1.6.15</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.15.7z">Source</a></td>
+        <td>1.6.16</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.16.7z">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
@@ -93,8 +93,8 @@ These are the libraries in the bundle:
     </tr>
     <tr>
         <td>OpenSSL</td>
-        <td>1.0.1j</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1j.7z">Source</a></td>
+        <td>1.0.1k</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1k.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
