@@ -870,11 +870,20 @@ $items.GetEnumerator() | %{
 	$item.Name = $name
 	$item.ArchiveFile = $archiveFile
 	$item.PatchDirectory = $(New-Object System.IO.DirectoryInfo $patchDirectory)
-	$item.BuildDirectory = $(New-Object System.IO.DirectoryInfo "$workingDirectory\$($archiveFile.BaseName)")
-	$item.BuildArchiveFile = $(New-Object System.IO.FileInfo "$workingDirectory\$($archiveFile.BaseName)-$filenameArch$($archiveFile.Extension)")
 	$item.Dependencies = @($item.Dependencies | %{ $items[$_] })
 	$item.Dependents = @()
 	$item.State = ''
+
+	if ($item.ArchiveFile.toString().EndsWith('.tar.xz')) {
+		$tarfile = $archiveFile.BaseName
+		$item.BuildDirectory = $(New-Object System.IO.DirectoryInfo "$workingDirectory\$([System.IO.Path]::GetFileNameWithoutExtension($tarfile))")
+	}
+	elseif ($item.ArchiveFile.toString().EndsWith('.7z')) {
+		$item.BuildDirectory = $(New-Object System.IO.DirectoryInfo "$workingDirectory\$($archiveFile.BaseName)")
+	}
+	else {
+		throw "Unrecognized file extension $_"
+	}
 }
 
 $items.GetEnumerator() | %{
@@ -958,7 +967,25 @@ $items.GetEnumerator() | %{
 		}
 
 		"Extracting $($item.ArchiveFile.Name) to $workingDirectory"
-		Exec $SevenZip x $item.ArchiveFile -o"$workingDirectory" -y > $null
+		$lowerfilename = $item.ArchiveFile.toString().ToLower()
+		if ($lowerfilename.EndsWith('.tar.xz') -Or $lowerfilename.EndsWith('.tar.gz') -Or $lowerfilename.EndsWith('.tar.bz2')) {
+			Exec $SevenZip x $item.ArchiveFile -aoa -o"$workingDirectory" -y > $null
+			"Extracted $($item.ArchiveFile.Name)"
+
+			$tarfile = [System.IO.Path]::GetFileNameWithoutExtension($item.ArchiveFile)
+			Exec $SevenZip x "$workingDirectory\$tarfile" -aoa -o"$workingDirectory" -y > $null
+
+			Remove-Item "$workingDirectory\$tarfile"
+
+			"Extracted $tarfile"
+		}
+		elseif ($item.ArchiveFile.toString().EndsWith('.7z')) {
+			Exec $SevenZip x $item.ArchiveFile -aoa -o"$workingDirectory" -y > $null
+		}
+		else {
+			throw "Unrecognized file extension $_"
+		}
+
 		"Extracted $($item.ArchiveFile.Name)"
 
 		Copy-Item "$($item.PatchDirectory)\*" $item.BuildDirectory -Recurse -Force
