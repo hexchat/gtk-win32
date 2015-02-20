@@ -29,32 +29,32 @@ These are the libraries in the bundle:
     <tr>
         <td>ATK</td>
         <td>2.14.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.14.0.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/atk-2.14.0.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>Cairo</td>
         <td>1.14.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/cairo-1.14.0.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/cairo-1.14.0.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>Enchant</td>
         <td>1.6.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz">Source</a></td>
     </tr>
     <tr>
         <td>Fontconfig</td>
         <td>2.8.0</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz">Source</a></td>
     </tr>
     <tr>
         <td>FreeType</td>
         <td>2.5.5</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.5.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/freetype-2.5.5.tar.baz">Source</a></td>
     </tr>
     <tr>
         <td>GDK-PixBuf</td>
         <td>2.30.7</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.7.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.7.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>gettext-runtime</td>
@@ -64,12 +64,12 @@ These are the libraries in the bundle:
     <tr>
         <td>GLib</td>
         <td>2.42.1</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.42.1.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/glib-2.42.1.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>GTK+</td>
         <td>2.24.25</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk-2.24.25.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gtk+-2.24.25.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>HarfBuzz</td>
@@ -84,7 +84,7 @@ These are the libraries in the bundle:
     <tr>
         <td>libpng</td>
         <td>1.6.16</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.16.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/libpng-1.6.16.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>libxml2</td>
@@ -94,17 +94,17 @@ These are the libraries in the bundle:
     <tr>
         <td>OpenSSL</td>
         <td>1.0.1l</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1l.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1l.tar.gz">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
         <td>1.36.8</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.8.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pango-1.36.8.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>Pixman</td>
         <td>0.32.6</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/pixman-0.32.6.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/pixman-0.32.6.tar.gz">Source</a></td>
     </tr>
     <tr>
         <td>win-iconv</td>
@@ -114,7 +114,7 @@ These are the libraries in the bundle:
     <tr>
         <td>zlib</td>
         <td>1.2.8</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.7z">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.tar.xz">Source</a></td>
     </tr>
 </table>
 
