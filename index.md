@@ -53,8 +53,8 @@ These are the libraries in the bundle:
     </tr>
     <tr>
         <td>GDK-PixBuf</td>
-        <td>2.30.7</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.7.tar.xz">Source</a></td>
+        <td>2.30.8</td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.8.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>gettext-runtime</td>
