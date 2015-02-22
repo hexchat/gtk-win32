@@ -94,7 +94,7 @@ These are the libraries in the bundle:
     <tr>
         <td>OpenSSL</td>
         <td>1.0.1l</td>
-        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1l.tar.gz">Source</a></td>
+        <td><a href="http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1l.7z">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
