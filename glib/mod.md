@@ -13,3 +13,4 @@
 `<GlibSeparateVSDllSuffix>-2.0</GlibSeparateVSDllSuffix>`
 	* `<PythonPath>c:\python27</PythonPath>` with
 `<PythonPath>..\..\..\..\..\....\..\python-2.7\$(Platform)</PythonPath>`
+ * In gobject.vcxproj, remove `<WholeProgramOptimization>false</WholeProgramOptimization>`

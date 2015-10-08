@@ -457,6 +457,7 @@ $items['glib'].BuildScript = {
 	Exec $patch -p1 -i glib-package-installation-directory.patch
 	Exec $patch -p1 -i g-win32-command-line-1.patch
 	Exec $patch -p1 -i g-win32-command-line-2.patch
+	Exec $patch -p1 -i gobject-init-ctor.patch
 
 	Fix-C4819 .\gio\gdbusaddress.c
 	Fix-C4819 .\gio\gfile.c

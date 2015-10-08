@@ -1,0 +1,29 @@
+diff -urpN glib.orig/gobject/gtype.c glib/gobject/gtype.c
+--- glib.orig/gobject/gtype.c	Tue Jul 21 21:05:03 2015
++++ glib/gobject/gtype.c	Tue Jul 21 21:05:56 2015
+@@ -4363,7 +4363,6 @@ g_type_init (void)
+ #ifdef G_DEFINE_CONSTRUCTOR_NEEDS_PRAGMA
+ #pragma G_DEFINE_CONSTRUCTOR_PRAGMA_ARGS(gobject_init_ctor)
+ #endif
+-G_DEFINE_CONSTRUCTOR(gobject_init_ctor)
+ #else
+ # error Your platform/compiler is missing constructor support
+ #endif
+@@ -4864,4 +4863,17 @@ g_type_ensure (GType type)
+    */
+   if (G_UNLIKELY (type == (GType)-1))
+     g_error ("can't happen");
++}
++
++#include <Windows.h>
++
++BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
++{
++	switch (fdwReason)
++	{
++	case DLL_PROCESS_ATTACH:
++		gobject_init_ctor();
++	}
++
++	return TRUE;
+ }
