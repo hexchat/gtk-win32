@@ -1,4 +1,4 @@
-Here you can download a GTK+ 2 bundle (and a few additional libraries) built with Visual Studio 2013. HexChat for Windows is built using this bundle.
+Here you can download a GTK+ 2 bundle (and a few additional libraries) built with Visual Studio 2015. HexChat for Windows is built using this bundle.
 
 
 ## GTK+ Bundle
@@ -12,7 +12,7 @@ This is the bundle built by us containing all the GTK+ binaries, headers and imp
         <td><a href="https://dl.hexchat.net/gtk-win32/vc12/x64/gtk-x64.7z">64-bit</a></td>
     </tr>
     <tr>
-        <td><a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">Microsoft Visual C++ Redistributable Package for Visual Studio 2013</a></td>
+        <td><a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Microsoft Visual C++ Redistributable Package for Visual Studio 2015</a></td>
         <td>vcredist_x86.exe - 32-bit</a></td>
         <td>vcredist_x64.exe - 64-bit</a></td>
     </tr>
@@ -120,7 +120,7 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 
 1. Install the following build tools and dependencies:
 
-    * [Visual Studio 2013 Express for Windows Desktop](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-2013-express) - Any version of VS apart from 2013 is not supported.
+    * [Visual Studio 2015 Community](http://www.visualstudio.com/downloads/download-visual-studio-vs) - Any version of VS apart from 2015 is not supported.
     * [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) - Not needed for Windows 8.1 and above
     * [CMake 3.0.2](http://www.cmake.org/download/)
     * [msys2](https://msys2.github.io/)
