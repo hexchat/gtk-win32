@@ -204,7 +204,7 @@ $items = @{
 	};
 
 	'pixman' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.32.6.tar.gz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.32.8.tar.gz'
 		'Dependencies' = @('libpng')
 	};
 
@@ -783,8 +783,8 @@ $items['pixman']['BuildScript'] = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vc12\pixman.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc12\ /maxcpucount /nodeReuse:True
-	Exec msbuild build\win32\vc12\install.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc12\ /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vc14\pixman.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc14\ /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vc14\install.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc14\ /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
