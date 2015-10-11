@@ -149,7 +149,7 @@ $items = @{
 	};
 
 	'freetype' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.tar.bz2'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.1.tar.bz2'
 		'Dependencies' = @()
 	};
 
@@ -388,7 +388,7 @@ $items['freetype'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild builds\windows\vc2013\freetype.vcxproj /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild builds\windows\vc2015\freetype.vcxproj /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -399,7 +399,7 @@ $items['freetype'].BuildScript = {
 
 	New-Item -Type Directory $packageDestination\lib
 	Copy-Item `
-		".\objs\vc2013\$platform\freetype.lib" `
+		".\objs\vc2015\$platform\freetype.lib" `
 		$packageDestination\lib
 
 	New-Item -Type Directory $packageDestination\share\doc\freetype
