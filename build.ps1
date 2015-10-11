@@ -184,7 +184,7 @@ $items = @{
 	};
 
 	'libpng' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libpng-1.6.17.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libpng-1.6.18.tar.xz'
 		'Dependencies' = @('zlib')
 	};
 
@@ -586,18 +586,18 @@ $items['libpng'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild projects\vc12\pnglibconf\pnglibconf.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc12\ /nodeReuse:True
-	Exec msbuild projects\vc12\libpng\libpng.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc12\ /nodeReuse:True
+	Exec msbuild projects\vc14\pnglibconf\pnglibconf.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc14\ /nodeReuse:True
+	Exec msbuild projects\vc14\libpng\libpng.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc14\ /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
 	switch ($filenameArch) {
 		'x86' {
-			$releaseDirectory = '.\projects\vc12\Release'
+			$releaseDirectory = '.\projects\vc14\Release'
 		}
 
 		'x64' {
-			$releaseDirectory = '.\projects\vc12\x64\Release'
+			$releaseDirectory = '.\projects\vc14\x64\Release'
 		}
 	}
 
