@@ -164,7 +164,7 @@ $items = @{
 	};
 
 	'glib' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.44.1.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.46.0.tar.xz'
 		'Dependencies' = @('gettext-runtime', 'libffi', 'zlib')
 	};
 
@@ -457,18 +457,19 @@ $items['glib'].BuildScript = {
 
 	Exec $patch -p1 -i glib-if_nametoindex.patch
 	Exec $patch -p1 -i glib-package-installation-directory.patch
-	Exec $patch -p1 -i g-win32-command-line-1.patch
-	Exec $patch -p1 -i g-win32-command-line-2.patch
 	Exec $patch -p1 -i gobject-init-ctor.patch
+	Exec $patch -p1 -i gnulib-snprintf.patch
 
 	Fix-C4819 .\gio\gdbusaddress.c
 	Fix-C4819 .\gio\gfile.c
+	Fix-C4819 .\gio\gwin32appinfo.h
+	Fix-C4819 .\gio\gwin32registrykey.h
 	Fix-C4819 .\glib\gmacros.h
 	Fix-C4819 .\glib\gmain.c
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs12\glib.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\glib.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 

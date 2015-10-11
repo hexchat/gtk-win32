@@ -1,0 +1,17 @@
+diff -urpN glib-2.46.0.orig/glib/gnulib/vasnprintf.c glib-2.46.0/glib/gnulib/vasnprintf.c
+--- glib-2.46.0.orig/glib/gnulib/vasnprintf.c	Wed Feb 25 19:01:38 2015
++++ glib-2.46.0/glib/gnulib/vasnprintf.c	Sun Oct 11 00:33:58 2015
+@@ -698,13 +698,7 @@ vasnprintf (char *resultbuf, size_t *len
+ 		    break;
+ 		  }
+ 		*p = dp->conversion;
+-#if HAVE_SNPRINTF
+-		p[1] = '%';
+-		p[2] = 'n';
+-		p[3] = '\0';
+-#else
+ 		p[1] = '\0';
+-#endif
+ 
+ 		/* Construct the arguments for calling snprintf or sprintf.  */
+ 		prefix_count = 0;

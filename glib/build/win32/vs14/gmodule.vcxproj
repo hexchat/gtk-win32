@@ -19,51 +19,51 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BD12E835-5C52-4E5D-8234-1C579F33E27A}</ProjectGuid>
-    <RootNamespace>glibgenmarshal</RootNamespace>
+    <ProjectGuid>{4214047C-F5C1-40B3-8369-5DCED8C32770}</ProjectGuid>
+    <RootNamespace>gmodule</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="glib-build-defines.props" />
+    <Import Project="glib-gen-srcs.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="glib-build-defines.props" />
+    <Import Project="glib-gen-srcs.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="glib-build-defines.props" />
+    <Import Project="glib-gen-srcs.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="glib-build-defines.props" />
+    <Import Project="glib-gen-srcs.props" />
   </ImportGroup>
   <Import Project="..\..\..\..\stack.props" />
   <PropertyGroup Label="UserMacros" />
@@ -75,7 +75,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;$(GModuleBuildDefines);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -86,17 +86,20 @@
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
+      <OutputFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).dll</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
+      <ProgramDatabaseFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
+      <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(GModuleBuildDefines);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
@@ -105,19 +108,22 @@
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
+      <OutputFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).dll</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
+      <ProgramDatabaseFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
+      <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;$(GModuleBuildDefines);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -128,17 +134,20 @@
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
+      <OutputFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).dll</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
+      <ProgramDatabaseFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
+      <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(GModuleBuildDefines);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
@@ -147,18 +156,40 @@
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
+      <OutputFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).dll</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
+      <ProgramDatabaseFile>$(OutDir)$(GlibDllPrefix)$(ProjectName)$(GlibDllSuffix).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
+      <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\gobject\glib-genmarshal.c" />
+    <ClCompile Include="..\..\..\gmodule\gmodule.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\gmodule\gmoduleconf.h.win32">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying gmoduleconf.h from gmoduleconf.h.win32...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(GenGModuleConfH)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\gmodule\gmoduleconf.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copying gmoduleconf.h from gmoduleconf.h.win32...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(GenGModuleConfH)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\gmodule\gmoduleconf.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying gmoduleconf.h from gmoduleconf.h.win32...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(GenGModuleConfH)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\gmodule\gmoduleconf.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copying gmoduleconf.h from gmoduleconf.h.win32...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(GenGModuleConfH)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\gmodule\gmoduleconf.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\gmodule\gmodule.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="glib.vcxproj">
