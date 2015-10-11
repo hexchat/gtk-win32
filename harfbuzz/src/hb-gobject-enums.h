@@ -41,14 +41,20 @@
 HB_BEGIN_DECLS
 
 
-GType hb_gobject_memory_mode_get_type (void) G_GNUC_CONST;
-#define HB_GOBJECT_TYPE_MEMORY_MODE (hb_gobject_memory_mode_get_type ())
+GType hb_gobject_blob_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_BLOB (hb_gobject_blob_get_type ())
+
+GType hb_gobject_buffer_cluster_level_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_BUFFER_CLUSTER_LEVEL (hb_gobject_buffer_cluster_level_get_type ())
 
 GType hb_gobject_buffer_content_type_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_BUFFER_CONTENT_TYPE (hb_gobject_buffer_content_type_get_type ())
 
 GType hb_gobject_buffer_flags_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_BUFFER_FLAGS (hb_gobject_buffer_flags_get_type ())
+
+GType hb_gobject_buffer_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_BUFFER (hb_gobject_buffer_get_type ())
 
 GType hb_gobject_buffer_serialize_flags_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_BUFFER_SERIALIZE_FLAGS (hb_gobject_buffer_serialize_flags_get_type ())
@@ -59,17 +65,53 @@ GType hb_gobject_buffer_serialize_format_get_type (void) G_GNUC_CONST;
 GType hb_gobject_direction_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_DIRECTION (hb_gobject_direction_get_type ())
 
+GType hb_gobject_face_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_FACE (hb_gobject_face_get_type ())
+
+GType hb_gobject_feature_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_FEATURE (hb_gobject_feature_get_type ())
+
+GType hb_gobject_font_funcs_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_FONT_FUNCS (hb_gobject_font_funcs_get_type ())
+
+GType hb_gobject_font_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_FONT (hb_gobject_font_get_type ())
+
+GType hb_gobject_glyph_info_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_GLYPH_INFO (hb_gobject_glyph_info_get_type ())
+
+GType hb_gobject_glyph_position_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_GLYPH_POSITION (hb_gobject_glyph_position_get_type ())
+
+GType hb_gobject_memory_mode_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_MEMORY_MODE (hb_gobject_memory_mode_get_type ())
+
+GType hb_gobject_ot_layout_glyph_class_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS (hb_gobject_ot_layout_glyph_class_get_type ())
+
 GType hb_gobject_script_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_SCRIPT (hb_gobject_script_get_type ())
 
-GType hb_gobject_unicode_general_category_get_type (void) G_GNUC_CONST;
-#define HB_GOBJECT_TYPE_UNICODE_GENERAL_CATEGORY (hb_gobject_unicode_general_category_get_type ())
+GType hb_gobject_segment_properties_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_SEGMENT_PROPERTIES (hb_gobject_segment_properties_get_type ())
+
+GType hb_gobject_set_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_SET (hb_gobject_set_get_type ())
+
+GType hb_gobject_shape_plan_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_SHAPE_PLAN (hb_gobject_shape_plan_get_type ())
 
 GType hb_gobject_unicode_combining_class_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_UNICODE_COMBINING_CLASS (hb_gobject_unicode_combining_class_get_type ())
 
-GType hb_gobject_ot_layout_glyph_class_get_type (void) G_GNUC_CONST;
-#define HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS (hb_gobject_ot_layout_glyph_class_get_type ())
+GType hb_gobject_unicode_funcs_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_UNICODE_FUNCS (hb_gobject_unicode_funcs_get_type ())
+
+GType hb_gobject_unicode_general_category_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_UNICODE_GENERAL_CATEGORY (hb_gobject_unicode_general_category_get_type ())
+
+GType hb_gobject_user_data_key_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_USER_DATA_KEY (hb_gobject_user_data_key_get_type ())
 
 
 HB_END_DECLS

@@ -18,6 +18,9 @@
     <ClCompile Include="..\src\hb-common.cc">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\hb-face.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\hb-fallback-shape.cc">
       <Filter>Source</Filter>
     </ClCompile>
@@ -51,6 +54,12 @@
     <ClCompile Include="..\src\hb-ot-shape-complex-default.cc">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\hb-ot-shape-complex-hangul.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hb-ot-shape-complex-hebrew.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\hb-ot-shape-complex-indic.cc">
       <Filter>Source</Filter>
     </ClCompile>
@@ -60,10 +69,16 @@
     <ClCompile Include="..\src\hb-ot-shape-complex-myanmar.cc">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\hb-ot-shape-complex-sea.cc">
+    <ClCompile Include="..\src\hb-ot-shape-complex-thai.cc">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\hb-ot-shape-complex-thai.cc">
+    <ClCompile Include="..\src\hb-ot-shape-complex-tibetan.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hb-ot-shape-complex-use.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hb-ot-shape-complex-use-table.cc">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="..\src\hb-ot-shape-fallback.cc">

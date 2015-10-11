@@ -1,4 +1,4 @@
- * Download [HarfBuzz 0.9.41](http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.41.tar.bz2)
+ * Download [HarfBuzz 1.0.4](http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.0.4.tar.bz2)
  * Download [blinkseb's HarfBuzz solution](https://github.com/blinkseb/harfbuzz)
  * Open `win32\harfbuzz.sln` with VS
  * Generate .def file:

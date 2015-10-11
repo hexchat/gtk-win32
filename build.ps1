@@ -174,7 +174,7 @@ $items = @{
 	};
 
 	'harfbuzz' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.41.tar.bz2'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-1.0.4.tar.bz2'
 		'Dependencies' = @('freetype', 'glib')
 	};
 
