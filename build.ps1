@@ -129,7 +129,7 @@ param (
 
 $items = @{
 	'atk' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/atk-2.16.0.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/atk-2.18.0.tar.xz'
 		'Dependencies' = @('glib')
 	};
 
@@ -233,7 +233,7 @@ $items['atk'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs12\atk.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\atk.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
