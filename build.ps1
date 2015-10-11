@@ -199,7 +199,7 @@ $items = @{
 	};
 
 	'pango' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.36.8.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.38.0.tar.xz'
 		'Dependencies' = @('cairo', 'harfbuzz')
 	};
 
@@ -743,7 +743,7 @@ $items['pango'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs12\pango.sln /p:Platform=$platform /p:Configuration=Release_FC /nodeReuse:True
+	Exec msbuild build\win32\vs14\pango.sln /p:Platform=$platform /p:Configuration=Release_FC /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 
