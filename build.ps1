@@ -164,7 +164,7 @@ $items = @{
 	};
 
 	'glib' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.46.0.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz'
 		'Dependencies' = @('gettext-runtime', 'libffi', 'zlib')
 	};
 
@@ -459,8 +459,6 @@ $items['glib'].BuildScript = {
 
 	Exec $patch -p1 -i glib-if_nametoindex.patch
 	Exec $patch -p1 -i glib-package-installation-directory.patch
-	Exec $patch -p1 -i gobject-init-ctor.patch
-	Exec $patch -p1 -i gnulib-snprintf.patch
 
 	Fix-C4819 .\gio\gdbusaddress.c
 	Fix-C4819 .\gio\gfile.c
