@@ -184,7 +184,7 @@ $items = @{
 	};
 
 	'libpng' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libpng-1.6.18.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libpng-1.6.21.tar.xz'
 		'Dependencies' = @('zlib')
 	};
 

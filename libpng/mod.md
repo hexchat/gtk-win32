@@ -1,4 +1,4 @@
-* Download [libpng 1.6.18](ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.18.tar.xz)
+* Download [libpng 1.6.21](ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.21.tar.xz)
 * Copy `projects\vstudio` to `projects\vc14`. Only keep libpng and pnglibconf directories.
 * In `projects\vc14\libpng\libpng.vcxproj`:
 	* Under `<ItemGroup Label="ProjectConfigurations">`, add
