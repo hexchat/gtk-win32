@@ -149,7 +149,7 @@ $items = @{
 	};
 
 	'freetype' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.1.tar.bz2'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.2.tar.bz2'
 		'Dependencies' = @()
 	};
 
@@ -385,6 +385,10 @@ $items['fontconfig'].BuildScript = {
 $items['freetype'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+
+	# Pango requires freetype.h to be in utf-8 with BOM
+	$freetype_h = Get-Content .\include\freetype\freetype.h -Encoding UTF8
+	Out-File .\include\freetype\freetype.h -InputObject $freetype_h -Encoding UTF8
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
