@@ -154,7 +154,7 @@ $items = @{
 	};
 
 	'gdk-pixbuf' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.1.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.3.tar.xz'
 		'Dependencies' = @('glib', 'libpng')
 	};
 
@@ -415,8 +415,6 @@ $items['freetype'].BuildScript = {
 $items['gdk-pixbuf'].BuildScript = {
 	$packageDestination = "$PWD-rel"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
-
-	Exec $patch -p1 -i bogus-math-h.patch
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 

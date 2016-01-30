@@ -1,4 +1,4 @@
-* Download [GDK-PixBuf 2.32.1](http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.32/gdk-pixbuf-2.32.1.tar.xz)
+* Download [GDK-PixBuf 2.32.3](http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.32/gdk-pixbuf-2.32.3.tar.xz)
 * In `build\win32\vs14\gdk-pixbuf-build-defines.props`, replace `intl.lib` with `libintl.lib`
 * In `build\win32\vs14\gdk-pixbuf-version-paths.props`, replace:
 	* `<GlibEtcInstallRoot>$(SolutionDir)..\..\..\..\vs$(VSVer)\$(Platform)</GlibEtcInstallRoot>` with `<GlibEtcInstallRoot>$(SolutionDir)..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>`
