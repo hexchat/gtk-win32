@@ -94,7 +94,7 @@ These are the libraries in the bundle:
     <tr>
         <td>Pango</td>
         <td>1.38.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/pango-1.38.0.tar.xz">Source</a></td>
+        <td><a href="https://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz">Source</a></td>
     </tr>
     <tr>
         <td>Pixman</td>

@@ -199,7 +199,7 @@ $items = @{
 	};
 
 	'pango' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.38.0.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz'
 		'Dependencies' = @('cairo', 'harfbuzz')
 	};
 
