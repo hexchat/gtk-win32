@@ -88,12 +88,12 @@ These are the libraries in the bundle:
     </tr>
     <tr>
         <td>OpenSSL</td>
-        <td>1.0.2d</td>
+        <td>1.0.2f</td>
         <td><a href="https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2f.tar.gz">Source</a></td>
     </tr>
     <tr>
         <td>Pango</td>
-        <td>1.38.0</td>
+        <td>1.39.0</td>
         <td><a href="https://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz">Source</a></td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ These are the libraries in the bundle:
     </tr>
     <tr>
         <td>win-iconv</td>
-        <td>0.0.6</td>
+        <td>0.0.7</td>
         <td><a href="https://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.7.tar.gz">Source</a></td>
     </tr>
     <tr>
