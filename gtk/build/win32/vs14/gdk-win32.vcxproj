@@ -27,22 +27,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -127,8 +127,8 @@
     <ClCompile Include="..\..\..\gdk\win32\gdkglobals-win32.c" />
     <ClCompile Include="..\..\..\gdk\win32\gdkim-win32.c" />
     <ClCompile Include="..\..\..\gdk\win32\gdkimage-win32.c" />
-    <ClCompile Include="..\..\..\gdk\win32\gdkinput-win32.c" />
     <ClCompile Include="..\..\..\gdk\win32\gdkinput.c" />
+    <ClCompile Include="..\..\..\gdk\win32\gdkinput-win32.c" />
     <ClCompile Include="..\..\..\gdk\win32\gdkkeys-win32.c" />
     <ClCompile Include="..\..\..\gdk\win32\gdkmain-win32.c" />
     <ClCompile Include="..\..\..\gdk\win32\gdkpixmap-win32.c" />

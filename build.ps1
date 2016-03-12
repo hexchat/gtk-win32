@@ -169,7 +169,7 @@ $items = @{
 	};
 
 	'gtk' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk+-2.24.29.tar.xz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz'
 		'Dependencies' = @('atk', 'gdk-pixbuf', 'pango')
 	};
 
@@ -492,7 +492,7 @@ $items['gtk'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs12\gtk+.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\gtk+.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
 

@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 13.00
-# Visual Studio 2013
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gdk-win32", "gdk-win32.vcxproj", "{FC5AADB5-95CD-4BF0-BA8B-0C16FE7073FA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gdk", "gdk.vcxproj", "{FC5AADB5-95CD-4BF0-BA8B-0C16FE7073F7}"
@@ -11,6 +11,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gailutil", "gailutil.vcxproj", "{B3B6558A-01C8-4C72-9BDE-84ABB1AE67DF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libwimp", "libwimp.vcxproj", "{7660FB4E-2AE6-483E-8813-0974CBE6F97F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtk-update-icon-cache", "gtk-update-icon-cache.vcxproj", "{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpixmap", "libpixmap.vcxproj", "{59FD5E4C-2E79-47D9-B485-A41143D39B13}"
 EndProject
@@ -72,6 +74,14 @@ Global
 		{7660FB4E-2AE6-483E-8813-0974CBE6F97F}.Release|Win32.Build.0 = Release|Win32
 		{7660FB4E-2AE6-483E-8813-0974CBE6F97F}.Release|x64.ActiveCfg = Release|x64
 		{7660FB4E-2AE6-483E-8813-0974CBE6F97F}.Release|x64.Build.0 = Release|x64
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Debug|Win32.Build.0 = Debug|Win32
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Debug|x64.ActiveCfg = Debug|x64
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Debug|x64.Build.0 = Debug|x64
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Release|Win32.ActiveCfg = Release|Win32
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Release|Win32.Build.0 = Release|Win32
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Release|x64.ActiveCfg = Release|x64
+		{FAB0AD6F-AEBF-4AF8-A1CC-6890A9090945}.Release|x64.Build.0 = Release|x64
 		{FC5AADB5-95CD-4BF0-BA8B-0C16FE8073FB}.Debug|Win32.ActiveCfg = Debug|Win32
 		{FC5AADB5-95CD-4BF0-BA8B-0C16FE8073FB}.Debug|Win32.Build.0 = Debug|Win32
 		{FC5AADB5-95CD-4BF0-BA8B-0C16FE8073FB}.Debug|x64.ActiveCfg = Debug|x64

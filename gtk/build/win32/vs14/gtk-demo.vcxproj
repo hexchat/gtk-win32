@@ -28,23 +28,23 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -187,7 +187,6 @@
     <ClCompile Include="..\..\..\demos\gtk-demo\infobar.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\links.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\list_store.c" />
-    <ClCompile Include="..\..\..\demos\gtk-demo\main.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\menus.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\offscreen_window.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\offscreen_window2.c" />
@@ -200,11 +199,12 @@
     <ClCompile Include="..\..\..\demos\gtk-demo\sizegroup.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\spinner.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\stock_browser.c" />
-    <ClCompile Include="..\..\..\demos\gtk-demo\textscroll.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\textview.c" />
+    <ClCompile Include="..\..\..\demos\gtk-demo\textscroll.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\toolpalette.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\tree_store.c" />
     <ClCompile Include="..\..\..\demos\gtk-demo\ui_manager.c" />
+    <ClCompile Include="..\..\..\demos\gtk-demo\main.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="gdk.vcxproj">
