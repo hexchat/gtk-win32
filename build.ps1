@@ -204,7 +204,7 @@ $items = @{
 	};
 
 	'pixman' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.32.8.tar.gz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz'
 		'Dependencies' = @('libpng')
 	};
 
