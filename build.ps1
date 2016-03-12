@@ -149,7 +149,7 @@ $items = @{
 	};
 
 	'freetype' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.2.tar.bz2'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.3.tar.bz2'
 		'Dependencies' = @()
 	};
 
