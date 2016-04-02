@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <VSVer>14</VSVer>
+    <GlibEtcInstallRoot>$(SolutionDir)..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>
+    <CopyDir>..\..\..\..\gobject-introspection-rel</CopyDir>
+    <!-- PythonDir needs to point to a 32-bit/x86 Python 2.7/3.3+ installation -->
+    <PythonDir>$(SolutionDir)..\..\..\..\..\..\python-2.7\$(Platform)</PythonDir>
+    <!-- PythonDirX64 needs to point to an x86-64/x64 Python 2.7/3.3+ installation -->
+    <PythonDirX64>$(SolutionDir)..\..\..\..\..\..\python-2.7\$(Platform)</PythonDirX64>
+    <IntrospectPythonParam>PYTHON=$(PythonDir)\python.exe</IntrospectPythonParam>
+    <IntrospectPythonParamX64>PYTHON=$(PythonDirX64)\python.exe</IntrospectPythonParamX64>
+    <GIVersion>1.48.0</GIVersion>
+    <BASE_GI_DIR>$(SolutionDir)\..\..\..</BASE_GI_DIR>
+    <ApiVersion>1.0</ApiVersion>
+    <DefDir>$(SolutionDir)$(Configuration)\$(Platform)\obj\$(ProjectName)</DefDir>
+    <LibGILibtoolCompatibleDllPrefix>lib</LibGILibtoolCompatibleDllPrefix>
+    <LibGILibtoolCompatibleDllSuffix>-$(ApiVersion)-0</LibGILibtoolCompatibleDllSuffix>
+    <LibGISeparateVSDllPrefix />
+    <LibGISeparateVSDllSuffix>-1.0</LibGISeparateVSDllSuffix>
+    <LibGIDllPrefix>$(LibGISeparateVSDllPrefix)</LibGIDllPrefix>
+    <LibGIDllSuffix>$(LibGISeparateVSDllSuffix)</LibGIDllSuffix>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_PropertySheetDisplayName>giversionpathsprops</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="VSVer">
+      <Value>$(VSVer)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GlibEtcInstallRoot">
+      <Value>$(GlibEtcInstallRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CopyDir">
+      <Value>$(CopyDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PythonDir">
+      <Value>$(PythonDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PythonDirX64">
+      <Value>$(PythonDirX64)</Value>
+    </BuildMacro>
+    <BuildMacro Include="IntrospectPythonParam">
+      <Value>$(IntrospectPythonParam)</Value>
+    </BuildMacro>
+    <BuildMacro Include="IntrospectPythonParamX64">
+      <Value>$(IntrospectPythonParamX64)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GIVersion">
+      <Value>$(GIVersion)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BASE_GI_DIR">
+      <Value>$(BASE_GI_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ApiVersion">
+      <Value>$(ApiVersion)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibGILibtoolCompatibleDllPrefix">
+      <Value>$(LibGILibtoolCompatibleDllPrefix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibGILibtoolCompatibleDllSuffix">
+      <Value>$(LibGILibtoolCompatibleDllSuffix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibGISeparateVSDllPrefix">
+      <Value>$(LibGISeparateVSDllPrefix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibGISeparateVSDllSuffix">
+      <Value>$(LibGISeparateVSDllSuffix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibGIDllPrefix">
+      <Value>$(LibGIDllPrefix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibGIDllSuffix">
+      <Value>$(LibGIDllSuffix)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

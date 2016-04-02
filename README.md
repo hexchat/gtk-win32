@@ -62,6 +62,11 @@ These are the libraries in the bundle:
         <td><a href="https://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz">Source</a></td>
     </tr>
     <tr>
+        <td>GObject-Introspection</td>
+        <td>1.48.0</td>
+        <td><a href="https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz">Source</a></td>
+    </tr>
+    <tr>
         <td>GTK+</td>
         <td>2.24.30</td>
         <td><a href="https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz">Source</a></td>

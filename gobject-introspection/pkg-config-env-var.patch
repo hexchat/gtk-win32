@@ -1,0 +1,22 @@
+--- gobject-introspection.orig/build/win32/introspection-msvc.mak	2016-03-22 15:22:28.000000000 -0700
++++ gobject-introspection/build/win32/introspection-msvc.mak	2016-04-04 16:28:36.036641400 -0700
+@@ -37,6 +37,10 @@
+ PYTHON=python
+ !endif
+ 
++!if "$(PKG_CONFIG)" == ""
++PKG_CONFIG=pkg-config
++!endif
++
+ # Don't change anything following this line!
+ 
+ GIR_SUBDIR = share\gir-1.0
+@@ -56,7 +60,7 @@
+ BUILD_INTROSPECTION = TRUE
+ 
+ !if ![set PKG_CONFIG_PATH=$(PKG_CONFIG_PATH)]	\
+-	&& ![pkg-config --print-errors --errors-to-stdout $(CHECK_PACKAGE) > pkgconfig.x]	\
++	&& ![$(PKG_CONFIG) --print-errors --errors-to-stdout $(CHECK_PACKAGE) > pkgconfig.x]	\
+ 	&& ![setlocal]	\
+ 	&& ![set file="pkgconfig.x"]	\
+ 	&& ![FOR %A IN (%file%) DO @echo PKG_CHECK_SIZE=%~zA > pkgconfig.chksize]	\

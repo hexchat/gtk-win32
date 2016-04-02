@@ -115,7 +115,7 @@ param (
 	[string]
 	$PerlDirectory = "$BuildDirectory\perl-5.20",
 
-	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
+	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gobject-introspection', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
 	$OnlyBuild = @()
 )
 
@@ -166,6 +166,11 @@ $items = @{
 	'glib' = @{
 		'ArchiveUrl' = 'http://ftp.acc.umu.se/pub/gnome/sources/glib/2.48/glib-2.48.0.tar.xz'
 		'Dependencies' = @('gettext-runtime', 'libffi', 'zlib')
+	};
+
+	'gobject-introspection' = @{
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz'
+		'Dependencies' = @('glib', 'cairo', 'pkg-config')
 	};
 
 	'gtk' = @{
@@ -482,6 +487,58 @@ $items['glib'].BuildScript = {
 
 	New-Item -Type Directory $packageDestination\share\doc\glib
 	Copy-Item .\COPYING $packageDestination\share\doc\glib
+
+	Package $packageDestination
+}
+
+$items['gobject-introspection'].BuildScript = {
+	$packageDestination = "$PWD-rel"
+	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+	New-Item -Type Directory $packageDestination
+
+	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+
+	# Avoid gi-introspect target
+	Exec msbuild build\win32\vs14\gobject-introspection.sln /p:Platform=$platform /p:Configuration=Release /nodeReuse:True /target:gi-install
+
+	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\share\doc\gobject-introspection
+	Copy-Item .\COPYING $packageDestination\share\doc\gobject-introspection
+
+	Package $packageDestination
+
+	# This process is split into two parts.
+	# This is because:
+	# - The project files are broken
+	# - The build process outputs libraries and tools that are depended
+	#   upon for the second phase, this requires properly setting up various
+	#   paths which is just easier if it is already installed.
+
+	$packageDestination = "$PWD-data-rel"
+	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+
+	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+
+	Exec $patch -p1 -i pkg-config-env-var.patch
+
+	$env:PREFIX = "..\..\..\..\..\gtk\$platform"
+	$env:PKG_CONFIG = "..\..\..\..\..\gtk\$platform\bin\pkg-config.exe"
+	$env:PYTHON = "..\..\..\..\..\python-2.7\$platform\python.exe"
+
+	Push-Location .\build\win32
+
+	Exec nmake -f .\gi-introspection-msvc.mak CFG=release
+
+	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\share\gir-1.0
+	Copy-Item .\*.gir $packageDestination\share\gir-1.0
+
+	New-Item -Type Directory $packageDestination\lib\girepository-1.0
+	Copy-Item .\*.typelib $packageDestination\lib\girepository-1.0
+
+	Pop-Location
 
 	Package $packageDestination
 }
