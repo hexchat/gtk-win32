@@ -115,7 +115,7 @@ param (
 	[string]
 	$PerlDirectory = "$BuildDirectory\perl-5.20",
 
-	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gobject-introspection', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
+	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gobject-introspection', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'luajit', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
 	$OnlyBuild = @()
 )
 
@@ -196,6 +196,11 @@ $items = @{
 	'libxml2' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libxml2-2.9.3.tar.gz'
 		'Dependencies' = @('win-iconv')
+	};
+
+	'luajit' = @{
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/luajit-2.0.4.tar.gz'
+		'Dependencies' = @()
 	};
 
 	'openssl' = @{
@@ -723,6 +728,47 @@ $items['libxml2'].BuildScript = {
 	New-Item -Type Directory $packageDestination\share\doc\libxml2
 	Copy-Item .\COPYING $packageDestination\share\doc\libxml2
 
+	Package $packageDestination
+}
+
+$items['luajit'].BuildScript = {
+	$packageDestination = "$PWD-$filenameArch"
+	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+
+	Exec $patch -p1 -i .\lua-default-path.patch
+
+	Push-Location .\src
+
+	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+
+	Exec .\msvcbuild
+
+	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\include\luajit-2.0
+	Copy-Item `
+		.\lua.h, `
+		.\lualib.h, `
+		.\luaconf.h, `
+		.\lauxlib.h, `
+		.\luajit.h `
+		$packageDestination\include\luajit-2.0
+
+	New-Item -Type Directory $packageDestination\bin
+	Copy-Item `
+		.\luajit.exe, `
+		.\lua51.dll `
+		$packageDestination\bin
+
+	New-Item -Type Directory $packageDestination\lib
+	Copy-Item `
+		.\lua51.lib `
+		$packageDestination\lib
+
+	Pop-Location
+
+	New-Item -Type Directory $packageDestination\share\doc\luajit
+	Copy-Item .\COPYRIGHT $packageDestination\share\doc\luajit
 	Package $packageDestination
 }
 
