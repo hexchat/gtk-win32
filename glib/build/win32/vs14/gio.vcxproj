@@ -195,6 +195,10 @@
    <ClCompile Include="..\..\..\gio\gdataoutputstream.c" />
    <ClCompile Include="..\..\..\gio\gdrive.c" />
    <ClCompile Include="..\..\..\gio\gdummyfile.c" />
+   <ClCompile Include="..\..\..\gio\gdatagrambased.c" />
+   <ClCompile Include="..\..\..\gio\gdtlsclientconnection.c" />
+   <ClCompile Include="..\..\..\gio\gdtlsconnection.c" />
+   <ClCompile Include="..\..\..\gio\gdtlsserverconnection.c" />
    <ClCompile Include="..\..\..\gio\gdummyproxyresolver.c" />
    <ClCompile Include="..\..\..\gio\gdummytlsbackend.c" />
    <ClCompile Include="..\..\..\gio\gemblem.c" />

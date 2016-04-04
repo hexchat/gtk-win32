@@ -164,7 +164,7 @@ $items = @{
 	};
 
 	'glib' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz'
+		'ArchiveUrl' = 'http://ftp.acc.umu.se/pub/gnome/sources/glib/2.48/glib-2.48.0.tar.xz'
 		'Dependencies' = @('gettext-runtime', 'libffi', 'zlib')
 	};
 
@@ -461,7 +461,9 @@ $items['gettext-runtime'].BuildScript = {
 $items['glib'].BuildScript = {
 	$packageDestination = "$PWD-rel"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+	New-Item -Type Directory $packageDestination
 
+	Exec $patch -p1 -i glibpc-libintl.patch
 	Exec $patch -p1 -i glib-if_nametoindex.patch
 	Exec $patch -p1 -i glib-package-installation-directory.patch
 

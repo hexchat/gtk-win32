@@ -156,8 +156,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\gio\gvdb\gvdb-builder.c" />
-    <ClCompile Include="..\..\..\gio\glib-compile-schemas.c" />
+   <ClCompile Include="..\..\..\gio\gvdb\gvdb-builder.c" />
+   <ClCompile Include="..\..\..\gio\glib-compile-schemas.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="glib.vcxproj">

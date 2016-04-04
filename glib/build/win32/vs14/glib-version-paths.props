@@ -4,6 +4,7 @@
     <VSVer>14</VSVer>
     <GlibEtcInstallRoot>..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>
     <CopyDir>..\..\..\..\glib-rel</CopyDir>
+    <GlibVersion>2.48.0</GlibVersion>
     <ApiVersion>2.0</ApiVersion>
     <GlibLibtoolCompatibleDllPrefix>lib</GlibLibtoolCompatibleDllPrefix>
     <GlibLibtoolCompatibleDllSuffix>-$(ApiVersion)-0</GlibLibtoolCompatibleDllSuffix>
@@ -11,7 +12,7 @@
     <GlibSeparateVSDllSuffix>-2.0</GlibSeparateVSDllSuffix>
     <GlibDllPrefix>$(GlibSeparateVSDllPrefix)</GlibDllPrefix>
     <GlibDllSuffix>$(GlibSeparateVSDllSuffix)</GlibDllSuffix>
-    <PythonPath>..\..\..\..\..\....\..\python-2.7\$(Platform)</PythonPath>
+    <PythonPath>..\..\..\..\..\..\python-2.7\$(Platform)</PythonPath>
   </PropertyGroup>
   <PropertyGroup>
     <_PropertySheetDisplayName>glibversionpathsprops</_PropertySheetDisplayName>
@@ -20,14 +21,17 @@
     <BuildMacro Include="VSVer">
       <Value>$(VSVer)</Value>
     </BuildMacro>
+    <BuildMacro Include="GlibVersion">
+      <Value>$(GlibVersion)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ApiVersion">
+      <Value>$(ApiVersion)</Value>
+    </BuildMacro>
     <BuildMacro Include="GlibEtcInstallRoot">
       <Value>$(GlibEtcInstallRoot)</Value>
     </BuildMacro>
     <BuildMacro Include="CopyDir">
       <Value>$(CopyDir)</Value>
-    </BuildMacro>
-    <BuildMacro Include="ApiVersion">
-      <Value>$(ApiVersion)</Value>
     </BuildMacro>
     <BuildMacro Include="GlibLibtoolCompatibleDllPrefix">
       <Value>$(GlibLibtoolCompatibleDllPrefix)</Value>

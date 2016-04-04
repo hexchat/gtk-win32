@@ -1,0 +1,11 @@
+--- glib.orig/build/win32/glibpc.py	2016-03-15 19:19:29.000000000 -0700
++++ glib.orig/build/win32/glibpc.py	2016-04-05 18:35:40.351402900 -0700
+@@ -26,7 +26,7 @@
+               	          'glib-mkenums': 'perl ${exec_prefix}/bin/glib-mkenums',
+               	          'gobject-query': '${exec_prefix}/bin/gobject-query',
+               	          '@PCRE_REQUIRES@': '',
+-              	          '@INTLLIBS@': '-lintl',
++              	          '@INTLLIBS@': '-llibintl',
+               	          '@G_LIBS_EXTRA@': '',
+               	          '@PCRE_LIBS@': '',
+               	          '@ICONV_LIBS@': '-liconv',
