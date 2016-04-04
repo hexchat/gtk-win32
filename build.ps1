@@ -115,7 +115,7 @@ param (
 	[string]
 	$PerlDirectory = "$BuildDirectory\perl-5.20",
 
-	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'win-iconv', 'zlib')]
+	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
 	$OnlyBuild = @()
 )
 
@@ -207,6 +207,11 @@ $items = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz'
 		'Dependencies' = @('libpng')
 	};
+
+	'pkg-config' = @{
+		'ArchiveUrl' = 'https://pkg-config.freedesktop.org/releases/pkg-config-0.29.1.tar.gz'
+		'Dependencies' = @('glib')
+	}
 
 	'win-iconv' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz'
@@ -793,6 +798,28 @@ $items['pixman']['BuildScript'] = {
 
 	Package $packageDestination
 }
+
+$items['pkg-config'].BuildScript = {
+	$packageDestination = "$PWD-rel"
+	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+
+	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+
+	Exec nmake /f Makefile.vc CFG=release GLIB_PREFIX=..\..\..\gtk\$platform
+
+	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\bin
+	Copy-Item `
+		.\release\$platform\pkg-config.exe `
+		$packageDestination\bin
+
+	New-Item -Type Directory $packageDestination\share\doc\pkg-config
+	Copy-Item .\COPYING $packageDestination\share\doc\pkg-config
+
+	Package $packageDestination
+}
+
 
 $items['win-iconv'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
