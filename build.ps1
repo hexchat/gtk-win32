@@ -115,7 +115,7 @@ param (
 	[string]
 	$PerlDirectory = "$BuildDirectory\perl-5.20",
 
-	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gobject-introspection', 'gtk', 'harfbuzz', 'libffi', 'libpng', 'libxml2', 'luajit', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
+	[string[]][ValidateSet('atk', 'cairo', 'enchant', 'fontconfig', 'freetype', 'gdk-pixbuf', 'gettext-runtime', 'glib', 'gobject-introspection', 'gtk', 'harfbuzz', 'lgi', 'libffi', 'libpng', 'libxml2', 'luajit', 'openssl', 'pango', 'pixman', 'pkg-config', 'win-iconv', 'zlib')]
 	$OnlyBuild = @()
 )
 
@@ -182,6 +182,11 @@ $items = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2'
 		'Dependencies' = @('freetype', 'glib')
 	};
+
+	'lgi' = @{
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/lgi-0.9.0-2c5e63d0.tar.gz'
+		'Dependencies' = @('luajit', 'gobject-introspection')
+	}
 
 	'libffi' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz'
@@ -613,6 +618,24 @@ $items['harfbuzz'].BuildScript = {
 
 	Package $packageDestination
 }
+
+$items['lgi'].BuildScript = {
+	$packageDestination = "$PWD-rel"
+	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
+
+	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+
+	Push-Location .\lgi
+
+	Exec nmake -f .\Makefile-msvc.mak install PREFIX=..\..\..\..\gtk\$platform DESTDIR=$packageDestination
+
+	Pop-Location
+
+	[void] (Swap-Environment $originalEnvironment)
+
+	Package $packageDestination
+}
+
 
 $items['libffi'].BuildScript = {
 	$packageDestination = "$PWD-rel"
