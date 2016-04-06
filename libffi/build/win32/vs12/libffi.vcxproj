@@ -17,11 +17,11 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v120</PlatformToolset>
-    <OutDir>..\..\..\..\libffi-rel\lib\</OutDir>
+    <OutDir>$(Configuration)\$(Platform)</OutDir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -45,6 +45,9 @@
     <PreBuildEvent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       <Command><![CDATA[cl /nologo /EP /DHAVE_CONFIG_H /DDLL_EXPORT /DPIC /I..\..\..\include /I..\..\..\x86_64-w64-mingw32 /I..\..\..\x86_64-w64-mingw32\include /I..\..\..\src\x86 ..\..\..\src\x86\win64.S > $(IntDir)\win64.asm]]></Command>
     </PreBuildEvent>
+	<Link>
+      <ModuleDefinitionFile>libffi.def</ModuleDefinitionFile>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\prep_cif.c" />

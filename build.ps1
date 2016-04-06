@@ -637,6 +637,16 @@ $items['libffi'].BuildScript = {
 
 	[void] (Swap-Environment $originalEnvironment)
 
+	New-Item -Type Directory $packageDestination\bin
+	Copy-Item `
+		.\build\win32\vs12\Release\$platform\libffi.dll `
+		$packageDestination\bin
+
+	New-Item -Type Directory $packageDestination\lib
+	Copy-Item `
+		.\build\win32\vs12\Release\$platform\libffi.lib `
+		$packageDestination\lib
+
 	New-Item -Type Directory $packageDestination\include
 	Copy-Item `
 		.\$buildDestination\include\ffi.h, `

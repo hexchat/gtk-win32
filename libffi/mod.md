@@ -14,3 +14,4 @@
     ```
 
 * Convert commands to project file
+* Create `libfii.def` file
