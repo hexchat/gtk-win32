@@ -1048,8 +1048,13 @@ $items.GetEnumerator() | %{
 
 		"Extracted $($item.ArchiveFile.Name)"
 
-		Copy-Item "$($item.PatchDirectory)\*" $item.BuildDirectory -Recurse -Force
-		"Copied patch contents from $($item.PatchDirectory) to $($item.BuildDirectory)"
+		if (Test-Path $item.PatchDirectory) {
+			Copy-Item "$($item.PatchDirectory)\*" $item.BuildDirectory -Recurse -Force
+			"Copied patch contents from $($item.PatchDirectory) to $($item.BuildDirectory)"
+		}
+		else {
+			"Skipped copying patches, $($item.PatchDirectory) does not exist."
+		}
 
 		Push-Location $item.BuildDirectory
 		Get-ChildItem -Recurse *.vcxproj | %{
