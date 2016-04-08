@@ -1,0 +1,41 @@
+From 95a18093fe2956eacc2505aa74c42f497ca56d20 Mon Sep 17 00:00:00 2001
+From: Patrick Griffis <tingping@tingping.se>
+Date: Fri, 8 Apr 2016 16:23:16 -0700
+Subject: [PATCH] Fix loading cairo on Win32
+
+---
+ lgi/core.c             | 4 ++--
+ lgi/override/cairo.lua | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/lgi/core.c b/lgi/core.c
+index b616a2b..667d683 100644
+--- a/lgi/core.c
++++ b/lgi/core.c
+@@ -503,8 +503,8 @@ static const struct luaL_Reg module_reg[] = {
+ #define MODULE_NAME_FORMAT_VERSION "cyg%s-%d.dll"
+ #define MODULE_NAME_FORMAT_PLAIN "cyg%s.dll"
+ #elif defined(G_OS_WIN32)
+-#define MODULE_NAME_FORMAT_VERSION "lib%s-%d.dll"
+-#define MODULE_NAME_FORMAT_PLAIN "lib%s.dll"
++#define MODULE_NAME_FORMAT_VERSION "%s-%d.dll"
++#define MODULE_NAME_FORMAT_PLAIN "%s.dll"
+ #elif defined(__APPLE__)
+ #define MODULE_NAME_FORMAT_VERSION "lib%s.%d.dylib"
+ #define MODULE_NAME_FORMAT_PLAIN "lib%s.dylib"
+diff --git a/lgi/override/cairo.lua b/lgi/override/cairo.lua
+index ca8193f..159ac81 100644
+--- a/lgi/override/cairo.lua
++++ b/lgi/override/cairo.lua
+@@ -20,7 +20,7 @@ local record = require 'lgi.record'
+ local enum = require 'lgi.enum'
+ local ti = ffi.types
+ 
+-cairo._module = core.module('cairo', 2)
++cairo._module = core.module('cairo')
+ local module_gobject = core.gi.cairo.resolve
+ 
+ -- Versioning support.
+-- 
+2.7.4.windows.1
+

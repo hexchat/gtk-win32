@@ -692,6 +692,8 @@ $items['lgi'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
+	Exec $patch -p1 -i .\Fix-loading-cairo-on-Win32.patch
+
 	Push-Location .\lgi
 
 	Exec nmake -f .\Makefile-msvc.mak install PREFIX=..\..\..\..\gtk\$platform DESTDIR=$packageDestination
