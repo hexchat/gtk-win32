@@ -19,3 +19,11 @@ copy "$(BinDir)\libwimp.pdb" $(CopyDir)\bin
 	* `<GtkSeparateVSDllSuffix>-2-vs$(VSVer)</GtkSeparateVSDllSuffix>` with
 `<GtkSeparateVSDllSuffix>-2.0</GtkSeparateVSDllSuffix>`
  * Delete `<Optimization>` lines in all `*.vcxproj` files
+
+  * Port introspection files in `build` from gtk3
+     * `msvcfiles.py` and `introspection-msvc.mak` are unmodified
+	 * `detectenv_msvc.mak` is from gobject-introspection (for VS2015)
+	 * `gen-file-list-gtk.py` simply required scanning the correct am files and
+	   using  the correct am variable names.
+	 * `gtk-introspection-msvc.mak` requires replacing any 3.0 with 2.0, replacing lib names with -win32 variants,
+	   and fixing include (..\gdk\win32) for GdkWin32.
