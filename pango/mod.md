@@ -10,3 +10,4 @@
 	* `<GlibEtcInstallRoot>$(SolutionDir)\..\..\..\..\vs$(VSVer)\$(Platform)</GlibEtcInstallRoot>` with `<GlibEtcInstallRoot>$(SolutionDir)..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>`
 	* `<CopyDir>$(GlibEtcInstallRoot)</CopyDir>` with `<CopyDir>$(SolutionDir)..\..\..\..\pango-rel</CopyDir>`
 	* `<PangoSeparateVSDllSuffix>-1-vs$(VSVer)</PangoSeparateVSDllSuffix>` with `<PangoSeparateVSDllSuffix>-1.0</PangoSeparateVSDllSuffix>`
+* Copy `build\detectenv-msvc.mak` from a newer project such as gobject-introspection (Simply includes VS2015 info)
