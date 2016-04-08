@@ -528,6 +528,7 @@ $items['glib'].BuildScript = {
 	Exec $patch -p1 -i glibpc-libintl.patch
 	Exec $patch -p1 -i glib-if_nametoindex.patch
 	Exec $patch -p1 -i glib-package-installation-directory.patch
+	Exec $patch -p1 -i lgi-gclosure-workaround.patch
 
 	Fix-C4819 .\gio\gdbusaddress.c
 	Fix-C4819 .\gio\gfile.c
