@@ -455,6 +455,25 @@ $items['gdk-pixbuf'].BuildScript = {
 	Copy-Item .\COPYING $packageDestination\share\doc\gdk-pixbuf
 
 	Package $packageDestination
+	$packageDestination = "$PWD-gir-rel"
+
+	Push-Location .\build
+	
+	$originalEnvironment = Swap-Environment $vcvarsEnvironment
+
+	Exec nmake -f .\gdk-pixbuf-introspection-msvc.mak CFG=release PYTHON2=..\..\..\..\python-2.7\$platform\python.exe BASEDIR=..\..\..\..\gtk\$platform
+
+	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\lib\girepository-1.0
+	Copy-Item .\*.typelib $packageDestination\lib\girepository-1.0
+
+	New-Item -Type Directory $packageDestination\share\gir-1.0
+	Copy-Item .\*.gir $packageDestination\share\gir-1.0
+	
+	Pop-Location
+
+	Package $packageDestination
 }
 
 $items['gettext-runtime'].BuildScript = {
