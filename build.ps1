@@ -585,7 +585,7 @@ $items['gobject-introspection'].BuildScript = {
 
 	Push-Location .\build\win32
 
-	Exec nmake -f .\gi-introspection-msvc.mak CFG=release
+	Exec nmake -f .\gi-introspection-msvc.mak CFG=release CAIROGOBJECT_DLLNAME=cairo-gobject.dll
 
 	[void] (Swap-Environment $originalEnvironment)
 
