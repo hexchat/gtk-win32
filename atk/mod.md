@@ -13,3 +13,4 @@
 	* Remove all `<Optimization>` lines
 * In `build\win32\vs14\atk-install.vcxproj`:
 	* Replace `AtkEtcInstallRoot` with `GLibEtcInstallRoot`
+* Copy `build\detectenv-msvc.mak` from a newer project like gobject-introspection (Until VS2015 added)
