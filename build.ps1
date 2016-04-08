@@ -257,6 +257,9 @@ $items['atk'].BuildScript = {
 
 	[void] (Swap-Environment $originalEnvironment)
 
+	New-Item -Type Directory $packageDestination\lib\pkgconfig
+	Copy-Item .\atk.pc $packageDestination\lib\pkgconfig
+
 	New-Item -Type Directory $packageDestination\share\doc\atk
 	Copy-Item .\COPYING $packageDestination\share\doc\atk
 
@@ -273,6 +276,9 @@ $items['cairo'].BuildScript = {
 
 	[void] (Swap-Environment $originalEnvironment)
 
+	New-Item -Type Directory $packageDestination\lib\pkgconfig
+	Copy-Item .\cairo*.pc $packageDestination\lib\pkgconfig
+	
 	New-Item -Type Directory $packageDestination\share\doc\cairo
 	Copy-Item .\COPYING $packageDestination\share\doc\cairo
 
@@ -441,6 +447,9 @@ $items['gdk-pixbuf'].BuildScript = {
 	Exec msbuild build\win32\vs14\gdk-pixbuf.sln /p:Platform=$platform /p:Configuration=Release_GDI+ /maxcpucount /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\lib\pkgconfig
+	Copy-Item .\gdk-pixbuf-2.0.pc $packageDestination\lib\pkgconfig
 
 	New-Item -Type Directory $packageDestination\share\doc\gdk-pixbuf
 	Copy-Item .\COPYING $packageDestination\share\doc\gdk-pixbuf
@@ -889,6 +898,9 @@ $items['pango'].BuildScript = {
 	Exec msbuild build\win32\vs14\pango.sln /p:Platform=$platform /p:Configuration=Release_FC /nodeReuse:True
 
 	[void] (Swap-Environment $originalEnvironment)
+
+	New-Item -Type Directory $packageDestination\lib\pkgconfig
+	Copy-Item .\pango.pc $packageDestination\lib\pkgconfig
 
 	New-Item -Type Directory $packageDestination\share\doc\pango
 	Copy-Item .\COPYING $packageDestination\share\doc\pango
