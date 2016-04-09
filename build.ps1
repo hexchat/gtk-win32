@@ -130,7 +130,7 @@ param (
 $items = @{
 	'atk' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/atk-2.18.0.tar.xz'
-		'Dependencies' = @('glib')
+		'Dependencies' = @('glib', 'gobject-introspection')
 	};
 
 	'cairo' = @{
@@ -155,7 +155,7 @@ $items = @{
 
 	'gdk-pixbuf' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.3.tar.xz'
-		'Dependencies' = @('glib', 'libpng')
+		'Dependencies' = @('glib', 'libpng', 'gobject-introspection')
 	};
 
 	'gettext-runtime' = @{
@@ -175,7 +175,7 @@ $items = @{
 
 	'gtk' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz'
-		'Dependencies' = @('atk', 'gdk-pixbuf', 'pango')
+		'Dependencies' = @('atk', 'gdk-pixbuf', 'pango', 'gobject-introspection')
 	};
 
 	'harfbuzz' = @{
@@ -215,7 +215,7 @@ $items = @{
 
 	'pango' = @{
 		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz'
-		'Dependencies' = @('cairo', 'harfbuzz')
+		'Dependencies' = @('cairo', 'harfbuzz', 'gobject-introspection')
 	};
 
 	'pixman' = @{
