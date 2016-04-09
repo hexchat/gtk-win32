@@ -7,7 +7,7 @@ SOURCES = \
 	object.c \
 	record.c
 
-DLL = lgi.dll
+DLL = corelgilua51.dll
 
 LUA_CFLAGS = /I$(PREFIX)\include\luajit-2.0
 GLIB_CFLAGS = /I$(PREFIX)\include\glib-2.0 /I$(PREFIX)\lib\glib-2.0\include
@@ -23,8 +23,8 @@ $(DLL): $(SOURCES)
 	link /nologo /DLL /OUT:$(DLL) .\*.obj /libpath:$(PREFIX)\lib $(LUA_LIBS) $(GLIB_LIBS) $(GIR_LIBS) $(FFI_LIBS)
 
 install: $(DLL)
-	mkdir $(DESTDIR)\bin
-	copy $(DLL) $(DESTDIR)\bin
+	mkdir $(DESTDIR)\lib\lua\lgi
+	copy $(DLL) $(DESTDIR)\lib\lua\lgi
 	
 	mkdir $(DESTDIR)\share\lua\lgi\override
 	copy ..\lgi.lua $(DESTDIR)\share\lua
