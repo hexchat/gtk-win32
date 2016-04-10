@@ -5,6 +5,7 @@ Here you can download a GTK+ 2 bundle (and a few additional libraries) built wit
 
 This is the bundle built by us containing all the GTK+ binaries, headers and import libraries. If you just want to use GTK+ for your application and don't want to build it yourself, download this. You will also need the Visual C++ redistributable to be able to run applications that use this bundle.
 
+
 <table>
     <tr>
         <td>GTK+ bundle</td>
@@ -20,104 +21,27 @@ This is the bundle built by us containing all the GTK+ binaries, headers and imp
 
 These are the libraries in the bundle:
 
-<table>
-    <tr>
-        <td>ATK</td>
-        <td>2.18.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/atk-2.18.0.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>Cairo</td>
-        <td>1.14.6</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/cairo-1.14.6.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>Enchant</td>
-        <td>1.6.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>Fontconfig</td>
-        <td>2.8.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>FreeType</td>
-        <td>2.6.3</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/freetype-2.6.3.tar.bz2">Source</a></td>
-    </tr>
-    <tr>
-        <td>GDK-PixBuf</td>
-        <td>2.32.3</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.3.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>gettext-runtime</td>
-        <td>0.18</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/gettext-vc100-0.18-src.tar.bz2">Source</a></td>
-    </tr>
-    <tr>
-        <td>GLib</td>
-        <td>2.46.2</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>GObject-Introspection</td>
-        <td>1.48.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>GTK+</td>
-        <td>2.24.30</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>HarfBuzz</td>
-        <td>1.2.3</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2">Source</a></td>
-    </tr>
-    <tr>
-        <td>libffi</td>
-        <td>3.2.1</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>libpng</td>
-        <td>1.6.21</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/libpng-1.6.21.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>libxml2</td>
-        <td>2.9.3</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.3.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>OpenSSL</td>
-        <td>1.0.2g</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2g.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>Pango</td>
-        <td>1.39.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz">Source</a></td>
-    </tr>
-    <tr>
-        <td>Pixman</td>
-        <td>0.34.0</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>win-iconv</td>
-        <td>0.0.8</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz">Source</a></td>
-    </tr>
-    <tr>
-        <td>zlib</td>
-        <td>1.2.8</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.tar.xz">Source</a></td>
-    </tr>
-</table>
-
+| Library                | Version        | Source
+| ---------------------- | -------------- | ------
+| ATK                    | 2.18.0         | [Source](https://dl.hexchat.net/gtk-win32/src/atk-2.18.0.tar.xz)
+| Cairo                  | 1.14.6         | [Source](https://dl.hexchat.net/gtk-win32/src/cairo-1.14.6.tar.xz)
+| Enchant                | 1.6.0          | [Source](https://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz)
+| Fontconfig             | 2.8.0          | [Source](https://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz)
+| FreeType               | 2.6.3          | [Source](https://dl.hexchat.net/gtk-win32/src/freetype-2.6.3.tar.bz2)
+| GDK-PixBuf             | 2.32.3         | [Source](https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.3.tar.xz)
+| gettext-runtime        | 0.18           | [Source](https://dl.hexchat.net/gtk-win32/src/gettext-vc100-0.18-src.tar.bz2)
+| GLib                   | 2.46.2         | [Source](https://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz)
+| GObject-Introspection  | 1.48.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz)
+| GTK+                   | 2.24.30        | [Source](https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz)
+| HarfBuzz               | 1.2.3          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2)
+| libffi                 | 3.2.1          | [Source](https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz)
+| libpng                 | 1.6.21         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.21.tar.xz)
+| libxml2                | 2.9.3          | [Source](https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.3.tar.gz)
+| OpenSSL                | 1.0.2g         | [Source](https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2g.tar.gz)
+| Pango                  | 1.39.0         | [Source](https://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz)
+| Pixman                 | 0.34.0         | [Source](https://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz)
+| win-iconv              | 0.0.8          | [Source](https://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz)
+| zlib                   | 1.2.8          | [Source](https://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.tar.xz)
 
 ## Building from Source
 
