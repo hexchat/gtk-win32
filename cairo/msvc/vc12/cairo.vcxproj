@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Release_FC|Win32">
-      <Configuration>Release_FC</Configuration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release_FC|x64">
-      <Configuration>Release_FC</Configuration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <PreBuildEvent>
-      <Command>$(PreBuildCfgStd)$(PreBuildCfgFT)$(PreBuildCfgFC)$(GenTmpFeaturesHeader)</Command>
+      <Command>$(PreBuildCfgStd)$(PreBuildCfgFT)$(GenTmpFeaturesHeader)</Command>
     </PreBuildEvent>
     <ClCompile>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -48,14 +48,14 @@
     <Link>
       <OutputFile>$(OutDir)$(CairoDllPrefix)$(ProjectName)$(CairoDllSuffix).dll</OutputFile>
       <ImportLibrary>$(TargetDir)$(ProjectName).lib</ImportLibrary>
-      <AdditionalDependencies>fontconfig.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_FC|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
