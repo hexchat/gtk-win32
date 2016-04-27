@@ -530,12 +530,9 @@ $items['glib'].BuildScript = {
 	Exec $patch -p1 -i glib-package-installation-directory.patch
 	Exec $patch -p1 -i lgi-gclosure-workaround.patch
 
-	Fix-C4819 .\gio\gdbusaddress.c
-	Fix-C4819 .\gio\gfile.c
-	Fix-C4819 .\gio\gwin32appinfo.h
-	Fix-C4819 .\gio\gwin32registrykey.h
-	Fix-C4819 .\glib\gmacros.h
-	Fix-C4819 .\glib\gmain.c
+	Get-ChildItem -Recurse *.c, *.h | %{
+		Fix-C4819 $_.FullName
+	}
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
