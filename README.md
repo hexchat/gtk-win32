@@ -34,7 +34,7 @@ These are the libraries in the bundle:
 | GObject-Introspection  | 1.48.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz)
 | GTK+                   | 2.24.30        | [Source](https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz)
 | HarfBuzz               | 1.2.3          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2)
-| lgi                    | 0.9.0-2c5e63d  | [Source](https://dl.hexchat.net/gtk-win32/src/lgi-0.9.0-2c5e63d0.tar.gz)
+| lgi                    | 0.9.1          | [Source](https://dl.hexchat.net/gtk-win32/src/lgi-0.9.1.tar.gz)
 | libffi                 | 3.2.1          | [Source](https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz)
 | libpng                 | 1.6.21         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.21.tar.xz)
 | libxml2                | 2.9.3          | [Source](https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.3.tar.gz)
