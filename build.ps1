@@ -184,7 +184,7 @@ $items = @{
 	};
 
 	'lgi' = @{
-		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/lgi-0.9.0-2c5e63d0.tar.gz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/lgi-0.9.1.tar.gz'
 		'Dependencies' = @('luajit', 'gobject-introspection')
 	}
 
@@ -528,7 +528,6 @@ $items['glib'].BuildScript = {
 	Exec $patch -p1 -i glibpc-libintl.patch
 	Exec $patch -p1 -i glib-if_nametoindex.patch
 	Exec $patch -p1 -i glib-package-installation-directory.patch
-	Exec $patch -p1 -i lgi-gclosure-workaround.patch
 
 	Get-ChildItem -Recurse *.c, *.h | %{
 		Fix-C4819 $_.FullName
