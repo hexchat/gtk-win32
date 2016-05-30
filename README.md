@@ -53,7 +53,7 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 
     * [Visual Studio 2015 Community](http://www.visualstudio.com/downloads/download-visual-studio-vs) - Any version of VS apart from 2015 is not supported.
     * [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) - Not needed for Windows 8.1 and above
-    * [CMake 3.0.2](http://www.cmake.org/download/)
+    * [CMake 3.5.2](https://cmake.org/download/)
     * [msys2](https://msys2.github.io/)
     * Perl 5.20 [x86](https://dl.hexchat.net/misc/perl/perl-5.20.0-x86.7z) or [x64](https://dl.hexchat.net/misc/perl/perl-5.20.0-x64.7z) (extract to _C:\gtk-build\perl-5.20\Win32_ or _C:\gtk-build\perl-5.20\x64_)
     * [Python 2.7](https://www.python.org/downloads/windows/) (install to _C:\gtk-build\python-2.7\Win32_ or _C:\gtk-build\python-2.7\x64_)
