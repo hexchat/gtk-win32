@@ -81,21 +81,19 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 1. Now start a new PowerShell window as a regular user. Go to the _gtk-win32_ directory and start building with the script. For example, to build the 32-bit bundle, run:
 
     ```powershell
-    cd C:\gtk-build\github\gtk-win32
-    .\build.ps1
+    C:\gtk-build\github\gtk-win32\build.ps1
     ```
 
     To build the 64-bit bundle instead, run:
 
     ```powershell
-    cd C:\gtk-build\github\gtk-win32
-    .\build.ps1 -Configuration x64
+    C:\gtk-build\github\gtk-win32\build.ps1 -Configuration x64
     ```
 
     The script has some parameters you can pass in. Run
 
     ```powershell
-    Get-Help -Full .\build.ps1
+    Get-Help -Full C:\gtk-build\github\gtk-win32\build.ps1
     ```
 
     to see the help for the parameters and examples.
