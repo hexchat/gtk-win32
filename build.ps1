@@ -15,6 +15,10 @@ x86       - 32-bit build.
 x64       - 64-bit build. Uses the 32-bit cross-compiler with VS Community / VC++ Build Tools, or the native 64-bit compiler with VS Professional and up.
 
 
+.PARAMETER TargetSDK
+Overrides the default MSBuild WindowsTargetPlatformVersion property.
+
+
 .PARAMETER DisableParallelBuild
 Setting this to $true forces the items to be built one after the other.
 
@@ -76,6 +80,11 @@ build.ps1 -OnlyBuild libpng
 Only builds libpng and its dependencies (zlib).
 
 
+.EXAMPLE
+build.ps1 -TargetSDK 10.0.10240.0
+Overrides MSBuild to use the Windows 10 SDK.
+
+
 .LINK
 http://hexchat.github.io/gtk-win32/
 
@@ -90,6 +99,9 @@ http://hexchat.github.io/gtk-win32/
 param (
 	[string][ValidateSet('x86', 'x64')]
 	$Configuration = 'x86',
+
+	[string]
+	$TargetSDK,
 
 	[switch]
 	$DisableParallelBuild = $false,
@@ -260,7 +272,7 @@ $items['atk'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs14\atk.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\atk.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -298,7 +310,7 @@ $items['cairo'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild msvc\vc12\cairo.sln /p:Platform=$platform /p:Configuration=Release_FC /maxcpucount /nodeReuse:True
+	Exec msbuild msvc\vc12\cairo.sln /p:Platform=$platform /p:Configuration=Release_FC /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -378,7 +390,7 @@ $items['fontconfig'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild fontconfig.sln /p:Platform=$platform /p:Configuration=Release /t:build /nodeReuse:True
+	Exec msbuild fontconfig.sln /p:Platform=$platform /p:Configuration=Release /t:build /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -444,7 +456,7 @@ $items['freetype'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild builds\windows\vc2015\freetype.vcxproj /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild builds\windows\vc2015\freetype.vcxproj /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -470,7 +482,7 @@ $items['gdk-pixbuf'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs14\gdk-pixbuf.sln /p:Platform=$platform /p:Configuration=Release_GDI+ /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\gdk-pixbuf.sln /p:Platform=$platform /p:Configuration=Release_GDI+ /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -542,7 +554,7 @@ $items['glib'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs14\glib.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\glib.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -560,7 +572,7 @@ $items['gobject-introspection'].BuildScript = {
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
 	# Avoid gi-introspect target
-	Exec msbuild build\win32\vs14\gobject-introspection.sln /p:Platform=$platform /p:Configuration=Release /nodeReuse:True /target:gi-install
+	Exec msbuild build\win32\vs14\gobject-introspection.sln /p:Platform=$platform /p:Configuration=Release /nodeReuse:True /target:gi-install $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -617,7 +629,7 @@ $items['gtk'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs14\gtk+.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs14\gtk+.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -663,7 +675,7 @@ $items['harfbuzz'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild win32\harfbuzz.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild win32\harfbuzz.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -728,7 +740,7 @@ $items['libffi'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs12\libffi.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vs12\libffi.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -760,8 +772,8 @@ $items['libpng'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild projects\vc14\pnglibconf\pnglibconf.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc14\ /nodeReuse:True
-	Exec msbuild projects\vc14\libpng\libpng.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc14\ /nodeReuse:True
+	Exec msbuild projects\vc14\pnglibconf\pnglibconf.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc14\ /nodeReuse:True $windowsTargetPlatformVersion
+	Exec msbuild projects\vc14\libpng\libpng.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\projects\vc14\ /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -806,7 +818,7 @@ $items['libxml2'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild win32\vc12\libxml2.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True
+	Exec msbuild win32\vc12\libxml2.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -958,7 +970,7 @@ $items['pango'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs14\pango.sln /p:Platform=$platform /p:Configuration=Release_FC /nodeReuse:True
+	Exec msbuild build\win32\vs14\pango.sln /p:Platform=$platform /p:Configuration=Release_FC /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -1020,8 +1032,8 @@ $items['pixman']['BuildScript'] = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vc14\pixman.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc14\ /maxcpucount /nodeReuse:True
-	Exec msbuild build\win32\vc14\install.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc14\ /maxcpucount /nodeReuse:True
+	Exec msbuild build\win32\vc14\pixman.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc14\ /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
+	Exec msbuild build\win32\vc14\install.vcxproj /p:Platform=$platform /p:Configuration=Release /p:SolutionDir=$PWD\build\win32\vc14\ /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -1083,7 +1095,7 @@ $items['zlib'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild contrib\vstudio\vc12\zlibvc.sln /p:Platform=$platform /p:Configuration=ReleaseWithoutAsm /maxcpucount /nodeReuse:True
+	Exec msbuild contrib\vstudio\vc12\zlibvc.sln /p:Platform=$platform /p:Configuration=ReleaseWithoutAsm /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
@@ -1189,6 +1201,14 @@ switch ($Configuration) {
 }
 
 $workingDirectory = "$BuildDirectory\build\$platform"
+
+
+if ($TargetSDK -eq '') {
+	$windowsTargetPlatformVersion = $null
+}
+else {
+	$windowsTargetPlatformVersion = "/p:WindowsTargetPlatformVersion=$TargetSDK"
+}
 
 
 # Set up additional properties on the items
@@ -1450,6 +1470,7 @@ while (@($items.GetEnumerator() | ?{ ($_.Value.State -eq 'Pending') -or ($_.Valu
 				$CMakePath = $using:CMakePath
 				$Configuration = $using:Configuration
 				$filenameArch = $using:filenameArch
+				$windowsTargetPlatformVersion = $using:windowsTargetPlatformVersion
 				$Msys2Directory = $using:Msys2Directory
 				$patch = $using:patch
 				$PerlDirectory = $using:PerlDirectory
