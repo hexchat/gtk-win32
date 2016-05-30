@@ -86,7 +86,7 @@ Overrides MSBuild to use the Windows 10 SDK.
 
 
 .LINK
-http://hexchat.github.io/gtk-win32/
+https://github.com/hexchat/gtk-win32/
 
 #>
 
