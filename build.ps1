@@ -12,7 +12,7 @@ This is a build script to build GTK+ 2 and openssl.
 .PARAMETER Configuration
 The configuration to be built. One of the following:
 x86       - 32-bit build.
-x64       - 64-bit build. Uses the 32-bit cross-compiler with VS Express or the native 64-bit compiler with VS Professional and up.
+x64       - 64-bit build. Uses the 32-bit cross-compiler with VS Community / VC++ Build Tools, or the native 64-bit compiler with VS Professional and up.
 
 
 .PARAMETER DisableParallelBuild
@@ -36,7 +36,7 @@ The directory where you checked out https://github.com/hexchat/gtk-win32.git
 
 
 .PARAMETER VSInstallPath
-The directory where you installed Visual Studio.
+The directory where you installed Visual Studio or the VC++ Build Tools.
 
 
 .PARAMETER CMakePath
@@ -107,7 +107,14 @@ param (
 	$PatchesRootDirectory = "$BuildDirectory\github\gtk-win32",
 
 	[string]
-	$VSInstallPath = 'C:\Program Files (x86)\Microsoft Visual Studio 14.0',
+	$VSInstallPath = $(
+		if (Test-Path 'C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtools.bat') {
+			'C:\Program Files (x86)\Microsoft Visual C++ Build Tools'
+		}
+		else {
+			'C:\Program Files (x86)\Microsoft Visual Studio 14.0'
+		}
+	),
 
 	[string]
 	$CMakePath = 'C:\Program Files (x86)\CMake\bin',
@@ -1127,27 +1134,44 @@ if (-not $(Test-Path $tar)) {
 
 
 # Verify VS exists at the indicated location, and that it supports the required target
-switch ($Configuration) {
-	'x86' {
-		$vcvarsBat = "$VSInstallPath\VC\bin\vcvars32.bat"
-	}
+if (Test-Path "$VSInstallPath\vcbuildtools.bat") {
+	$vcvarsBat = "`"$VSInstallPath\vcbuildtools.bat`" "
 
-	'x64' {
-		$vcvarsBat = "$VSInstallPath\VC\bin\amd64\vcvars64.bat"
+	switch ($Configuration) {
+		'x86' {
+			$vcvarsBat += 'x86'
+		}
 
-		# make sure it works even with VS Express
-		if (-not $(Test-Path $vcvarsBat)) {
-			$vcvarsBat = "$VSInstallPath\VC\bin\x86_amd64\vcvarsx86_amd64.bat"
+		'x64' {
+			$vcvarsBat += 'amd64'
 		}
 	}
 }
+else {
+	switch ($Configuration) {
+		'x86' {
+			$vcvarsBat = "$VSInstallPath\VC\bin\vcvars32.bat"
+		}
 
-if (-not $(Test-Path $vcvarsBat)) {
-	throw "`"$vcvarsBat`" could not be found. Please check you have Visual Studio installed at `"$VSInstallPath`" and that it supports the configuration `"$Configuration`"."
+		'x64' {
+			$vcvarsBat = "$VSInstallPath\VC\bin\amd64\vcvars64.bat"
+
+			# make sure it works even with VS Community / VC++ Build Tools
+			if (-not $(Test-Path $vcvarsBat)) {
+				$vcvarsBat = "$VSInstallPath\VC\bin\x86_amd64\vcvarsx86_amd64.bat"
+			}
+		}
+	}
+
+	if (-not $(Test-Path $vcvarsBat)) {
+		throw "`"$vcvarsBat`" could not be found. Please check you have Visual Studio installed at `"$VSInstallPath`" and that it supports the configuration `"$Configuration`"."
+	}
+
+	$vcvarsBat = "`"$vcvarsBat`""
 }
 
 $vcvarsEnvironment = @{}
-$(&cmd /C "`"$vcvarsBat`" > NUL && SET") | %{
+$(&cmd /C "$vcvarsBat > NUL && SET") | %{
 	$keyValuePair = $_.Split('=', 2)
 	$vcvarsEnvironment[$keyValuePair[0]] = $keyValuePair[1]
 }

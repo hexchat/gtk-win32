@@ -51,7 +51,7 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 
 1. Install the following build tools and dependencies:
 
-    * [Visual Studio 2015 Community](http://www.visualstudio.com/downloads/download-visual-studio-vs) - Any version of VS apart from 2015 is not supported.
+    * [Visual Studio 2015 Community](http://www.visualstudio.com/downloads/download-visual-studio-vs) or [Visual C++ Build Tools 2015](http://go.microsoft.com/fwlink/?LinkId=691126) - Any version of VS apart from 2015 is not supported.
     * [Visual C++ Redistributable Packages for VS 2012 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
     * [Visual C++ Redistributable Packages for VS 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
     * [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) - Not needed for Windows 8.1 and above
