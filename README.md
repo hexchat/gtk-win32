@@ -39,7 +39,7 @@ These are the libraries in the bundle:
 | libpng                 | 1.6.22         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.22.tar.xz)
 | libxml2                | 2.9.4          | [Source](https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.4.tar.gz)
 | luajit                 | 2.0.4          | [Source](https://dl.hexchat.net/gtk-win32/src/luajit-2.0.4.tar.gz)
-| OpenSSL                | 1.0.2g         | [Source](https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2g.tar.gz)
+| OpenSSL                | 1.0.2h         | [Source](https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2h.tar.gz)
 | Pango                  | 1.39.0         | [Source](https://dl.hexchat.net/gtk-win32/src/pango-1.39.0.tar.xz)
 | Pixman                 | 0.34.0         | [Source](https://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz)
 | win-iconv              | 0.0.8          | [Source](https://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz)
