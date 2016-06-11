@@ -218,7 +218,7 @@ $items = @{
 	};
 
 	'libxml2' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libxml2-2.9.3.tar.gz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.4.tar.gz'
 		'Dependencies' = @('win-iconv')
 	};
 
@@ -803,21 +803,19 @@ $items['libxml2'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild win32\vc12\libxml2.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
+	Exec msbuild win32\VC14\libxml2.vcxproj /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
 	New-Item -Type Directory $packageDestination\bin
 	Copy-Item `
 		.\lib\libxml2.dll, `
-		.\lib\libxml2.pdb, `
-		.\lib\runsuite.exe, `
-		.\lib\runsuite.pdb `
+		.\lib\libxml2.pdb `
 		$packageDestination\bin
 
 	New-Item -Type Directory $packageDestination\include\libxml
 	Copy-Item `
-		.\win32\VC12\config.h, `
+		.\win32\VC14\config.h, `
 		.\include\wsockcompat.h, `
 		.\include\libxml\*.h `
 		$packageDestination\include\libxml
