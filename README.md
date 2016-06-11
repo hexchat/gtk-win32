@@ -9,8 +9,8 @@ This is the bundle built by us containing all the GTK+ binaries, headers and imp
 <table>
     <tr>
         <td>GTK+ bundle</td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/vc12/x86/gtk-Win32.7z">32-bit</a></td>
-        <td><a href="https://dl.hexchat.net/gtk-win32/vc12/x64/gtk-x64.7z">64-bit</a></td>
+        <td><a href="https://dl.hexchat.net/gtk-win32/vc14/x86/gtk-Win32.7z">32-bit</a></td>
+        <td><a href="https://dl.hexchat.net/gtk-win32/vc14/x64/gtk-x64.7z">64-bit</a></td>
     </tr>
     <tr>
         <td><a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Microsoft Visual C++ Redistributable Package for Visual Studio 2015</a></td>
