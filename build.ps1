@@ -173,7 +173,7 @@ $items = @{
 	};
 
 	'gdk-pixbuf' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.3.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.34.0.tar.xz'
 		'Dependencies' = @('glib', 'libpng', 'gobject-introspection')
 	};
 

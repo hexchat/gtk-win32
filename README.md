@@ -28,7 +28,7 @@ These are the libraries in the bundle:
 | Enchant                | 1.6.0          | [Source](https://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz)
 | Fontconfig             | 2.8.0          | [Source](https://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz)
 | FreeType               | 2.6.3          | [Source](https://dl.hexchat.net/gtk-win32/src/freetype-2.6.3.tar.bz2)
-| GDK-PixBuf             | 2.32.3         | [Source](https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.32.3.tar.xz)
+| GDK-PixBuf             | 2.34.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.34.0.tar.xz)
 | gettext-runtime        | 0.18           | [Source](https://dl.hexchat.net/gtk-win32/src/gettext-vc100-0.18-src.tar.bz2)
 | GLib                   | 2.46.2         | [Source](https://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz)
 | GObject-Introspection  | 1.48.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz)
