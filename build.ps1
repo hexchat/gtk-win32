@@ -198,7 +198,7 @@ $items = @{
 	};
 
 	'harfbuzz' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.7.tar.bz2'
 		'Dependencies' = @('freetype', 'glib')
 	};
 
@@ -670,35 +670,20 @@ $items['gtk'].BuildScript = {
 }
 
 $items['harfbuzz'].BuildScript = {
-	$packageDestination = "$PWD-$filenameArch"
-	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
-
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild win32\harfbuzz.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
+	Get-ChildItem -Recurse *.cc, *.hh | %{
+		Fix-C4819 $_.FullName
+	}
+
+	Push-Location .\win32
+
+	Exec nmake /f Makefile.vc CFG=release PYTHON=..\..\..\..\python-2.7\$platform\python.exe PERL=..\..\..\..\perl-5.20\$platform\bin\perl.exe PREFIX=`"$workingDirectory\..\..\gtk\$platform`" FREETYPE=1 GOBJECT=1
+	Exec nmake /f Makefile.vc install CFG=release PREFIX=`"$workingDirectory\..\..\gtk\$platform`" FREETYPE=1 GOBJECT=1
+
+	Pop-Location
 
 	[void] (Swap-Environment $originalEnvironment)
-
-	New-Item -Type Directory $packageDestination\bin
-	Copy-Item `
-		.\win32\libs\Release\harfbuzz.dll, `
-		.\win32\libs\Release\harfbuzz.pdb `
-		$packageDestination\bin
-
-	New-Item -Type Directory $packageDestination\include
-	Copy-Item `
-		.\src\*.h `
-		$packageDestination\include
-
-	New-Item -Type Directory $packageDestination\lib
-	Copy-Item `
-		.\win32\libs\harfbuzz\Release\harfbuzz.lib `
-		$packageDestination\lib
-
-	New-Item -Type Directory $packageDestination\share\doc\harfbuzz
-	Copy-Item .\COPYING $packageDestination\share\doc\harfbuzz
-
-	Package $packageDestination
 }
 
 $items['lgi'].BuildScript = {

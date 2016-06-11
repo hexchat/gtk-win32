@@ -33,7 +33,7 @@ These are the libraries in the bundle:
 | GLib                   | 2.48.1         | [Source](https://dl.hexchat.net/gtk-win32/src/glib-2.48.1.tar.xz)
 | GObject-Introspection  | 1.48.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz)
 | GTK+                   | 2.24.30        | [Source](https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz)
-| HarfBuzz               | 1.2.3          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2)
+| HarfBuzz               | 1.2.7          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.7.tar.bz2)
 | lgi                    | 0.9.1          | [Source](https://dl.hexchat.net/gtk-win32/src/lgi-0.9.1.tar.gz)
 | libffi                 | 3.2.1          | [Source](https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz)
 | libpng                 | 1.6.21         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.21.tar.xz)
@@ -71,7 +71,6 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
 
     * Perl 5.20 [x86](https://dl.hexchat.net/misc/perl/perl-5.20.0-x86.tar.xz) or [x64](https://dl.hexchat.net/misc/perl/perl-5.20.0-x64.tar.xz) (extract to _C:\gtk-build\perl-5.20_ so you have _C:\gtk-build\perl-5.20\Win32\bin\perl.exe_ or _C:\gtk-build\perl-5.20\x64\bin\perl.exe_)
     * [msgfmt](https://dl.hexchat.net/gtk-win32/msgfmt-0.18.1.tar.xz) (extract to _C:\gtk-build_ so you have _C:\gtk-build\msgfmt\msgfmt.exe_)
-    * [Ragel](https://dl.hexchat.net/gtk-win32/ragel-6.8.tar.xz) (extract to _C:\gtk-build_ so you have _C:\gtk-build\ragel\ragel.exe_)
 
 	Extract the files with 7-zip, or in the MSYS2 shell with the `tar` command, eg `tar xf perl-5.20.0-x86.tar.xz`
 
