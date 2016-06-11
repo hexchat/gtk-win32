@@ -23,7 +23,7 @@ These are the libraries in the bundle:
 
 | Library                | Version        | Source
 | ---------------------- | -------------- | ------
-| ATK                    | 2.18.0         | [Source](https://dl.hexchat.net/gtk-win32/src/atk-2.18.0.tar.xz)
+| ATK                    | 2.20.0         | [Source](https://dl.hexchat.net/gtk-win32/src/atk-2.20.0.tar.xz)
 | Cairo                  | 1.14.6         | [Source](https://dl.hexchat.net/gtk-win32/src/cairo-1.14.6.tar.xz)
 | Enchant                | 1.6.0          | [Source](https://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz)
 | Fontconfig             | 2.8.0          | [Source](https://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz)

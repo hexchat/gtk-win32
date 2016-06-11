@@ -148,7 +148,7 @@ param (
 
 $items = @{
 	'atk' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/atk-2.18.0.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/atk-2.20.0.tar.xz'
 		'Dependencies' = @('glib', 'gobject-introspection')
 	};
 
