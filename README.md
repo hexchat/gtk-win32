@@ -36,7 +36,7 @@ These are the libraries in the bundle:
 | HarfBuzz               | 1.2.7          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.7.tar.bz2)
 | lgi                    | 0.9.1          | [Source](https://dl.hexchat.net/gtk-win32/src/lgi-0.9.1.tar.gz)
 | libffi                 | 3.2.1          | [Source](https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz)
-| libpng                 | 1.6.21         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.21.tar.xz)
+| libpng                 | 1.6.22         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.22.tar.xz)
 | libxml2                | 2.9.3          | [Source](https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.3.tar.gz)
 | luajit                 | 2.0.4          | [Source](https://dl.hexchat.net/gtk-win32/src/luajit-2.0.4.tar.gz)
 | OpenSSL                | 1.0.2g         | [Source](https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2g.tar.gz)

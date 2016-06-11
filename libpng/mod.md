@@ -1,6 +1,6 @@
-* Download [libpng 1.6.21](ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.21.tar.xz)
+* Download [libpng 1.6.22](ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.22.tar.xz)
 * Copy `projects\vstudio` to `projects\vc14`. Only keep libpng and pnglibconf directories.
-* In `projects\vc14\libpng\libpng.vcxproj`:
+* In `projects\vc14\libpng\libpng.vcxproj` and `projects\vc14\pnglibconf\pnglibconf.vcxproj`:
 	* Under `<ItemGroup Label="ProjectConfigurations">`, add
 		```
 		    <ProjectConfiguration Include="Release|x64">
@@ -11,6 +11,22 @@
 	* Add `<PlatformToolset>v140</PlatformToolset>` to all `<PropertyGroup>` elements that have `Label="Configuration"`
 	* Add
 		```
+		  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		    <ConfigurationType>DynamicLibrary</ConfigurationType>
+		    <WholeProgramOptimization>true</WholeProgramOptimization>
+		    <CharacterSet>MultiByte</CharacterSet>
+		    <PlatformToolset>v140</PlatformToolset>
+		  </PropertyGroup>
+		```
+	* Add
+		```
+		  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		  </ImportGroup>
+		```
+	* Add `<Import Project="..\..\..\..\stack.props" />`
+	* Add
+		```
 		  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
 		    <LinkIncremental>false</LinkIncremental>
 		    <CustomBuildBeforeTargets />
@@ -18,7 +34,9 @@
 		  </PropertyGroup>
 		```
 	* Remove all `<Optimization>` elements
+* In `projects\vc14\libpng\libpng.vcxproj`:
 	* Replace `<AdditionalDependencies>zlib.lib</AdditionalDependencies>` with `<AdditionalDependencies>zlib1.lib</AdditionalDependencies>`
+	* Replace `<AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>` with `<AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>`
 	* Add
 		```
 		  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -52,7 +70,35 @@
 		  </ItemDefinitionGroup>
 		```
 	* Under `<ClCompile Include="..\..\..\png.c">`, add `<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>`
-* Add to `projects\vstudio\zlib.props`:
+* In `projects\vc14\pnglibconf\pnglibconf.vcxproj`:
+	* Add
+		```
+		  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		    <ClCompile>
+		      <WarningLevel>Level3</WarningLevel>
+		      <FunctionLevelLinking>true</FunctionLevelLinking>
+		      <IntrinsicFunctions>true</IntrinsicFunctions>
+		    </ClCompile>
+		    <Link>
+		      <GenerateDebugInformation>true</GenerateDebugInformation>
+		      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+		      <OptimizeReferences>true</OptimizeReferences>
+		    </Link>
+		    <CustomBuildStep>
+		      <Command>copy ..\..\..\scripts\pnglibconf.h.prebuilt ..\..\..\pnglibconf.h</Command>
+		    </CustomBuildStep>
+		    <CustomBuildStep>
+		      <Message>Generating pnglibconf.h</Message>
+		    </CustomBuildStep>
+		    <CustomBuildStep>
+		      <Outputs>..\..\..\pnglibconf.h</Outputs>
+		    </CustomBuildStep>
+		    <CustomBuildStep>
+		      <Inputs>..\..\..\scripts\pnglibconf.h.prebuilt</Inputs>
+		    </CustomBuildStep>
+		  </ItemDefinitionGroup>
+		```
+* In `projects\vstudio\zlib.props`, add
 	```
 	  <ItemDefinitionGroup>
 	    <ClCompile>
