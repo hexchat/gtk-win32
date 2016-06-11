@@ -30,7 +30,7 @@ These are the libraries in the bundle:
 | FreeType               | 2.6.3          | [Source](https://dl.hexchat.net/gtk-win32/src/freetype-2.6.3.tar.bz2)
 | GDK-PixBuf             | 2.34.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.34.0.tar.xz)
 | gettext-runtime        | 0.18           | [Source](https://dl.hexchat.net/gtk-win32/src/gettext-vc100-0.18-src.tar.bz2)
-| GLib                   | 2.46.2         | [Source](https://dl.hexchat.net/gtk-win32/src/glib-2.46.2.tar.xz)
+| GLib                   | 2.48.1         | [Source](https://dl.hexchat.net/gtk-win32/src/glib-2.48.1.tar.xz)
 | GObject-Introspection  | 1.48.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz)
 | GTK+                   | 2.24.30        | [Source](https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz)
 | HarfBuzz               | 1.2.3          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.3.tar.bz2)

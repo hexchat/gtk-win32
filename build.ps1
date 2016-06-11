@@ -183,7 +183,7 @@ $items = @{
 	};
 
 	'glib' = @{
-		'ArchiveUrl' = 'http://ftp.acc.umu.se/pub/gnome/sources/glib/2.48/glib-2.48.0.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/glib-2.48.1.tar.xz'
 		'Dependencies' = @('gettext-runtime', 'libffi', 'zlib')
 	};
 
@@ -554,7 +554,7 @@ $items['glib'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec msbuild build\win32\vs14\glib.sln /p:Platform=$platform /p:Configuration=Release /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
+	Exec msbuild build\win32\vs14\glib.sln /p:Platform=$platform /p:Configuration=Release_BundledPCRE /maxcpucount /nodeReuse:True $windowsTargetPlatformVersion
 
 	[void] (Swap-Environment $originalEnvironment)
 
