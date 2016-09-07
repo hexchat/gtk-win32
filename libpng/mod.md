@@ -1,4 +1,4 @@
-* Download [libpng 1.6.22](ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.22.tar.xz)
+* Download [libpng 1.6.25](ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.25.tar.xz)
 * Copy `projects\vstudio` to `projects\vc14`. Only keep libpng and pnglibconf directories.
 * In `projects\vc14\libpng\libpng.vcxproj` and `projects\vc14\pnglibconf\pnglibconf.vcxproj`:
 	* Under `<ItemGroup Label="ProjectConfigurations">`, add
@@ -41,7 +41,7 @@
 		```
 		  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
 		    <ClCompile>
-		      <WarningLevel>Level4</WarningLevel>
+		      <WarningLevel>$(WarningLevel)</WarningLevel>
 		      <PrecompiledHeader>Use</PrecompiledHeader>
 		      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
 		      <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -54,9 +54,9 @@
 		      <CompileAs>CompileAsC</CompileAs>
 		      <StringPooling>true</StringPooling>
 		      <MinimalRebuild>false</MinimalRebuild>
-		      <DisableSpecificWarnings>4996;4127</DisableSpecificWarnings>
+		      <DisableSpecificWarnings>$(DisableSpecificWarnings)</DisableSpecificWarnings>
 		      <AdditionalIncludeDirectories>$(ZLibSrcDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-		      <TreatWarningAsError>true</TreatWarningAsError>
+		      <TreatWarningAsError>$(TreatWarningAsError)</TreatWarningAsError>
 		    </ClCompile>
 		    <Link>
 		      <SubSystem>Windows</SubSystem>
@@ -75,7 +75,7 @@
 		```
 		  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
 		    <ClCompile>
-		      <WarningLevel>Level3</WarningLevel>
+		      <WarningLevel>$(WarningLevel)</WarningLevel>
 		      <FunctionLevelLinking>true</FunctionLevelLinking>
 		      <IntrinsicFunctions>true</IntrinsicFunctions>
 		    </ClCompile>
