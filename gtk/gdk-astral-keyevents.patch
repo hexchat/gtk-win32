@@ -1,0 +1,132 @@
+From b7c92fb1fb31fbdb70348587dc326142f4f615b3 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=D0=A0=D1=83=D1=81=D0=BB=D0=B0=D0=BD=20=D0=98=D0=B6=D0=B1?=
+ =?UTF-8?q?=D1=83=D0=BB=D0=B0=D1=82=D0=BE=D0=B2?= <lrn1986@gmail.com>
+Date: Thu, 28 Jul 2016 15:39:43 +0000
+Subject: [PATCH] GDK W32: Support UTF-16 surrogate pairs passed via VK_PACKET
+
+This is, essentially, a piece of g_utf16_to_ucs4() built into GDK
+W32 keyboard message processing.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=769126
+---
+ gdk/win32/gdkevents-win32.c | 75 ++++++++++++++++++++++++++++++++++++++-------
+ gdk/win32/gdkwindow-win32.h |  8 +++++
+ 2 files changed, 72 insertions(+), 11 deletions(-)
+
+diff --git a/gdk/win32/gdkevents-win32.c b/gdk/win32/gdkevents-win32.c
+index d654b92..ccb583b 100644
+--- a/gdk/win32/gdkevents-win32.c
++++ b/gdk/win32/gdkevents-win32.c
+@@ -2280,6 +2280,35 @@ gdk_event_translate (MSG  *msg,
+       if (GDK_WINDOW_DESTROYED (window))
+ 	break;
+ 
++      impl = GDK_WINDOW_IMPL_WIN32 (GDK_WINDOW_OBJECT (window)->impl);
++
++      API_CALL (GetKeyboardState, (key_state));
++
++      ccount = 0;
++
++      if (msg->wParam == VK_PACKET)
++	{
++	  ccount = ToUnicode (VK_PACKET, HIWORD (msg->lParam), key_state, wbuf, 1, 0);
++	  if (ccount == 1)
++	    {
++	      if (wbuf[0] >= 0xD800 && wbuf[0] < 0xDC00)
++	        {
++		  if (msg->message == WM_KEYDOWN)
++		    impl->leading_surrogate_keydown = wbuf[0];
++		  else
++		    impl->leading_surrogate_keyup = wbuf[0];
++
++		  /* don't emit an event */
++		  return_val = TRUE;
++		  break;
++	        }
++	      else
++		{
++		  /* wait until an event is created */;
++		}
++	    }
++	}
++
+       event = gdk_event_new ((msg->message == WM_KEYDOWN ||
+ 			      msg->message == WM_SYSKEYDOWN) ?
+ 			     GDK_KEY_PRESS : GDK_KEY_RELEASE);
+@@ -2310,22 +2339,46 @@ gdk_event_translate (MSG  *msg,
+ 	       LOBYTE (HIWORD (msg->lParam)) == _scancode_rshift)
+ 	event->key.hardware_keycode = VK_RSHIFT;
+ 
+-      API_CALL (GetKeyboardState, (key_state));
+-
+       /* g_print ("ctrl:%02x lctrl:%02x rctrl:%02x alt:%02x lalt:%02x ralt:%02x\n", key_state[VK_CONTROL], key_state[VK_LCONTROL], key_state[VK_RCONTROL], key_state[VK_MENU], key_state[VK_LMENU], key_state[VK_RMENU]); */
+       
+       build_key_event_state (event, key_state);
+ 
+-      if (msg->wParam == VK_PACKET &&
+-	  ToUnicode (VK_PACKET, HIWORD (msg->lParam), key_state, wbuf, 1, 0) == 1)
+-	event->key.keyval = gdk_unicode_to_keyval (wbuf[0]);
++      if (msg->wParam == VK_PACKET && ccount == 1)
++	{
++	  if (wbuf[0] >= 0xD800 && wbuf[0] < 0xDC00)
++	    {
++	      g_assert_not_reached ();
++	    }
++	  else if (wbuf[0] >= 0xDC00 && wbuf[0] < 0xE000)
++	    {
++	      wchar_t leading;
++
++              if (msg->message == WM_KEYDOWN)
++		leading = impl->leading_surrogate_keydown;
++	      else
++		leading = impl->leading_surrogate_keyup;
++
++	      event->key.keyval = gdk_unicode_to_keyval ((leading - 0xD800) * 0x400 + wbuf[0] - 0xDC00 + 0x10000);
++	    }
++	  else
++	    {
++	      event->key.keyval = gdk_unicode_to_keyval (wbuf[0]);
++	    }
++	}
++      else
++	{
++	  gdk_keymap_translate_keyboard_state (gdk_keymap_get_for_display (_gdk_display),
++					       event->key.hardware_keycode,
++					       event->key.state,
++					       event->key.group,
++					       &event->key.keyval,
++					       NULL, NULL, NULL);
++	}
++
++      if (msg->message == WM_KEYDOWN)
++	impl->leading_surrogate_keydown = 0;
+       else
+-	gdk_keymap_translate_keyboard_state (NULL,
+-					     event->key.hardware_keycode,
+-					     event->key.state,
+-					     event->key.group,
+-					     &event->key.keyval,
+-					     NULL, NULL, NULL);
++	impl->leading_surrogate_keyup = 0;
+ 
+       fill_key_event_string (event);
+ 
+diff --git a/gdk/win32/gdkwindow-win32.h b/gdk/win32/gdkwindow-win32.h
+index 096db33..5c091d7 100644
+--- a/gdk/win32/gdkwindow-win32.h
++++ b/gdk/win32/gdkwindow-win32.h
+@@ -76,6 +76,14 @@ struct _GdkWindowImplWin32
+   HICON   hicon_big;
+   HICON   hicon_small;
+ 
++  /* When VK_PACKET sends us a leading surrogate, it's stashed here.
++   * Later, when another VK_PACKET sends a tailing surrogate, we make up
++   * a full unicode character from them, or discard the leading surrogate,
++   * if the next key is not a tailing surrogate.
++   */
++  wchar_t leading_surrogate_keydown;
++  wchar_t leading_surrogate_keyup;
++
+   /* Window size hints */
+   gint hint_flags;
+   GdkGeometry hints;

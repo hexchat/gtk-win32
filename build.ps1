@@ -625,6 +625,7 @@ $items['gtk'].BuildScript = {
 	Exec $patch -p1 -i gtk-accel.patch
 	Exec $patch -p1 -i gtk-multimonitor.patch
 	Exec $patch -p1 -i gtkstatusicon-dpichange.patch
+	Exec $patch -p1 -i gdk-astral-keyevents.patch
 
 	Fix-C4819 .\gdk\gdkkeyuni.c
 
