@@ -40,7 +40,7 @@ These are the libraries in the bundle:
 | libxml2                | 2.9.4          | [Source](https://dl.hexchat.net/gtk-win32/src/libxml2-2.9.4.tar.gz)
 | luajit                 | 2.0.4          | [Source](https://dl.hexchat.net/gtk-win32/src/luajit-2.0.4.tar.gz)
 | OpenSSL                | 1.0.2h         | [Source](https://dl.hexchat.net/gtk-win32/src/openssl-1.0.2h.tar.gz)
-| Pango                  | 1.40.1         | [Source](https://dl.hexchat.net/gtk-win32/src/pango-1.40.1.tar.xz)
+| Pango                  | 1.40.2         | [Source](https://dl.hexchat.net/gtk-win32/src/pango-1.40.2.tar.xz)
 | Pixman                 | 0.34.0         | [Source](https://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz)
 | win-iconv              | 0.0.8          | [Source](https://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz)
 | zlib                   | 1.2.8          | [Source](https://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.tar.xz)

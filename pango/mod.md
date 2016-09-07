@@ -1,4 +1,4 @@
-* Download [Pango 1.40.1](http://ftp.gnome.org/pub/gnome/sources/pango/1.40/pango-1.40.1.tar.xz)
+* Download [Pango 1.40.2](http://ftp.gnome.org/pub/gnome/sources/pango/1.40/pango-1.40.2.tar.xz)
 * Patch with `patch -p1 -i pango-synthesize-all-fonts.patch`
 * In all vcxproj files:
 	* Add `<Import Project="..\..\..\..\stack.props" />`
@@ -10,4 +10,7 @@
 	* `<GlibEtcInstallRoot>$(SolutionDir)\..\..\..\..\vs$(VSVer)\$(Platform)</GlibEtcInstallRoot>` with `<GlibEtcInstallRoot>$(SolutionDir)..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>`
 	* `<CopyDir>$(GlibEtcInstallRoot)</CopyDir>` with `<CopyDir>$(SolutionDir)..\..\..\..\pango-rel</CopyDir>`
 	* `<PangoSeparateVSDllSuffix>-1-vs$(VSVer)</PangoSeparateVSDllSuffix>` with `<PangoSeparateVSDllSuffix>-1.0</PangoSeparateVSDllSuffix>`
+	* `<PythonPath>c:\python34</PythonPath>` with `<PythonPath>..\..\..\..\..\..\python-2.7\$(Platform)</PythonPath>`
+	* `<PythonPathX64>$(PythonPath).x64</PythonPathX64>` with `<PythonPathX64>$(PythonPath)</PythonPathX64>`
+
 * Copy `build\detectenv-msvc.mak` from a newer project such as gobject-introspection (Simply includes VS2015 info)
