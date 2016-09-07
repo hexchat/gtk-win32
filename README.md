@@ -33,7 +33,7 @@ These are the libraries in the bundle:
 | GLib                   | 2.48.2         | [Source](https://dl.hexchat.net/gtk-win32/src/glib-2.48.2.tar.xz)
 | GObject-Introspection  | 1.48.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz)
 | GTK+                   | 2.24.30        | [Source](https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz)
-| HarfBuzz               | 1.2.7          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.2.7.tar.bz2)
+| HarfBuzz               | 1.3.0          | [Source](https://dl.hexchat.net/gtk-win32/src/harfbuzz-1.3.0.tar.bz2)
 | lgi                    | 0.9.1          | [Source](https://dl.hexchat.net/gtk-win32/src/lgi-0.9.1.tar.gz)
 | libffi                 | 3.2.1          | [Source](https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz)
 | libpng                 | 1.6.22         | [Source](https://dl.hexchat.net/gtk-win32/src/libpng-1.6.22.tar.xz)

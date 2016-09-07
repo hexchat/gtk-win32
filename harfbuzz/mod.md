@@ -1,4 +1,4 @@
-* Download [HarfBuzz 1.2.7](https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.2.7.tar.bz2)
+* Download [HarfBuzz 1.3.0](https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.3.0.tar.bz2)
 * In win32\config-msvc.mak, replace
 	```
 	HARFBUZZ_DLL_FILENAME = $(CFG)\$(PLAT)\harfbuzz-vs$(VSVER)
