@@ -1316,10 +1316,18 @@ $items.GetEnumerator() | %{
 
 			$outputDirectoryName = [System.IO.Path]::GetFilenameWithoutExtension($item.ArchiveFile.BaseName)
 
-			while (Test-Path "$workingDirectory\$outputDirectoryName") {
-				Move-Item "$workingDirectory\$outputDirectoryName" $item.BuildDirectory
-				Sleep 1
+			while ($true) {
+				try {
+					Copy-Item "$workingDirectory\$outputDirectoryName" $item.BuildDirectory -Recurse -ErrorAction Stop
+					break
+				}
+				catch {
+					Remove-Item -Recurse -Force $item.BuildDirectory -ErrorAction Ignore
+					Sleep 1
+				}
 			}
+
+			Remove-Item -Recurse -Force "$workingDirectory\$outputDirectoryName"
 		}
 		else {
 			# gettext-runtime is a tarbomb
