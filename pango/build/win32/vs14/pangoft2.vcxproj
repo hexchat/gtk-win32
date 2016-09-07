@@ -88,7 +88,6 @@
     <Link>
       <AdditionalDependencies>$(PangoFT2Libs);%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(PangoDllPrefix)$(ProjectName)$(PangoDllSuffix).dll</OutputFile>
-      <ModuleDefinitionFile>..\..\..\pango\pangoft2.def</ModuleDefinitionFile>
       <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -108,7 +107,6 @@
     <Link>
       <AdditionalDependencies>$(PangoFT2Libs);%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(PangoDllPrefix)$(ProjectName)$(PangoDllSuffix).dll</OutputFile>
-      <ModuleDefinitionFile>..\..\..\pango\pangoft2.def</ModuleDefinitionFile>
       <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -132,7 +130,6 @@
     <Link>
       <AdditionalDependencies>$(PangoFT2Libs);%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(PangoDllPrefix)$(ProjectName)$(PangoDllSuffix).dll</OutputFile>
-      <ModuleDefinitionFile>..\..\..\pango\pangoft2.def</ModuleDefinitionFile>
       <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -152,7 +149,6 @@
     <Link>
       <AdditionalDependencies>$(PangoFT2Libs);%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(PangoDllPrefix)$(ProjectName)$(PangoDllSuffix).dll</OutputFile>
-      <ModuleDefinitionFile>..\..\..\pango\pangoft2.def</ModuleDefinitionFile>
       <ImportLibrary>$(TargetDir)$(ProjectName)-$(ApiVersion).lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -165,17 +161,17 @@
     <ResourceCompile Include="..\..\..\pango\pangoft2.rc" />
   </ItemGroup>
   <ItemGroup>
- <ClCompile Include="..\..\..\pango\pangofc-font.c" />
- <ClCompile Include="..\..\..\pango\pangofc-fontmap.c" />
- <ClCompile Include="..\..\..\pango\pangofc-decoder.c" />
- <ClCompile Include="..\..\..\pango\pangofc-shape.c" />
- <ClCompile Include="..\..\..\pango\pangoft2.c" />
- <ClCompile Include="..\..\..\pango\pangoft2-fontmap.c" />
- <ClCompile Include="..\..\..\pango\pangoft2-render.c" />
- <ClCompile Include="..\..\..\pango\pango-ot-buffer.c" />
- <ClCompile Include="..\..\..\pango\pango-ot-info.c" />
- <ClCompile Include="..\..\..\pango\pango-ot-ruleset.c" />
- <ClCompile Include="..\..\..\pango\pango-ot-tag.c" />
+   <ClCompile Include="..\..\..\pango\pangofc-font.c" />
+   <ClCompile Include="..\..\..\pango\pangofc-fontmap.c" />
+   <ClCompile Include="..\..\..\pango\pangofc-decoder.c" />
+   <ClCompile Include="..\..\..\pango\pangofc-shape.c" />
+   <ClCompile Include="..\..\..\pango\pangoft2.c" />
+   <ClCompile Include="..\..\..\pango\pangoft2-fontmap.c" />
+   <ClCompile Include="..\..\..\pango\pangoft2-render.c" />
+   <ClCompile Include="..\..\..\pango\pango-ot-buffer.c" />
+   <ClCompile Include="..\..\..\pango\pango-ot-info.c" />
+   <ClCompile Include="..\..\..\pango\pango-ot-ruleset.c" />
+   <ClCompile Include="..\..\..\pango\pango-ot-tag.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="pango.vcxproj">

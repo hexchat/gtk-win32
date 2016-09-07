@@ -233,7 +233,7 @@ $items = @{
 	};
 
 	'pango' = @{
-		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/pango-1.40.1.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/pango-1.40.2.tar.xz'
 		'Dependencies' = @('cairo', 'harfbuzz', 'gobject-introspection')
 	};
 
@@ -949,6 +949,7 @@ $items['pango'].BuildScript = {
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
 	Exec $patch -p1 -i pango-synthesize-fonts-properly.patch
+	Exec $patch -p1 -i pangocairo-fix-missing-export.patch
 
 	Fix-C4819 .\pango\break.c
 	Fix-C4819 .\pango\pango-language-sample-table.h
@@ -968,11 +969,11 @@ $items['pango'].BuildScript = {
 	Package $packageDestination
 	$packageDestination = "$PWD-gir-rel"
 
-	Push-Location .\build
+	Push-Location .\build\win32
 	
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec nmake -f .\pango-introspection-msvc.mak CFG=release PYTHON2=..\..\..\..\python-2.7\$platform\python.exe BASEDIR=..\..\..\..\gtk\$platform
+	Exec nmake -f .\pango-introspection-msvc.mak CFG=release PYTHON=..\..\..\..\..\python-2.7\$platform\python.exe PREFIX=..\..\..\..\..\gtk\$platform
 
 	[void] (Swap-Environment $originalEnvironment)
 

@@ -158,9 +158,10 @@ copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*.dll $(CopyDir)\bin
 
 copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*.pdb $(CopyDir)\bin
 
-mkdir $(CopyDir)\include
 
-copy $(SolutionDir)$(Configuration)\$(Platform)\include\*.h $(CopyDir)\include
+mkdir $(CopyDir)\include\cairo
+
+copy $(SolutionDir)$(Configuration)\$(Platform)\include\*.h $(CopyDir)\include\cairo
 
 
 mkdir $(CopyDir)\lib

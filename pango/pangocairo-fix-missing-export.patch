@@ -1,0 +1,24 @@
+From c67b12e547c3ed150a4f6300da442d4e48561253 Mon Sep 17 00:00:00 2001
+From: Patrick Griffis <tingping@tingping.se>
+Date: Wed, 7 Sep 2016 08:39:22 -0400
+Subject: [PATCH] Fix exporting pango_cairo_win32_font_map_get_type
+
+---
+ pango/pangocairo-win32.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/pango/pangocairo-win32.h b/pango/pangocairo-win32.h
+index 33d0ee4..61a14dd 100644
+--- a/pango/pangocairo-win32.h
++++ b/pango/pangocairo-win32.h
+@@ -42,6 +42,7 @@ struct _PangoCairoWin32FontMap
+   double dpi;
+ };
+ 
++_PANGO_EXTERN
+ GType pango_cairo_win32_font_map_get_type (void) G_GNUC_CONST;
+ 
+ PangoFont *_pango_cairo_win32_font_new (PangoCairoWin32FontMap       *cwfontmap,
+-- 
+2.9.3
+
