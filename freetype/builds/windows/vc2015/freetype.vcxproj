@@ -191,18 +191,18 @@
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'" />
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">freetype263d</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">freetype263d</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">freetype263MTd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">freetype263MTd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">freetype263STd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|x64'">freetype263STd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">freetype265d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">freetype265d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">freetype265MTd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">freetype265MTd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">freetype265STd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|x64'">freetype265STd</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">freetype</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">freetype</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">freetype263MT</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">freetype263MT</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">freetype263ST</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'">freetype263ST</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">freetype265MT</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">freetype265MT</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">freetype265ST</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'">freetype265ST</TargetName>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\freetype.user.props" Condition="exists('$(SolutionDir)\freetype.user.props')" Label="UserProperties" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -487,7 +487,7 @@
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalLibraryDirectories>$(UserLibraryDirectories);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(UserDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-     </Lib>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">
     <ClCompile>
@@ -1407,11 +1407,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\ft2build.h" />
-    <ClInclude Include="..\..\..\include\config\ftconfig.h" />
-    <ClInclude Include="..\..\..\include\config\ftheader.h" />
-    <ClInclude Include="..\..\..\include\config\ftmodule.h" />
-    <ClInclude Include="..\..\..\include\config\ftoption.h" />
-    <ClInclude Include="..\..\..\include\config\ftstdlib.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftheader.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftoption.h" />
+    <ClInclude Include="..\..\..\include\freetype\config\ftstdlib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
