@@ -158,7 +158,7 @@ $items = @{
 	};
 
 	'enchant' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz'
+		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/enchant-1.6.1.tar.xz'
 		'Dependencies' = @('glib')
 	};
 

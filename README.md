@@ -25,7 +25,7 @@ These are the libraries in the bundle:
 | ---------------------- | -------------- | ------
 | ATK                    | 2.20.0         | [Source](https://dl.hexchat.net/gtk-win32/src/atk-2.20.0.tar.xz)
 | Cairo                  | 1.14.6         | [Source](https://dl.hexchat.net/gtk-win32/src/cairo-1.14.6.tar.xz)
-| Enchant                | 1.6.0          | [Source](https://dl.hexchat.net/gtk-win32/src/enchant-1.6.0.tar.gz)
+| Enchant                | 1.6.1          | [Source](https://dl.hexchat.net/gtk-win32/src/enchant-1.6.1.tar.xz)
 | Fontconfig             | 2.8.0          | [Source](https://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz)
 | FreeType               | 2.6.3          | [Source](https://dl.hexchat.net/gtk-win32/src/freetype-2.6.3.tar.bz2)
 | GDK-PixBuf             | 2.34.0         | [Source](https://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.34.0.tar.xz)
