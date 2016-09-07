@@ -1,5 +1,6 @@
  * Download [cairo 1.14.6](http://cairographics.org/releases/cairo-1.14.6.tar.xz)
  * Download [VS solution](https://wiki.gnome.org/Projects/GTK%2B/Win32/MSVCCompilationOfGTKStack?action=AttachFile&do=get&target=cairo-vsprojects.zip)
+ * Copy `msvc\vs10` to `msvc\vc12`
  * In `msvc\vc12\cairo.props`, replace:
 	* `<CairoEtcInstallRoot>..\..\..\vs10\$(Platform)</CairoEtcInstallRoot>` with
 `<CairoEtcInstallRoot>..\..\..\..\..\gtk\$(Platform)</CairoEtcInstallRoot>`
@@ -16,7 +17,7 @@
 	* `libpng15.lib` with
 `libpng16.lib`
 	* Remove
-`copy $(SolutionDir)$(Configuration)\$(Platform)\include\*.h $(CopyDir)\include\cairo`
+`copy $(SolutionDir)$(Configuration)\$(Platform)\include\*.h $(CopyDir)\include`
 	* Add to `CairoDoInstall`:
 `copy $(SolutionDir)$(Configuration)\$(Platform)\bin\*.pdb $(CopyDir)\bin`
  * Add `src\cairo-path-stroke-traps.c` to the `cairo` project
