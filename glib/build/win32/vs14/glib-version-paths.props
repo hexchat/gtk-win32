@@ -2,10 +2,10 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="UserMacros">
     <VSVer>14</VSVer>
+    <GlibVersion>2.48.2</GlibVersion>
+    <ApiVersion>2.0</ApiVersion>
     <GlibEtcInstallRoot>..\..\..\..\..\..\gtk\$(Platform)</GlibEtcInstallRoot>
     <CopyDir>..\..\..\..\glib-rel</CopyDir>
-    <GlibVersion>2.48.1</GlibVersion>
-    <ApiVersion>2.0</ApiVersion>
     <GlibLibtoolCompatibleDllPrefix>lib</GlibLibtoolCompatibleDllPrefix>
     <GlibLibtoolCompatibleDllSuffix>-$(ApiVersion)-0</GlibLibtoolCompatibleDllSuffix>
     <GlibSeparateVSDllPrefix />
