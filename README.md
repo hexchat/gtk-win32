@@ -55,7 +55,7 @@ If you want to build the bundle from source yourself, we have a PowerShell scrip
     * [Visual C++ Redistributable Packages for VS 2012 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
     * [Visual C++ Redistributable Packages for VS 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
     * [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) - Not needed for Windows 8.1 and above
-    * [CMake 3.5.2](https://cmake.org/download/)
+    * [CMake 3.6.1](https://cmake.org/download/)
     * [msys2](https://msys2.github.io/)
     * [Python 2.7](https://www.python.org/downloads/windows/) (install to _C:\gtk-build\python-2.7\Win32_ or _C:\gtk-build\python-2.7\x64_)
 

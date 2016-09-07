@@ -129,7 +129,7 @@ param (
 	),
 
 	[string]
-	$CMakePath = 'C:\Program Files (x86)\CMake\bin',
+	$CMakePath = 'C:\Program Files\CMake\bin',
 
 	[string]
 	$PerlDirectory = "$BuildDirectory\perl-5.20",
