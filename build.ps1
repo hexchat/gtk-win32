@@ -153,22 +153,22 @@ $items = @{
 	};
 
 	'cairo' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/cairo-1.14.6.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/cairo-1.14.6.tar.xz'
 		'Dependencies' = @('fontconfig', 'glib', 'pixman')
 	};
 
 	'enchant' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/enchant-1.6.1.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/enchant-1.6.1.tar.xz'
 		'Dependencies' = @('glib')
 	};
 
 	'fontconfig' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/fontconfig-2.8.0.tar.gz'
 		'Dependencies' = @('freetype', 'libxml2')
 	};
 
 	'freetype' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/freetype-2.6.5.tar.bz2'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/freetype-2.6.5.tar.bz2'
 		'Dependencies' = @()
 	};
 
@@ -178,7 +178,7 @@ $items = @{
 	};
 
 	'gettext-runtime' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gettext-vc100-0.18-src.tar.bz2'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/gettext-vc100-0.18-src.tar.bz2'
 		'Dependencies' = @('win-iconv')
 	};
 
@@ -188,12 +188,12 @@ $items = @{
 	};
 
 	'gobject-introspection' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/gobject-introspection-1.48.0.tar.xz'
 		'Dependencies' = @('glib', 'cairo', 'pkg-config')
 	};
 
 	'gtk' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/gtk+-2.24.30.tar.xz'
 		'Dependencies' = @('atk', 'gdk-pixbuf', 'pango', 'gobject-introspection')
 	};
 
@@ -208,7 +208,7 @@ $items = @{
 	}
 
 	'libffi' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/libffi-3.2.1.tar.gz'
 		'Dependencies' = @()
 	};
 
@@ -238,7 +238,7 @@ $items = @{
 	};
 
 	'pixman' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/pixman-0.34.0.tar.gz'
 		'Dependencies' = @('libpng')
 	};
 
@@ -248,12 +248,12 @@ $items = @{
 	}
 
 	'win-iconv' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.8.tar.gz'
 		'Dependencies' = @()
 	};
 
 	'zlib' = @{
-		'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.tar.xz'
+		'ArchiveUrl' = 'https://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.tar.xz'
 		'Dependencies' = @()
 	};
 }
