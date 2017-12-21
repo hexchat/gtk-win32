@@ -386,7 +386,7 @@ $items['fontconfig'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
-	Exec $patch -p1 -i fontconfig.patch
+	Exec $patch -f -p1 -i fontconfig.patch
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
@@ -518,7 +518,7 @@ $items['gettext-runtime'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
-	Exec $patch -p1 -i gettext-runtime.patch
+	Exec $patch -f -p1 -i gettext-runtime.patch
 
 	Remove-Item -Recurse CMakeCache.txt, CMakeFiles -ErrorAction Ignore
 
@@ -544,9 +544,9 @@ $items['glib'].BuildScript = {
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 	New-Item -Type Directory $packageDestination
 
-	Exec $patch -p1 -i glibpc-libintl.patch
-	Exec $patch -p1 -i glib-if_nametoindex.patch
-	Exec $patch -p1 -i glib-package-installation-directory.patch
+	Exec $patch -f -p1 -i glibpc-libintl.patch
+	Exec $patch -f -p1 -i glib-if_nametoindex.patch
+	Exec $patch -f -p1 -i glib-package-installation-directory.patch
 
 	Get-ChildItem -Recurse *.c, *.h | %{
 		Fix-C4819 $_.FullName
@@ -593,7 +593,7 @@ $items['gobject-introspection'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec $patch -p1 -i pkg-config-env-var.patch
+	Exec $patch -f -p1 -i pkg-config-env-var.patch
 
 	$env:PREFIX = "..\..\..\..\..\gtk\$platform"
 	$env:PKG_CONFIG = "..\..\..\..\..\gtk\$platform\bin\pkg-config.exe"
@@ -620,12 +620,12 @@ $items['gtk'].BuildScript = {
 	$packageDestination = "$PWD-rel"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
-	Exec $patch -p1 -i gtk-revert-scrolldc-commit.patch
-	Exec $patch -p1 -i gtk-bgimg.patch
-	Exec $patch -p1 -i gtk-accel.patch
-	Exec $patch -p1 -i gtk-multimonitor.patch
-	Exec $patch -p1 -i gtkstatusicon-dpichange.patch
-	Exec $patch -p1 -i gdk-astral-keyevents.patch
+	Exec $patch -f -p1 -i gtk-revert-scrolldc-commit.patch
+	Exec $patch -f -p1 -i gtk-bgimg.patch
+	Exec $patch -f -p1 -i gtk-accel.patch
+	Exec $patch -f -p1 -i gtk-multimonitor.patch
+	Exec $patch -f -p1 -i gtkstatusicon-dpichange.patch
+	Exec $patch -f -p1 -i gdk-astral-keyevents.patch
 
 	Fix-C4819 .\gdk\gdkkeyuni.c
 
@@ -694,7 +694,7 @@ $items['lgi'].BuildScript = {
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 
-	Exec $patch -p1 -i .\Fix-loading-cairo-on-Win32.patch
+	Exec $patch -f -p1 -i .\Fix-loading-cairo-on-Win32.patch
 
 	Push-Location .\lgi
 
@@ -712,8 +712,8 @@ $items['libffi'].BuildScript = {
 	$packageDestination = "$PWD-rel"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
-	Exec $patch -p1 -i libffi-msvc-complex.patch
-	Exec $patch -p1 -i libffi-win64-jmp.patch
+	Exec $patch -f -p1 -i libffi-msvc-complex.patch
+	Exec $patch -f -p1 -i libffi-win64-jmp.patch
 
 	switch ($filenameArch) {
 		'x86' {
@@ -837,7 +837,7 @@ $items['luajit'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
-	Exec $patch -p1 -i .\lua-default-path.patch
+	Exec $patch -f -p1 -i .\lua-default-path.patch
 
 	Push-Location .\src
 
@@ -948,8 +948,8 @@ $items['pango'].BuildScript = {
 	$packageDestination = "$PWD-rel"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
 
-	Exec $patch -p1 -i pango-synthesize-fonts-properly.patch
-	Exec $patch -p1 -i pangocairo-fix-missing-export.patch
+	Exec $patch -f -p1 -i pango-synthesize-fonts-properly.patch
+	Exec $patch -f -p1 -i pangocairo-fix-missing-export.patch
 
 	Fix-C4819 .\pango\break.c
 	Fix-C4819 .\pango\pango-language-sample-table.h
