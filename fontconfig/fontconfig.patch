@@ -115,6 +115,15 @@ diff -ruN --strip-trailing-cr fontconfig-2.8.0.orig/src/fccache.c fontconfig-2.8
  #  include <sys/mman.h>
  #elif defined(_WIN32)
  #  define _WIN32_WINNT 0x0500
+@@ -859,7 +861,7 @@
+     if (!list)
+ 	return FcFalse;
+     while ((test_dir = FcStrListNext (list))) {
+-	if (access ((char *) test_dir, W_OK|X_OK) == 0)
++	if (access ((char *) test_dir, W_OK) == 0)
+ 	{
+ 	    cache_dir = test_dir;
+ 	    break;
 diff -ruN --strip-trailing-cr fontconfig-2.8.0.orig/src/fcint.h fontconfig-2.8.0/src/fcint.h
 --- fontconfig-2.8.0.orig/src/fcint.h	2009-11-16 22:46:18 +0000
 +++ fontconfig-2.8.0/src/fcint.h	2012-10-02 08:38:33 +0000
